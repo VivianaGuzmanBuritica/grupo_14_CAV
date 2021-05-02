@@ -48,9 +48,9 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
     Sitio web de venta de alimentos que cuenta con una ruta en su menú de navegación *Estilo de Vida* que agrupa productos en relación con tendencias nutricionales como veganas, vegetarianas, Kheto, libre de gluten , sin azucar, organico, grumet, etc, que brindan al cliente un filtro puntual sobre el *detalle del producto* desde el *Home*.
 
-- [Get Drink](https://getdrink.com.ar/):
+- [PediFull](http://pedifull.com): (user:pedifull@gmail.com - pass:Demo2020)
 
-    Sitio web de bebidas................... 
+    Sitio web de compras, un Marketplace B2B exlusivo para comercios especializado en ayudar a fabricantes, marcas distribuidores o mayoristas a pofrecer sus catalogos de productos. Los comercios pueden abastecer sus negocios de manera rapida, facil y segura. 
 
 -[Jumbo](https://www.tiendasjumbo.co/):
 
