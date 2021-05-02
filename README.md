@@ -50,7 +50,7 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
 - [PediFull](http://pedifull.com): (user:pedifull@gmail.com - pass:Demo2020)
 
-    Sitio web de compras, un Marketplace B2B exlusivo para comercios especializado en ayudar a fabricantes, marcas distribuidores o mayoristas a pofrecer sus catalogos de productos. Los comercios pueden abastecer sus negocios de manera rapida, facil y segura. 
+    Sitio web de compras, un Marketplace B2B exlusivo para comercios especializado en ayudar a fabricantes, marcas, distribuidores o mayoristas a ofrecer sus catalogos de productos. Los comercios pueden abastecer sus negocios de manera rapida, facil y segura. 
 
 -[Jumbo](https://www.tiendasjumbo.co/):
 
