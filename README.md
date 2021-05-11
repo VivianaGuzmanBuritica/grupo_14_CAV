@@ -24,8 +24,7 @@ el catálogo de alimentos se subdivide en las siguientes categorias
 
 -*ALACENA*: arroz y granos, aceites, harinas
 -*BEBIDAS*: Gaseosas, agua, jugos, vinos, licores
--*CONGELADOS*: Carnes, verduras
--*......*:....................
+-*CONGELADOS*: Carnes, verdurascommi
 
 **Püblico**
 
@@ -60,9 +59,9 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
     Sitio Web de venta de productos alimenticios(carne, verduas, no perecederos, etc), de limpieza y mascotas a precios mayoristas, distribuidos en categorías de productos, y con un sistema de fidelización por puntos para el cliente.
 
--[referente 5](Link):
+-[Tiendas D1](https://d1.com.co/):
 
-    Descripcion...
+    Sitio Web de venta de productos de la canasta familiar con precios competitivos enfocados en marcas locales, importados y propias de las cuales algunas los clientes solo encontrataran en sus tiendas, tanto fisicas como virtuales.
 
 ## 4. Wireframe y boceto:
 
