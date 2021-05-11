@@ -52,11 +52,11 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
     Sitio web de compras, un Marketplace B2B exlusivo para comercios especializado en ayudar a fabricantes, marcas, distribuidores o mayoristas a ofrecer sus catalogos de productos. Los comercios pueden abastecer sus negocios de manera rapida, facil y segura. 
 
--[Jumbo](https://www.tiendasjumbo.co/):
+- [Jumbo](https://www.tiendasjumbo.co/):
 
     Sitio web de viveres, con un menú de navegación en el *home* visualmente más resumido, condensa las categorias de alimentos en una sola ruta.
 
--[SuperSimple](https://supersimplemayorista.com/):
+- [SuperSimple](https://supersimplemayorista.com/):
 
     Sitio Web de venta de productos alimenticios(carne, verduas, no perecederos, etc), de limpieza y mascotas a precios mayoristas, distribuidos en categorías de productos, y con un sistema de fidelización por puntos para el cliente.
 
