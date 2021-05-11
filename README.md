@@ -20,11 +20,11 @@ CAV es un Market Place que se encarga de la comercialización virtual de aliment
 
 **Productos**
 
-el catálogo de alimentos se subdivide en las siguientes categorias 
+el catálogo de alimentos se subdivide en las siguientes categorias. 
 
--*ALACENA*: arroz y granos, aceites, harinas
--*BEBIDAS*: Gaseosas, agua, jugos, vinos, licores
--*CONGELADOS*: Carnes, verdurascommi
+-*ALACENA*: arroz y granos, aceites, harinas.
+-*BEBIDAS*: Gaseosas, agua, jugos, vinos, licores.
+-*CONGELADOS*: Carnes, verduras.
 
 **Püblico**
 
@@ -36,7 +36,7 @@ El proyecto esta enfocado a la venta de alimentos al por mayor, por lo cual nues
 Hola! Papa de Tomas y Santiango tengo 46 años de Buenos Aires, soy director en una empresa de comercializacion y logista, me gusta hacer, me apaciona el tenis y no se nada de programacion pero creo que me gusta.
 
 **Agustina Di Marco**
-Hola! soy Lic. en Administración de Empresas, tengo 28 años y soy de San Luis. Me interesa incorporar nuevas herramientas y perfeccionarme para mejorar la pyme donde trabajo
+Hola! soy Lic. en Administración de Empresas, tengo 28 años y soy de San Luis. Me interesa incorporar nuevas herramientas y perfeccionarme para mejorar la pyme donde trabajo.
 
 **Viviana Guzmán**
 Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi campo de trabajo ha sido principalmente el de la investigación y diseño editorial, me interesa ampliar mi rango laboral desde la programación.  
