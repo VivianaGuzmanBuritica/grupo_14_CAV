@@ -56,9 +56,9 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
     Sitio web de viveres, con un menú de navegación en el *home* visualmente más resumido, condensa las categorias de alimentos en una sola ruta.
 
--[Referente 4](Link):
+-[SuperSimple](https://supersimplemayorista.com/):
 
-    Descripcion........................
+    Sitio Web de venta de productos alimenticios(carne, verduas, no perecederos, etc), de limpieza y mascotas a precios mayoristas, distribuidos en categorías de productos, y con un sistema de fidelización por puntos para el cliente.
 
 -[referente 5](Link):
 
