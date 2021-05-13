@@ -63,13 +63,13 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
     Sitio Web de venta de productos de la canasta familiar con precios competitivos enfocados en marcas locales, importados y propias de las cuales algunas los clientes solo encontrataran en sus tiendas, tanto fisicas como virtuales.
 
-## 4. Wireframe y boceto:
+## 4. [Wireframe y boceto](https://marvelapp.com/prototype/14hc6ji9):
 
-### Home
-### Detalle de producto
-### Carrito de compras
-### Formulario de registro
-### Formulario de login
+### [Home](https://marvelapp.com/project/5656722/screen/79279061)
+### [Detalle de producto](https://marvelapp.com/project/5656722/screen/79280263)
+### [Carrito de compras](https://marvelapp.com/project/5656722/screen/79296212)
+### [Formulario de registro](https://marvelapp.com/project/5656722/screen/79296212)
+### [Formulario de login](https://marvelapp.com/project/5656722/screen/79280284)
 
 ## 5. Opcional:
 
