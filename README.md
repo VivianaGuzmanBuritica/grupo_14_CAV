@@ -67,8 +67,8 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
 ### [Home](https://marvelapp.com/project/5656722/screen/79279061)
 ### [Detalle de producto](https://marvelapp.com/project/5656722/screen/79280263)
-### [Carrito de compras](https://marvelapp.com/project/5656722/screen/79296212)
-### [Formulario de registro](https://marvelapp.com/project/5656722/screen/79296212)
+### [Carrito de compras](https://marvelapp.com/prototype/14hc6ji9/screen/79336783)
+### [Formulario de registro](https://marvelapp.com/prototype/14hc6ji9/screen/79310649)
 ### [Formulario de login](https://marvelapp.com/project/5656722/screen/79280284)
 
 ## 5. Opcional:
