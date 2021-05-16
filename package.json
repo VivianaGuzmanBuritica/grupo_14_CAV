@@ -1,0 +1,22 @@
+{
+  "name": "grupo_14_cav",
+  "version": "1.0.0",
+  "description": "Compra Alimentos Virutual - CAV, por Angustina Di Marco, Cristian Christian Novello y Viviana Guzmán",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VivianaGuzmanBuritica/grupo_14_CAV.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VivianaGuzmanBuritica/grupo_14_CAV/issues"
+  },
+  "homepage": "https://github.com/VivianaGuzmanBuritica/grupo_14_CAV#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
