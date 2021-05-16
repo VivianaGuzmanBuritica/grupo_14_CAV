@@ -59,7 +59,7 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 
     Sitio Web de venta de productos alimenticios(carne, verduas, no perecederos, etc), de limpieza y mascotas a precios mayoristas, distribuidos en categorías de productos, y con un sistema de fidelización por puntos para el cliente.
 
--[Tiendas D1](https://d1.com.co/):
+- [Tiendas D1](https://d1.com.co/):
 
     Sitio Web de venta de productos de la canasta familiar con precios competitivos enfocados en marcas locales, importados y propias de las cuales algunas los clientes solo encontrataran en sus tiendas, tanto fisicas como virtuales.
 
@@ -71,15 +71,15 @@ Hola! soy Administradora Ambiental, tengo 29 años, soy de Cali, Colombia. Mi ca
 ### [Formulario de registro](https://marvelapp.com/prototype/14hc6ji9/screen/79310649)
 ### [Formulario de login](https://marvelapp.com/project/5656722/screen/79280284)
 
-## [Tablero de trabajo](https://trello.com/invite/b/sJJz2mD1/48ff84c7e1b25237442df967e7f65f51/cav)
+## 5. [Tablero de trabajo](https://trello.com/invite/b/sJJz2mD1/48ff84c7e1b25237442df967e7f65f51/cav)
 
-    En la plataforma de Trello se consignan los objetivos por cada Sprint, al cual a su vez se asigna un resposable y una etiqueta de acuerdo a su estado de ejecución, de la siguiente manera:
+En la plataforma de Trello se consignan los objetivos por cada Sprint, al cual a su vez se asigna un resposable y una etiqueta de acuerdo a su estado de ejecución, de la siguiente manera:
 
-    Rojo **pendiente**, Amarillo **En desarrollo**, Verde **realizado**.
+Rojo **pendiente**, Amarillo **En desarrollo**, Verde **realizado**.
 
-    Adicionalmente, el equipo de trabajo mantiene comunicación constante vía Whatsapp para monitorear el avance, despejar dudas y reportar sobre las actualizaciones hechas en el repositorio y evitar posibles inconvenientes en el versionado de los archivos. 
+Adicionalmente, el equipo de trabajo mantiene comunicación constante vía Whatsapp para monitorear el avance, despejar dudas y reportar sobre las actualizaciones hechas en el repositorio y evitar posibles inconvenientes en el versionado de los archivos. 
 
-## 5. Opcional:
+## 6. Opcional:
 ### Logo
 ### Colores
 ### Tipografía
