@@ -15,7 +15,10 @@ Mantener la comunicación constante, para el reporte del avance y despejar dudas
 Sostener la comunicación para reportar los avances individuales hechos al proyecto, y evitar posibles confictos al momento de subir los archivos al repositorio.
 
 ### 4. Hacer menos.
+  Usar el tiempo de manera mas eficiente sin perder de foco los objetivos del sprint. 
 
 ### 5. Dejar de hacer.
+ 
+
 
 
