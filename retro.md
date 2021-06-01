@@ -12,12 +12,12 @@ Mantener la comunicación constante, para el reporte del avance y despejar dudas
 
 ### 3. Continuar haciendo.
 
+Sostener la comunicación para reportar los avances individuales hechos al proyecto, y evitar posibles confictos al momento de subir los archivos al repositorio.
+
 ### 4. Hacer menos.
-
-
+  Usar el tiempo de manera mas eficiente sin perder de foco los objetivos del sprint. 
 
 ### 5. Dejar de hacer.
-
-Procrastinar la finalización de las entregas en pos de investigar a fondo cada elemento. Si bien es una buena práctica en si y previene errores, no ayuda a hacer un uso eficiente del tiempo designado ni contribuye a completar el proyecto.
+ 
 
 
