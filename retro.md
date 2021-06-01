@@ -13,7 +13,10 @@ Mantener la comunicación constante, para el reporte del avance y despejar dudas
 ### 3. Continuar haciendo.
 
 ### 4. Hacer menos.
+  Usar el tiempo de manera mas eficiente sin perder de foco los objetivos del sprint. 
 
 ### 5. Dejar de hacer.
+ 
+
 
 
