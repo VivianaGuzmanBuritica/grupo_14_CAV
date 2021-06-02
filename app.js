@@ -3,7 +3,7 @@ const app= express();
 
 const path= require("path");
 
-app.listen(3003, () => console.log("Servidor corriendo"))
+app.listen(3003, () => console.log("Servidor corriendo puerto 3003"))
 
 app.use(express.static(path.resolve(__dirname,"./public")))
 
