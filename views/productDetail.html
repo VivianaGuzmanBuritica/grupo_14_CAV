@@ -6,15 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del producto</title>
-    <link rel="stylesheet" href="/css/index.css">
-    </link>
-    <link rel="stylesheet" href="/css/productDetail.css">
-    </link>
+    <link rel="stylesheet" href="/css/index.css"></link>
+    <link rel="stylesheet" href="/css/productDetail.css"></link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
+    <header>
+        <i class="fas fa-bars" id="burger-menu"></i>
+        <span><a href="/"><img src="/images/cav-verdecl.png" class="logo"></a></span>
+        <nav class="navbar">
+            <ul id="menu" type=none>
+                <li class="item"><a href="">PRODUCTOS</a></li>
+                <li class="item"><a href="">CAJAS</a></li>
+                <li class="item"><a href="">PROMOCIONES</a></li>
+                <li class="item"><a href="/login">MI CUENTA</a></li>
+            </ul>
+        </nav>
+        <span id="ayuda">
+            <p>Ayuda</p>
+            <i class="far fa-question-circle"></i>
+        </span>
+        <span id="carrito"><a href="productCart">
+                <p>Mi carrito</p>
+            </a>
+            <i class="fas fa-shopping-cart"></i></span>
+
+    </header>
+    <main>
     <section>
         <figure>
             <img src="/images/azucar.jpg"></img>
@@ -35,17 +55,49 @@
             <h2>Nombre de producto</h2>
             <h3>Marca</h3>
             <h3>Código producto: 300845</h3>
-            <a href="/productCart">
+
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum debitis fuga repudiandae unde. Odit ab
-                eum dignissimos fuga molestia</p></a>
+                eum dignissimos fuga molestia</p>
         </article>
     </section>
     <section>
         <form>
             <input type="number" min="0" placeholder="0">
-            <button type="submit">AGREGAR AL CARRITO</button>
+            <a href="/productCart">
+                <button type="submit">AGREGAR AL CARRITO></button>
+            </a>
         </form>
     </section>
+    </main>
+    <footer>
+        <ul type=none>
+            <li class="links-footer"><a href="">QUIENES SOMOS</a></li>
+            <li class="links-footer"><a href="">PAGOS Y ENVIOS</a></li>
+            <li class="links-footer"><a href="">COMPRAS POR MAYOR</a></li>
+        </ul>
+        <ul type=none>
+            <li class="links-footer">CONTACTO</li>
+            <li><a href=""><i class="fab fa-whatsapp fa-2x" id="iconos"></i>Whatsapp</a></li>
+            <li><a href=""><i class="far fa-envelope fa-2x" id="iconos"></i>Email</a></li>
+        </ul>
+        <div class="rrss">
+            <div class="links-footer">REDES SOCIALES</div>
+            <div></div><i class="fab fa-facebook-square fa-2x" id="iconos"></i>
+            <i class="fab fa-instagram-square fa-2x" id="iconos"></i>
+            <i class="fab fa-twitter-square fa-2x" id="iconos"></i>
+        </div>
+        </div>
+        <div class="newsletter">
+            <div>NEWSLETTER</div>
+            <div>¡No te pierdas ninguna oferta!</div>
+            <form>
+                <input type="text" name="nombre" placeholder="Nombre" id="newsletter">
+                <input type="email" name="email" placeholder="Email" id="newsletter">
+                <button type="submit" id="newsletter">ENVIAR</button>
+        </div>
+        </form>
+        </div>
+    </footer>
 </body>
 
 </html>

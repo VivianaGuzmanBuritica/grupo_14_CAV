@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAV</title>
-    <link rel="stylesheet" href="/css/index.css"></link>
+    <link rel="stylesheet" href="/css/index.css">
+    </link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <header>
         <i class="fas fa-bars" id="burger-menu"></i>
         <span><img src="/images/cav-verdecl.png" class="logo"></span>
-            <nav class="navbar">
-                <ul id="menu" type=none>
-                    <li class="item"><a href="">PRODUCTOS</a></li>
-                    <li class="item"><a href="">CAJAS</a></li>
-                    <li class="item"><a href="">PROMOCIONES</a></li>
-                    <li class="item"><a href="/login">MI CUENTA</a></li>
-                </ul>
-            </nav>
-                <span id="ayuda"><p>Ayuda</p>
-                    <i class="far fa-question-circle"></i></span>
-                <span id="carrito"><a href="productCart"><p>Mi carrito</p></a>
-                    <i class="fas fa-shopping-cart"></i></span>
-            
+        <nav class="navbar">
+            <ul id="menu" type=none>
+                <li class="item"><a href="">PRODUCTOS</a></li>
+                <li class="item"><a href="">CAJAS</a></li>
+                <li class="item"><a href="">PROMOCIONES</a></li>
+                <li class="item"><a href="/login">MI CUENTA</a></li>
+            </ul>
+        </nav>
+        <span id="ayuda">
+            <p>Ayuda</p>
+            <i class="far fa-question-circle"></i>
+        </span>
+        <span id="carrito"><a href="productCart">
+                <p>Mi carrito</p>
+            </a>
+            <i class="fas fa-shopping-cart"></i></span>
+
     </header>
     <main>
         <form>
@@ -35,30 +41,53 @@ rel="stylesheet" />
             </i>>
         </form>
         <h2>DESTACADOS</h2>
-            <div class="article">
-                <img src="/images/azucar.jpg"></img>
-                    <p>Descripción</p>
-                    <p>$200,00</p>
-                    <div id="botones-home">
-                        <span class="botones"><i class="far fa-eye"></i><p>DETALLES</p></span>
-                        <span class="botones"><i class="fas fa-shopping-cart"></i><p>COMPRAR</p></span></div>
+        <div class="article">
+            <img src="/images/azucar.jpg"></img>
+            <p>Descripción</p>
+            <p>$200,00</p>
+            <div id="botones-home">
+                <a href="/productDetail">
+                    <button type="submit">
+                        <span class="botones"><i class="far fa-eye"></i>
+                            <p>DETALLES</p>
+                        </span>
+                    </button>
+                </a>
+                <a href="/productCart">
+                    <button type="submit">
+                        <span class="botones"><i class="fas fa-shopping-cart"></i>
+                            <p>COMPRA</p>
+                        </span>
+                    </button>
+                </a>
             </div>
-            <div class="article">
-                <img src="/images/azucar.jpg"></img>
-                    <p>Descripción</p>
-                    <p>$200,00</p>
-                    <div id="botones-home">
-                        <span class="botones"><i class="far fa-eye"></i><p>DETALLES</p></span>
-                        <span class="botones"><i class="fas fa-shopping-cart"></i><p>COMPRAR</p></span></div>
+        </div>
+        <div class="article">
+            <img src="/images/azucar.jpg"></img>
+            <p>Descripción</p>
+            <p>$200,00</p>
+            <div id="botones-home">
+                <span class="botones"><i class="far fa-eye"></i>
+                    <p>DETALLES</p>
+                </span>
+                <span class="botones"><i class="fas fa-shopping-cart"></i>
+                    <p>COMPRAR</p>
+                </span>
             </div>
-            <div class="article">
-                <img src="/images/azucar.jpg"></img>
-                    <p>Descripción</p>
-                    <p>$200,00</p>
-                    <div id="botones-home">
-                        <span class="botones"><i class="far fa-eye"></i><p>DETALLES</p></span>
-                        <span class="botones"><i class="fas fa-shopping-cart"></i><p>COMPRAR</p></span></div>
+        </div>
+        <div class="article">
+            <img src="/images/azucar.jpg"></img>
+            <p>Descripción</p>
+            <p>$200,00</p>
+            <div id="botones-home">
+                <span class="botones"><i class="far fa-eye"></i>
+                    <p>DETALLES</p>
+                </span>
+                <span class="botones"><i class="fas fa-shopping-cart"></i>
+                    <p>COMPRAR</p>
+                </span>
             </div>
+        </div>
 
     </main>
     <footer>
@@ -72,19 +101,26 @@ rel="stylesheet" />
             <li><a href=""><i class="fab fa-whatsapp fa-2x" id="iconos"></i>Whatsapp</a></li>
             <li><a href=""><i class="far fa-envelope fa-2x" id="iconos"></i>Email</a></li>
         </ul>
-        <div class="rrss"><div class="links-footer">REDES SOCIALES</div>
+        <div class="rrss">
+            <div class="links-footer">REDES SOCIALES</div>
             <div></div><i class="fab fa-facebook-square fa-2x" id="iconos"></i>
             <i class="fab fa-instagram-square fa-2x" id="iconos"></i>
-            <i class="fab fa-twitter-square fa-2x" id="iconos"></i></div></div>
-            <div class="newsletter"><div>NEWSLETTER</div>
+            <i class="fab fa-twitter-square fa-2x" id="iconos"></i>
+        </div>
+        </div>
+        <div class="newsletter">
+            <div>NEWSLETTER</div>
             <div>¡No te pierdas ninguna oferta!</div>
-                <form>
-                    <input type="text" name="nombre" placeholder="Nombre" id="newsletter">
-                    <input type="email" name="email" placeholder="Email" id="newsletter">
-                        <button type="submit" id="newsletter">ENVIAR</button></div>
-                </form></div>
+            <form>
+                <input type="text" name="nombre" placeholder="Nombre" id="newsletter">
+                <input type="email" name="email" placeholder="Email" id="newsletter">
+                <button type="submit" id="newsletter">ENVIAR</button>
+        </div>
+        </form>
+        </div>
 
-        
+
     </footer>
 </body>
+
 </html>
