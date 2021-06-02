@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "app.js -e css,html",
-    "start": " node app.js"
+    "start": " nodemon app.js -e css,html"
+    
   },
   "repository": {
     "type": "git",
