@@ -81,3 +81,7 @@ main{
     border: none;
     border-radius: 8px;
 }
+.cantidadCarrito button a{
+    text-decoration: none;
+    color: #eee;
+}
