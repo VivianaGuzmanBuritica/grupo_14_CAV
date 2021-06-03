@@ -14,6 +14,10 @@ header{
     background-color: #ffcc29;
 }
 
+header nav ul{
+    list-style-type: none;
+}
+
 .navbar{
     display: none;
 }
@@ -52,6 +56,10 @@ main{
     background-color: #fce59b;
 }
 
+main h4{
+    display: none;
+}
+
 h2{
     padding: 20px;
 }
@@ -65,7 +73,7 @@ h2{
     box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 )
 }
 
-#botones-home{
+.botones-home{
     display: flex;
     margin: 5px;
     justify-content: center;
@@ -87,6 +95,10 @@ footer{
     padding: 10px
 }
 
+footer ul{
+    list-style-type: none;
+}
+
 #newsletter{
     display: flex;
     text-align: center;
@@ -106,7 +118,7 @@ footer a {
     font-weight:900;
 }
 
-#iconos{
+footer i {
     padding: 5px;
     color: #00af91;
 }
