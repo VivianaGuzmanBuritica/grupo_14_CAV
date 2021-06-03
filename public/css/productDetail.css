@@ -1,0 +1,83 @@
+main{
+    display: flex;
+    background-color: transparent;
+    width: 70vw;
+    margin: auto;
+    margin-top: 10vh;
+    
+}
+
+.miniaturas{
+    display:flex;
+    flex-direction: column;
+   }
+
+.imagenes{
+    padding-top: 5px;
+    width: 10vw;
+}
+
+.fotoProducto{
+    margin: 0px 3vw;
+}
+
+.foto{
+    width:35vw;
+    padding: 10px;
+}
+
+.porcentaje{
+    background-color:#f58634;
+    color: #eee;
+    font-weight: bold;
+    padding: 4px;
+    width: 17vw;
+    position: absolute;
+    display: inline;
+    flex-direction: row-reverse;
+    top:27vh;    
+}
+
+.detalleProducto{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    text-align: left;
+}
+
+.caracteristicaProducto h3{
+    font-size: 14px;
+    display: inline;
+    font-weight: normal;
+    margin-left: 20px;
+}
+.caracteristicaProducto p{
+    margin: 20px;
+    text-align: left;
+}
+
+.caracteristicaProducto{
+    width: 30vw;
+    padding-top: 5vh;
+    
+}
+
+.cantidadCarrito{
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+}
+
+.cantidadCarrito input{
+    width: 6vw;
+    padding: 5px;
+    margin: 0px 20px;
+}
+
+.cantidadCarrito button{
+    padding: 8px;
+    background-color:#f58634;
+    color: #eee;
+    border: none;
+    border-radius: 8px;
+}

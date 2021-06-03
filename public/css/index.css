@@ -11,7 +11,7 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #f58634;
+    background-color: #ffcc29;
 }
 
 .navbar{
@@ -31,7 +31,6 @@ header{
     display: block;
     justify-content: center;
     width: 20%;
-    background-color: #f58634;
 }
 
 #ayuda{
@@ -146,9 +145,11 @@ footer a {
     align-items: center;
 }
 
-.item{
+.item a{
     padding-left: 10px;
     padding-right: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .logo{
