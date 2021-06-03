@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del producto</title>
-    <link rel="stylesheet" href="/css/index.css"></link>
-    <link rel="stylesheet" href="/css/productDetail.css"></link>
+    <link rel="stylesheet" href="/css/index.css">
+    </link>
+    <link rel="stylesheet" href="/css/productDetail.css">
+    </link>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
@@ -35,38 +37,42 @@
 
     </header>
     <main>
-    <section>
-        <figure>
-            <img src="/images/azucar.jpg"></img>
-            <img src="/images/azucar.jpg"></img>
-            <img src="/images/azucar.jpg"></img>
-        </figure>
+        
+        <section class="miniaturas">
+            <figure>
+                <img src="/images/azucar.jpg" class="imagenes"></img>
+                <img src="/images/azucar.jpg"class="imagenes"></img>
+                <img src="/images/azucar.jpg"class="imagenes"></img>
+            </figure>
+        </section>
+        <section class="fotoProducto">
+            <figure>
+                <img src="/images/azucar.jpg" class="foto"></img>
+                <figcaption>
+                    <p class='porcentaje'>10% off</p>
+                </figcaption>
+            </figure>
+        </section>
+    <section class="detalleProducto">
+        <section class="caracteristicaProducto">
+            <article>
+                <h2>Nombre de producto</h2>
+                <h3>Marca</h3>
+                <h3>Código producto: 300845</h3>
 
-    </section>
-    <figure>
-        <img src="/images/azucar.jpg"></img>
-        <figcaption>
-            <p>10% off</p>
-        </figcaption>
-    </figure>
-    </section>
-    <section>
-        <article>
-            <h2>Nombre de producto</h2>
-            <h3>Marca</h3>
-            <h3>Código producto: 300845</h3>
-
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum debitis fuga repudiandae unde. Odit ab
-                eum dignissimos fuga molestia</p>
-        </article>
-    </section>
-    <section>
-        <form>
-            <input type="number" min="0" placeholder="0">
-            <a href="/productCart">
-                <button type="submit">AGREGAR AL CARRITO></button>
-            </a>
-        </form>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum debitis fuga repudiandae unde. Odit
+                    ab
+                    eum dignissimos fuga molestia</p>
+            </article>
+        </section>
+        <section class="cantidadCarrito">
+            <form>
+                <input type="number" min="0" placeholder="0">
+                <a href="/productCart">
+                    <button type="submit">AGREGAR AL CARRITO</button>
+                </a>
+            </form>
+        </section>
     </section>
     </main>
     <footer>
