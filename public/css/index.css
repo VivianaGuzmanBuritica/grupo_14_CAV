@@ -11,7 +11,7 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #f58634;
+    background-color: #ffcc29;
 }
 
 header a{
@@ -36,8 +36,7 @@ header a{
     margin-right: auto;
     display: block;
     justify-content: center;
-    width: 20%;
-    background-color: #f58634;
+    width: 20%
 }
 
 #ayuda{
@@ -197,9 +196,11 @@ header a {
     align-items: center;
 }
 
-.item{
+.item a{
     padding-left: 10px;
     padding-right: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .logo{
