@@ -87,6 +87,13 @@ h2{
     width: 150px;
 }
 
+.article:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
 .precio{
     color: red;
     font-weight: bold;
