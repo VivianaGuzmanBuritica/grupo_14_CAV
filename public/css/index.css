@@ -20,9 +20,55 @@ header a{
 }
 
 
-.navbar{
+
+.burgermenu input[type="checkbox"], .burgermenu .fa-bars, .burgermenu .fa-times {
+    position: absolute;  
+    left: 0;
+    top: 0; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    width: 48px;
+    height: 48px;  
+  }
+   
+  .burgermenu .fa-bars, .burgermenu .fa-times {
+    pointer-events: none;
+  }
+   
+  .burgermenu input[type="checkbox"] {
+    opacity: 0; 
+  }
+   
+   
+  .burgermenu nav {
     display: none;
-}
+  }
+
+  .burgermenu nav ul{
+      list-style-type: none;
+  }
+   
+  .burgermenu input:checked ~ nav {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    background-color: #ffcc29;
+    z-index: 3;
+    line-height: 25px;
+  }
+   
+  .burgermenu input:checked ~ .fa-bars {
+    display: none;
+  }
+   
+  .burgermenu input:not(:checked) ~ .fa-times {
+    display: none;
+  }
+
+
+
 
 #burger-menu{
     padding-top: 20px;
@@ -186,7 +232,8 @@ header a {
     display: none;
 }
 
-.navbar{
+
+.burgermenu .navbar{
     display: flex;
     justify-content: left;
 }
