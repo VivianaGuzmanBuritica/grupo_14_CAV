@@ -1,9 +1,10 @@
 const express= require("express");
 const app= express();
-
 const path= require("path");
 
-app.listen(3003, () => console.log("Servidor corriendo puerto 3003"))
+app.set("port", process.env.PORT || 3003)
+
+app.listen(app.get("port"),() => console.log("Servidor corriendo puerto:"+ app.get("port")))
 
 app.use(express.static(path.resolve(__dirname,"./public")))
 
