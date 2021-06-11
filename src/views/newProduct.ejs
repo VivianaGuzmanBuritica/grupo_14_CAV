@@ -1,34 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("./partials/head") %>
     <title>CAV</title>
     <link rel="stylesheet" href="/css/index.css"></link>
     <link rel="stylesheet" href="/css/login.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet">
 </head>
 <body>
-    <header>
-        <i class="fas fa-bars" id="burger-menu"></i>
-        <span><a href="/"><img src="/images/cav-verdecl.png" class="logo"></a></span>
-            <nav class="navbar">
-                <ul id="menu" type=none>
-                    <li class="item"><a>PRODUCTOS</a></li>
-                    <li class="item"><a>CAJAS</a></li>
-                    <li class="item"><a>PROMOCIONES</a></li>
-                    <li class="item"><a>MI CUENTA</a></li>
-                </ul>
-            </nav>
-                <span id="ayuda"><p>Ayuda</p>
-                    <i class="far fa-question-circle"></i></span>
-                    <a href="productCart.ejs"><span id="carrito"><p>Mi carrito</p>
-                    <i class="fas fa-shopping-cart"></i></span></a>
-            
-    </header>
+    <%- include("./partials/header") %>
     <main>
         <form>
             <fieldset>
@@ -40,32 +19,7 @@ rel="stylesheet">
                 <p class="registro"><a href="/register">REGISTRATE</a></p>
             </fieldset>
         </form>
-
     </main>
-    <footer>
-        <ul type=none>
-            <li class="links-footer"><a href="">QUIENES SOMOS</a></li>
-            <li class="links-footer"><a href="">PAGOS Y ENVIOS</a></li>
-            <li class="links-footer"><a href="">COMPRAS POR MAYOR</a></li>
-        </ul>
-        <ul type=none>
-            <li class="links-footer">CONTACTO</li>
-            <li><a href=""><i class="fab fa-whatsapp fa-2x" id="iconos"></i>Whatsapp</a></li>
-            <li><a href=""><i class="far fa-envelope fa-2x" id="iconos"></i>Email</a></li>
-        </ul>
-        <div class="rrss"><div class="links-footer">REDES SOCIALES</div>
-            <div></div><i class="fab fa-facebook-square fa-2x" id="iconos"></i>
-            <i class="fab fa-instagram-square fa-2x" id="iconos"></i>
-            <i class="fab fa-twitter-square fa-2x" id="iconos"></i></div></div>
-            <div class="newsletter"><div>NEWSLETTER</div>
-            <div>¡No te pierdas ninguna oferta!</div>
-                <form>
-                    <input type="text" name="nombre" placeholder="Nombre" id="newsletter">
-                    <input type="email" name="email" placeholder="Email" id="newsletter">
-                        <button type="submit" id="newsletter">ENVIAR</button></div>
-                </form></div>
-
-        
-    </footer>
+    <%- include("./partials/footer") %>
 </body>
 </html>
