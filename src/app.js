@@ -22,8 +22,11 @@ app.use(main);
 const product = require('./routes/product');
 app.use(product);
 
+const user = require('./routes/user');
+app.use(user);
+
 //app.get("/", (req,res) => res.sendFile(path.join(__dirname,"./views/index.html")))
-app.get("/login.html", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/login.html")))
+//app.get("/login.html", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/login.html")))
 app.get("/register", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/register.html")))
 app.get("/productCart.html", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/productCart.html")))
 //app.get("/productDetail.html", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/productDetail.html")))
