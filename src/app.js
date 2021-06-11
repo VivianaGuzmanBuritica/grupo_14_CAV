@@ -7,7 +7,6 @@ app.set("port", process.env.PORT || 3003)
 app.listen(app.get("port"),() => console.log("Servidor corriendo puerto:"+ app.get("port")))
 
 
-<<<<<<< HEAD:src/app.js
 // public access
 app.use(express.static(path.resolve(__dirname,"../public")))
 
@@ -25,13 +24,6 @@ app.get("/login.html", (req, res)=> res.sendFile(path.resolve(__dirname, "./view
 app.get("/register", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/register.html")))
 app.get("/productCart.html", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/productCart.html")))
 app.get("/productDetail.html", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/productDetail.html")))
-=======
-app.get("/", (req,res) => res.sendFile(path.join(__dirname,"./views/index.ejs")))
-app.get("/login", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/login.ejs")))
-app.get("/register", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/register.ejs")))
-app.get("/productCart", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/productCart.ejs")))
-app.get("/productDetail", (req, res)=> res.sendFile(path.resolve(__dirname, "./views/productDetail.ejs")))
->>>>>>> 48d5e5e0cb9dc1368aef1b657ffa73adab4ba505:app.js
 
 app.set("view engine","ejs");
 
