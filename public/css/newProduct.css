@@ -1,21 +1,32 @@
-form *{
+main *{
     margin: 0 auto;
-    background-color:#fff;
-    border-radius: 8px;
     border:none;
-    width: 60%;      
+    width: 60%;
+          
 }
 
-fieldset{
-    border:solid red 1px;
+ main form{
+    margin:0 auto;
+    background-color:#fff;
+    width: 80%;
+    border-radius: 8px;
+    padding: 10px;
 }
+
+label{
+    padding: 5px;
+    margin-top: 5%;
+
+}
+
 fieldset textarea{
     display: flex;
     align-items: center;
-    width: 300px;
+    width: 50vw;
     height: 100px;
     border: solid 1px #eee;
     font-family: Roboto;
+    margin: 10px 0px 20px 0px;
  }
 
 fieldset input, fieldset button {
@@ -25,8 +36,8 @@ fieldset input, fieldset button {
     border-radius: 5px;
     background-color: #eee;
     border: none;
-    width: 300px;
-    margin-top: 18px;  
+    width: 50vw;
+    margin: 15px auto;  
 }
 
 fieldset button{
@@ -45,4 +56,15 @@ button:hover{
 @keyframes boton{
     0%{background-color:#00af91;}
     100%{background-color: #007965;}
+}
+
+@media(min-width:480px) {
+
+    main form{
+       width: 70vmin;
+    }
+
+   main fieldset input,  fieldset button, fieldset textarea {
+        width: 60vmin;
+    }
 }
