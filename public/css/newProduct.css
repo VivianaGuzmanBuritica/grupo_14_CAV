@@ -6,6 +6,9 @@ form *{
     width: 60%;      
 }
 
+fieldset{
+    border:solid red 1px;
+}
 fieldset textarea{
     display: flex;
     align-items: center;
