@@ -17,8 +17,10 @@
                 <input type="text" name="name" id="name" required placeholder="Nombre de producto">
             </fieldset>
 
-            <fieldset> <label>Descripción:</label>
-                <textarea name="description" id="description">Escribe aquí las caracteristicas de tu producto</textarea>
+            <label id="description">Descripción:</label>
+            <fieldset>
+                
+                <textarea name="description" id="description" placeholder='Escribe aquí'></textarea>
             </fieldset>
 
             <fieldset>
@@ -37,11 +39,9 @@
                     <option value="Bebidas">
                     <option value="Congelados">
                 </datalist>
-            </fieldset>
-
-            <fieldset>
+                
                 <label>Precio:</label>
-                <input type="number" name="price" id="price">
+                <input type="number" min="0" name="price" id="price" placeholder="$300">
             </fieldset>
 
             <fieldset>
