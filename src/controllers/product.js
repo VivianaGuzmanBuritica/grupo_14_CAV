@@ -8,7 +8,7 @@ const productController = {
             category: req.body.category,
             price: req.body.price
         }
-        res.redirect("index")
+        res.redirect("index");
     }
 };
 
