@@ -28,6 +28,9 @@ app.use(user);
 const productCart = require('./routes/productCart');
 app.use(productCart);
 
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 
 
   

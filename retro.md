@@ -21,3 +21,28 @@ Sostener la comunicación para reportar los avances individuales hechos al proye
  
 Procrastincar las entregas en pos de investigar a fondo cada elemento que inlcuimos en el código. Si bien es una buena práctica que ayuda a evitar errores, no ayuda a hacer un uso eficiente del tiempo ni contribuye a la finalizacion de proyecto.
 
+
+Sprint 3
+
+## Dinámica de la estrella de mar:
+
+### 1. Comenzar a hacer:
+Establecer reuniones periódicas en vez de comunicarnos al momento de tener
+dudas o dificultades en la ejecución de las tareas.
+
+### 2. Hacer más:
+
+
+
+### 3. Continuar haciendo.
+Mantener comunicación fluida para despejar dudas y avanzar completando 
+las tareas.
+
+### 4. Hacer menos.
+
+
+### 5. Dejar de hacer.
+ 
+
+
+
