@@ -6,9 +6,11 @@ const productController = {
             name: req.body.name,
             description: req.body.description,
             category: req.body.category,
-            price: req.body.price
+            price: req.body.price,
         }
-        res.redirect("index");
+        console.log(req.body);
+        
+        res.redirect("newProduct")
     }
 };
 

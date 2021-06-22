@@ -1,6 +1,7 @@
 const express= require("express");
 const app= express();
 const path= require("path");
+const method = require('method-override');
 
 // server start
 app.set("port", process.env.PORT || 3003)
@@ -15,6 +16,11 @@ app.use(express.static(path.resolve(__dirname,"../public")))
 app.set('view engine','ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
+// Data Configuration 
+app.use(express.urlencoded({extended:false}));
+app.use(method("_method")) // ?_method=PUT
+app.use(express.json());
+
 // routes
 const main = require('./routes/main');
 app.use(main);
@@ -28,9 +34,5 @@ app.use(user);
 const productCart = require('./routes/productCart');
 app.use(productCart);
 
-app.use(express.urlencoded({extended:false}));
-app.use(express.json());
 
 
-
-  

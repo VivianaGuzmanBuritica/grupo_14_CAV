@@ -1,4 +1,4 @@
-# [RETROSPECTIVA PRIMER SPPRINT](https://proyectosagiles.org/2009/06/14/retrospectiva-estrella-mar-starfish-retrospective-scrum/)
+# [RETROSPECTIVA AL PRIMER SPPRINT](https://proyectosagiles.org/2009/06/14/retrospectiva-estrella-mar-starfish-retrospective-scrum/)
 
 ## Dinámica de la estrella de mar:
 
@@ -22,7 +22,7 @@ Sostener la comunicación para reportar los avances individuales hechos al proye
 Procrastincar las entregas en pos de investigar a fondo cada elemento que inlcuimos en el código. Si bien es una buena práctica que ayuda a evitar errores, no ayuda a hacer un uso eficiente del tiempo ni contribuye a la finalizacion de proyecto.
 
 
-Sprint 3
+# RETROSPECTIVA AL SEGUNDO SPRINT
 
 ## Dinámica de la estrella de mar:
 
@@ -31,7 +31,7 @@ Establecer reuniones periódicas en vez de comunicarnos al momento de tener
 dudas o dificultades en la ejecución de las tareas.
 
 ### 2. Hacer más:
-
+Consultar y actualizar oportunamente el tablero de tareas, para el monitoreo del desarrollo de las actividades.
 
 
 ### 3. Continuar haciendo.
@@ -39,10 +39,10 @@ Mantener comunicación fluida para despejar dudas y avanzar completando
 las tareas.
 
 ### 4. Hacer menos.
-
+Dividir tareas individualmente provoca falta de integración, se propone para el próximo Sprint, trabajar juntos para mejorar el aprendizaje de todas la fase de construcción del código.
 
 ### 5. Dejar de hacer.
- 
+ Incluir archivos o carpetas en el proyecto que se encuentren desvinculados con su funcionalidad, pues estos ocupan espacio en la memoria del mismo y se pueden prestar para confusiones.
 
 
 
