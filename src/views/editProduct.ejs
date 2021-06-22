@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("./partials/head") %>
+        <title>CAV</title>
+        <link rel="stylesheet" href="/css/index.css">
+        </link>
+        <link rel="stylesheet" href="/css/newProduct.css">
+        </link>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+        <main>
+            <form action="/editProduct?_method=PUT" method="POST" enctype="multipart/form-data">
+                <h2>Editar producto</h2>
+                <fieldset>
+                    <label>Nombre de producto:</label>
+                    <input type="text" name="name" id="name" required placeholder="Nombre de producto">
+                </fieldset>
+
+                <label id="description">Descripción:</label>
+                <fieldset>
+
+                    <textarea name="description" id="description" placeholder='Escribe aquí'></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <label>Ajuntar imagen</label>
+                    <input type="file" name="image" id="image">
+                </fieldset>
+
+                <fieldset>
+                    <label>Categoría:</label>
+                    <input list="category" name="category">
+                </fieldset>
+
+                <fieldset>
+                    <datalist id="category" placeholder="Categoría">
+                        <option value="Alacena">
+                        <option value="Bebidas">
+                        <option value="Congelados">
+                    </datalist>
+
+                    <label>Precio:</label>
+                    <input type="number" min="0" name="price" id="price" placeholder="$300">
+                </fieldset>
+
+                <fieldset>
+                    <button type="submit">Crear producto</button>
+                </fieldset>
+
+            </form>
+        </main>
+        <%- include("./partials/footer") %>
+</body>
+
+</html>

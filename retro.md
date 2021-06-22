@@ -39,8 +39,7 @@ Mantener comunicación fluida para despejar dudas y avanzar completando
 las tareas.
 
 ### 4. Hacer menos.
-
-
+Dividir tareas individualmente provoca falta de integración, se propone para el próximo Sprint, trabajar juntos para mejorar el aprendizaje de todas la fase de construcción del código.
 
 ### 5. Dejar de hacer.
  Incluir archivos o carpetas en el proyecto que se encuentren desvinculados con su funcionalidad, pues estos ocupan espacio en la memoria del mismo y se pueden prestar para confusiones.
