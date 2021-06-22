@@ -10,7 +10,7 @@ const productController = {
         }
         console.log(req.body);
         
-        res.redirect("index")
+        res.redirect("login")
     },
 
     edit:(req, res) => res.render('editProduct'),
@@ -23,7 +23,7 @@ const productController = {
         }
         console.log(req.body);
         
-        res.redirect("index")
+        res.redirect("login")
     }
 
 };
