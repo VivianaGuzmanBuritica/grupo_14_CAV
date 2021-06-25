@@ -10,7 +10,7 @@
 <body>
     <%- include("./partials/header") %>
     <main>
-        <form action="/login" method="POST">
+        <form action="/login" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <div class="icono"><i class="fas fa-user-alt"></i></div>
                 <input type="email" name="user" id="user" required placeholder="Usuario/ e-mail">
