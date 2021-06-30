@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 router.get('/ingresar', user.login);
 router.get('/registro',user.register);
 
-router.post('/login',user.userLogin);
+router.post('/perfil',user.userLogin);
 router.post('/registro',user.userRegister); 
 
 router.get("/create",user.create)//crear usuario
