@@ -20,6 +20,7 @@ const userController = {
             domicilio: req.body.domicilio,
             tipo: req.body.tipo,
             interes: req.body.interes,
+            fotoPerfil: req.body.fotoPerfil,
             fechaNacimiento: req.body.fechaNacimiento,
             password: req.body.password,
             confirmPassword: req.body.confirmPassword
