@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("./partials/head") %>
+    <%- include("../partials/head") %>
     <title>REGISTRATE</title>
     <link rel="stylesheet" href="/css/register.css"></link>
 </head>
 <body> 
-    <%- include("./partials/header") %> 
+    <%- include("../partials/header") %> 
     <main>
-        <form class="register" action="/register" method="POST" enctype="multipart/form-data">
+        <form class="register" action="/usuario/registro" method="POST" enctype="multipart/form-data">
             <fieldset>
             <legend><b>Nombre y apellido</b></legend>   
             <label for="name"></label>
@@ -98,10 +98,10 @@
                 
 
                 <input type="submit" value="Enviar">  
-                <input type="reset" value="Reset">
+                <input type="reset" value="Eliminar perfil">
             
         </form>
     </main>
-    <%- include("./partials/footer") %>
+    <%- include("../partials/footer") %>
 </body>
 </html>

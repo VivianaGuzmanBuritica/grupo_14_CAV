@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("./partials/head") %>
+        <title>CAV</title>
+        <link rel="stylesheet" href="/css/index.css">
+        </link>
+        <link rel="stylesheet" href="/css/login.css">
+        </link>
+
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+        <main>
+            <div class="icono"><i class="fas fa-user-alt"></i></div>
+            <p>Bienvenido</p>
+            <form action="/login" method="POST" enctype="multipart/form-data">
+              
+                <fieldset>
+                    
+                    <input type="email" name="user" id="user" required placeholder="Usuario/ e-mail">
+                    <input type="password" name="password" id="password" required placeholder="Contraseña">
+                    <p class="recuperarContrasena"><a href="">¿Olvidaste tu contraseña</a></p>
+                    <button type="submit">Editar perfil</button>
+                    <p class="registro"><a href="/profile">Editar</a></p>
+
+                </fieldset>
+            </form>
+        </main>
+        <%- include("./partials/footer") %>
+</body>
+
+</html>

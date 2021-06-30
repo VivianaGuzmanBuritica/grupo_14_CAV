@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %>
+    <title>REGISTRATE</title>
+    <link rel="stylesheet" href="/css/register.css"></link>
+</head>
+<body> 
+    <%- include("../partials/header") %> 
+    <main>
+        <form class="register" action="/register" method="POST" enctype="multipart/form-data">
+            <fieldset>
+            <legend><b>Nombre y apellido</b></legend>   
+            <label for="name"></label>
+            <input type="text" name="name" id="name">
+            </fieldset>
+            
+            <fieldset>
+            <legend><b>Nombre de usuario</b></legend>
+            <label for="username"></label>
+            <input type="text" name="username" id="usernames">
+            </fieldset>
+
+            
+            <fieldset>
+                <legend><b>Domicilio</b></legend>
+                <label for="domicilio"></label>
+                <input type="text" name="domicilio" id="domicilio">
+            </fieldset>
+            
+            <fieldset>
+                <legend><b>Tipo de comercio</b></legend>
+                <input list="tipo" name="tipo">
+                <datalist id="tipo">
+                    <option value="Autoservico">
+                    <option value="Almacen">
+                    <option value="Kiosco">
+                    <option value="Esatcion de servicio">
+                </datalist>
+               
+            </fieldset>
+            
+            <fieldset class="interes">
+                <legend><b>Rubros de interes</b></legend>
+                
+                <label for="Alimentos">
+                    <input type="checkbox" name="interes" id="alimentos" value="aliemntos">
+                    Alimentos
+                </label>
+                
+                <label for="bebidas">
+                    <input type="checkbox" name="interes" id="bebidas" value="bebidas">
+                    Bebidas
+                </label>
+                
+                <label for="lacteos">
+                    <input type="checkbox" name="interes" id="lacteos" value="lacteos">
+                    Lacteos
+                </label>
+                
+                <label for="congelados">
+                    <input type="checkbox" name="interes" id="congelados" value="congelados">
+                    Alim. congelados
+                </label>
+                
+                <label for="vida">
+                    <input type="checkbox" name="interes" id="vida" value="vida">
+                    <label for="vida">
+                        Vida sana
+                    </label>
+                    
+                </fieldset>
+                
+                <fieldset class="fotoperfil">
+                    <legend><b>Foto de perfil</b></legend>
+                    <label for="foto">
+                        <input type="file" name="fotoPerfil" id="foto perfil">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                <legend><b>Fecha de nacimiento</b></legend>
+                <label for="date"></label>
+                <input type="date" name="fechaNacimiento" id="fecha nacimiento">
+                </fieldset>
+
+            <fieldset>
+            <legend><b>Contraseña</b></legend>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" required>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Confirmar contraseña</b></legend>
+                <label for="password"></label>
+                <input type="password" name="confirmPassword" id="password" required>
+                </fieldset>
+                
+
+                <input type="submit" value="Enviar">  
+                <input type="reset" value="Eliminar perfil">
+            
+        </form>
+    </main>
+    <%- include("../partials/footer") %>
+</body>
+</html>
