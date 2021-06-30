@@ -1,6 +1,6 @@
 const productController = {
-    productDetail:(req, res) => res.render('productDetail'),
-    newProduct:(req, res) => res.render('newProduct'),
+    productDetail:(req, res) => res.render('products/productDetail'),
+    newProduct:(req, res) => res.render('products/newProduct'),
     createProduct: function(req,res){
         let producto= {
             name: req.body.name,
@@ -13,7 +13,7 @@ const productController = {
         res.redirect("login")
     },
 
-    edit:(req, res) => res.render('editProduct'),
+    edit:(req, res) => res.render('products/editProduct'),
     editProduct: function(req,res){
         let producto= {
             name: req.body.name,
