@@ -1,9 +1,9 @@
 const user = require('../models/user');
 
 const userController = {
-    login: (req, res) => res.render('login'),
+    login: (req, res) => res.render('users/login'),
 
-    registro: (req, res) => res.render('register'),
+    register: (req, res) => res.render('users/register'),
 
 
     userLogin: function (req, res) {
@@ -13,16 +13,16 @@ const userController = {
         }
         console.log(req.body);
 
-        res.redirect('/profile')
+        res.redirect('login')
     },
 
     create: (req,res) => res.render("register"),//crear usuario
     save: (req,res) => {
         let result = user.new(req.body,req.file)
-        return result == true ? res.redirect("/user/profile") : res.send("Error al cargar la informacion") 
+        return result == true ? res.redirect("users/profile") : res.send("Error al cargar la informacion") 
     },// guardar el usuario guardado
-    show: (req, res) => res.render("user/profile", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
-    edit: (req, res) => res.render("user/edit", { user: user.one(req.params.id) }),//mostrar vista perfila editar//
+    show: (req, res) => res.render("users/profile", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
+    edit: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }),//mostrar vista perfila editar//
     update: (req, res) => {
         let result = user.edit(req.body, req.file, req.params.id)
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion")
@@ -45,7 +45,7 @@ const userController = {
         }
         console.log(req.body);
 
-        res.redirect('/login')
+        res.redirect('/users/register')
     }
 
 };
