@@ -14,16 +14,18 @@
 <body>
     <%- include("./partials/header") %>
         <main>
+            <div class="icono"><i class="fas fa-user-alt"></i></div>
+            <p>Bienvenido</p>
             <form action="/login" method="POST" enctype="multipart/form-data">
+              
                 <fieldset>
-                    <div class="icono"><i class="fas fa-user-alt"></i></div>
+                    
                     <input type="email" name="user" id="user" required placeholder="Usuario/ e-mail">
                     <input type="password" name="password" id="password" required placeholder="Contraseña">
                     <p class="recuperarContrasena"><a href="">¿Olvidaste tu contraseña</a></p>
-                    <button type="submit">Enviar</button>
-                   
-                    <p class="registro"><a href="/register">REGISTRATE</a></p>
-                    <p class="registro"><a href="/profile">perfil</a></p>
+                    <button type="submit">Editar perfil</button>
+                    <p class="registro"><a href="/profile">Editar</a></p>
+
                 </fieldset>
             </form>
         </main>
