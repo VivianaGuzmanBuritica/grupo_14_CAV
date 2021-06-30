@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
      
     const upload = multer({storage})
 
-router.get('/login', user.login);
+router.get('/ingresar', user.login);//cambiar ruta URL por ingresar???
 router.get('/register',user.registro);
 
 router.post('/login',user.userLogin);

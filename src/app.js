@@ -28,8 +28,8 @@ app.use(main);
 const product = require('./routes/product');
 app.use(product);
 
-const user = require('./routes/user');
-app.use(user);
+const user =require('./routes/user');
+app.use('/usuario', user);
 
 const productCart = require('./routes/productCart');
 app.use(productCart);
