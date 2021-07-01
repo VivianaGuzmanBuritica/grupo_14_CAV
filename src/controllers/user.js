@@ -1,4 +1,9 @@
 const user = require('../models/user');
+const path = require('path');
+const fs = require('fs');
+
+
+
 
 const userController = {
     login: (req, res) => res.render('users/login'),
@@ -17,7 +22,7 @@ const userController = {
     },
 
     create: (req,res) => res.render("register"),//crear usuario
-    save: (req,res) => {
+    save: (req,res) => { 
         let result = user.new(req.body,req.file)
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
     },// guardar el usuario guardado
@@ -32,8 +37,17 @@ const userController = {
         return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
     },//borrar usuario
 
+    all: function() {
+        const directory = path.resolve(__dirname,"../data","users.json");
+        const file = fs.readFileSync(directory,"utf-8");
+        const convert = JSON.parse(file);
+        return convert;
+    },
+
     userRegister: function (req, res) {
-        let register = {
+        const directory = path.resolve(__dirname,"../data","users.json");
+        let usuarios = user.all();
+         let register = {
             name: req.body.name,
             username: req.body.username,
             domicilio: req.body.domicilio,
@@ -41,11 +55,16 @@ const userController = {
             interes: req.body.interes,
             fechaNacimiento: req.body.fechaNacimiento,
             password: req.body.password,
-            confirmPassword: req.body.confirmPassword
-        }
-        console.log(req.body);
+            confirmPassword: req.body.confirmPassword,
+            
+        };
+        usuarios.push(register)
+        fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
+        console.log(usuarios);
+        res.send('llegue')
+        return true;   
 
-        res.redirect('/users/register')
+        
     }
 
 };

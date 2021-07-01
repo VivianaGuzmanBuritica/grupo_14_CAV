@@ -19,7 +19,7 @@ router.get('/ingresar', user.login);
 router.get('/registro',user.register);
 
 router.post('/perfil',user.userLogin);
-router.post('/registro',user.userRegister); 
+router.post('/registro',[upload.any()],user.userRegister); 
 
 router.get("/create",user.create)//crear usuario
 router.post("/save",[upload.any()],user.save)//guardar usuario creado revisar ANY
