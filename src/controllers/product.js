@@ -1,4 +1,11 @@
+const product = require('../models/product');
+const path = require('path');
+const fs = require('fs');
+const productModel = require('../models/product');
+const { all } = require('../models/product');
+
 const productController = {
+    list: (req,res) => res.render('products/productList',{list:product.all}),
     productDetail:(req, res) => res.render('products/productDetail'),
     newProduct:(req, res) => res.render('products/newProduct'),
     createProduct: function(req,res){
@@ -24,8 +31,13 @@ const productController = {
         console.log(req.body);
         
         res.redirect("login")
-    }
+    },
 
-};
+    deleteProduct: (req,res) => {
+        let result = product.delete(req.params.id);
+        return result == true ? res.redirect("/") : res.send("Error")
+    }, 
+
+}
 
 module.exports = productController;

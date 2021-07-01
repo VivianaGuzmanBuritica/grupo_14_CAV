@@ -17,5 +17,15 @@
     "fechaNacimiento": "2021-06-09",
     "password": "asdf",
     "confirmPassword": "asd"
+  },
+  {
+    "name": "Agustina",
+    "username": "agdimarco",
+    "domicilio": "fffff",
+    "tipo": "Autoservico",
+    "interes": "bebidas",
+    "fechaNacimiento": "1993-01-08",
+    "password": "1234",
+    "confirmPassword": "1234"
   }
 ]
