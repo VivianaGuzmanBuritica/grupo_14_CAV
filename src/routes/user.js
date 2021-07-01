@@ -16,12 +16,13 @@ const storage = multer.diskStorage({
     const upload = multer({storage})
 
 router.get('/ingresar', user.login);
-router.post('/ingresar',user.userLogin);
+router.post('/ingresar',[upload.any()],user.userLogin);
 
 router.get('/registro',user.register);
 router.post('/registro',[upload.any()],user.userRegister); 
 
 router.get('/perfil', user.profile);
+router.post('/perfil', user.profile);
 
 router.get("/:id",user.show); //mostrar vista profile REVISAR "/profile/:id"
 router.get("/edit/:id",user.edit); //mostra vista editar profile

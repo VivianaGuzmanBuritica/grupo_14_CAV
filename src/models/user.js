@@ -19,6 +19,7 @@ const model = {
         let usuarios = this.all();
         let resultado = usuarios.find(usuario => usuario[field] == text)
         return resultado;
+       
     },
 
     new: function (data,file) {
@@ -73,5 +74,6 @@ const model = {
 };
 
 console.log(model.findByEmail('email','vivianaguzmanburitica@gmail.com'))
+
 
 module.exports = model;
