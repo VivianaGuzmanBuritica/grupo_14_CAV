@@ -36,10 +36,7 @@
     "fechaNacimiento": "2021-07-20",
     "password": "ddd",
     "confirmPassword": "ddd"
-    "fechaNacimiento": "2021-06-09",
-    "password": "asdf",
-    "confirmPassword": "asd"
-  },
+    },
   {
     "name": "Agustina",
     "username": "agdimarco",
