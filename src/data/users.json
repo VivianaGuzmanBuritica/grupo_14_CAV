@@ -1,23 +1,42 @@
 [
   {
-    "username": "CMN",
-    "domicilio": "CASA",
-    "tipo": "AB",
-    "interes": "TODOS",
-    "fechaNacimiento": "01/01/01",
-    "password": "1234",
-    "confirmPassword": "1234"
+    "name": "Viviana",
+    "username": "G",
+    "domicilio": "Buriticá",
+    "tipo": "",
+    "fechaNacimiento": "",
+    "password": "sss",
+    "confirmPassword": "sss"
   },
   {
-    "name": "nico",
-    "username": "nico",
-    "domicilio": "vedia 285",
+    "name": "Viviana",
+    "email": "vivianaguzmanburitica@gmail.com",
+    "domicilio": "Buriticá",
+    "tipo": "",
+    "fechaNacimiento": "",
+    "password": "sss",
+    "confirmPassword": "sss"
+  },
+  {
+    "name": "Viviana",
+    "email": "viviana@gmail.com",
+    "domicilio": "Buriticá",
     "tipo": "Autoservico",
     "interes": "aliemntos",
-    "fechaNacimiento": "2021-06-09",
-    "password": "asdf",
-    "confirmPassword": "asd"
+    "fechaNacimiento": "2021-07-06",
+    "password": "111",
+    "confirmPassword": "111"
   },
+  {
+    "name": "daniela",
+    "email": "daniela@gmail.com",
+    "domicilio": "daddd",
+    "tipo": "Autoservico",
+    "interes": "aliemntos",
+    "fechaNacimiento": "2021-07-20",
+    "password": "ddd",
+    "confirmPassword": "ddd"
+    },
   {
     "name": "Agustina",
     "username": "agdimarco",
