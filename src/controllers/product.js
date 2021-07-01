@@ -5,7 +5,7 @@ const productModel = require('../models/product');
 const { all } = require('../models/product');
 
 const productController = {
-    //list: (req,res) => res.render('products/productList',{...product.all()}),//
+    list: (req,res) => res.render('products/productList'),
     productDetail:(req, res) => res.render('products/productDetail'),
     newProduct:(req, res) => res.render('products/newProduct'),
     createProduct: function(req,res){
