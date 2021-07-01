@@ -8,11 +8,6 @@ const productModel = {
         const convert = JSON.parse(file)
         return convert
     },
-    one: function (id) {
-        let productos = this.all();
-        let resultado = productos.find(producto => producto.id == id)
-        return resultado;
-    }
 
 }
 
