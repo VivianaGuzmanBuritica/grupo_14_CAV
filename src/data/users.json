@@ -1,0 +1,21 @@
+[
+  {
+    "username": "CMN",
+    "domicilio": "CASA",
+    "tipo": "AB",
+    "interes": "TODOS",
+    "fechaNacimiento": "01/01/01",
+    "password": "1234",
+    "confirmPassword": "1234"
+  },
+  {
+    "name": "nico",
+    "username": "nico",
+    "domicilio": "vedia 285",
+    "tipo": "Autoservico",
+    "interes": "aliemntos",
+    "fechaNacimiento": "2021-06-09",
+    "password": "asdf",
+    "confirmPassword": "asd"
+  }
+]
