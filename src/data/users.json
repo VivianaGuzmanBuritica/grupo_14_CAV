@@ -1,10 +1,11 @@
 [
   {
-    "name": "Viviana",
-    "username": "G",
-    "domicilio": "Buriticá",
-    "tipo": "",
-    "fechaNacimiento": "",
+    "name": "daniela",
+    "email": "daniela@gmail.com",
+    "domicilio": "aaa",
+    "tipo": "Autoservico",
+    "interes": "bebidas",
+    "fechaNacimiento": "2021-07-07",
     "password": "sss",
     "confirmPassword": "sss"
   },
@@ -12,39 +13,10 @@
     "name": "Viviana",
     "email": "vivianaguzmanburitica@gmail.com",
     "domicilio": "Buriticá",
-    "tipo": "",
-    "fechaNacimiento": "",
-    "password": "sss",
-    "confirmPassword": "sss"
-  },
-  {
-    "name": "Viviana",
-    "email": "viviana@gmail.com",
-    "domicilio": "Buriticá",
     "tipo": "Autoservico",
     "interes": "aliemntos",
-    "fechaNacimiento": "2021-07-06",
-    "password": "111",
-    "confirmPassword": "111"
-  },
-  {
-    "name": "daniela",
-    "email": "daniela@gmail.com",
-    "domicilio": "daddd",
-    "tipo": "Autoservico",
-    "interes": "aliemntos",
-    "fechaNacimiento": "2021-07-20",
-    "password": "ddd",
-    "confirmPassword": "ddd"
-    },
-  {
-    "name": "Agustina",
-    "username": "agdimarco",
-    "domicilio": "fffff",
-    "tipo": "Autoservico",
-    "interes": "bebidas",
-    "fechaNacimiento": "1993-01-08",
-    "password": "1234",
-    "confirmPassword": "1234"
+    "fechaNacimiento": "2021-07-21",
+    "password": "dddd",
+    "confirmPassword": "ddddd"
   }
 ]
