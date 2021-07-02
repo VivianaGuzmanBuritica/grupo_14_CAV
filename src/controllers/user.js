@@ -12,8 +12,8 @@ const userController = {
     
     userLogin: function (req, res) {
       let usuarios = user.findByEmail('email', req.body.email);
-        return res.send(usuarios)
-        //return res.redirect('perfil') 
+    
+    return res.redirect('perfil') 
     },
 
     userRegister: function (req, res) {
@@ -34,6 +34,7 @@ const userController = {
         usuarios.push(register)
         fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
         console.log(usuarios);
+
         res.redirect('ingresar')
         return true;   
       

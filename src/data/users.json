@@ -1,22 +1,72 @@
 [
   {
-    "name": "daniela",
-    "email": "daniela@gmail.com",
-    "domicilio": "aaa",
+    "name": "Christian",
+    "email": "cmn@vemart.com.ar",
+    "domicilio": "Novello",
     "tipo": "Autoservico",
-    "interes": "bebidas",
+    "interes": "aliemntos",
+    "fechaNacimiento": "2021-07-06",
+    "password": "1234",
+    "confirmPassword": "1354"
+  },
+  {
+    "name": "nico",
+    "email": "",
+    "domicilio": "vedia 285",
+    "tipo": "Autoservico",
+    "interes": "aliemntos",
+    "fechaNacimiento": "2021-06-09",
+    "password": "aq",
+    "confirmPassword": "aqaq"
+  },
+  {
+    "name": "martin",
+    "email": "cmn@vemart.com.ar",
+    "domicilio": "acha",
+    "tipo": "Autoservico",
+    "interes": "lacteos",
     "fechaNacimiento": "2021-07-07",
-    "password": "sss",
+    "password": "ccc",
     "confirmPassword": "sss"
   },
   {
-    "name": "Viviana",
-    "email": "vivianaguzmanburitica@gmail.com",
-    "domicilio": "Buriticá",
+    "name": "Christian",
+    "email": "cmn@vemart.com.ar",
+    "domicilio": "Novello",
     "tipo": "Autoservico",
     "interes": "aliemntos",
-    "fechaNacimiento": "2021-07-21",
-    "password": "dddd",
-    "confirmPassword": "ddddd"
+    "fechaNacimiento": "2021-07-07",
+    "password": "cccc",
+    "confirmPassword": "cccc"
+  },
+  {
+    "name": "Christian",
+    "email": "cmn@vemart.com.ar",
+    "domicilio": "Novello",
+    "tipo": "Autoservico",
+    "interes": "aliemntos",
+    "fechaNacimiento": "2021-07-07",
+    "password": "assss",
+    "confirmPassword": "assss"
+  },
+  {
+    "name": "Christian",
+    "email": "cmn@vemart.com.ar",
+    "domicilio": "Novello",
+    "tipo": "Autoservico",
+    "interes": "bebidas",
+    "fechaNacimiento": "",
+    "password": "assss",
+    "confirmPassword": "sss"
+  },
+  {
+    "name": "Christian",
+    "email": "cmn@vemart.com.ar",
+    "domicilio": "Novello",
+    "tipo": "Autoservico",
+    "interes": "lacteos",
+    "fechaNacimiento": "2021-06-30",
+    "password": "assss",
+    "confirmPassword": "ssss"
   }
 ]

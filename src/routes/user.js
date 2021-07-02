@@ -6,22 +6,23 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.resolve(__dirname,'../../uploads/avatars'))
+        cb(null, 'public/uploads/avatars')
         },
       filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
+        cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname));
       }
     })
      
     const upload = multer({storage})
 
 router.get('/ingresar', user.login);
-router.post('/ingresar',user.userLogin);
+router.post('/ingresar',[upload.any()],user.userLogin);
 
 router.get('/registro',user.register);
 router.post('/registro',[upload.any()],user.userRegister); 
 
 router.get('/perfil', user.profile);
+router.post('/perfil', user.profile);
 
 router.get("/:id",user.show); //mostrar vista profile REVISAR "/profile/:id"
 router.get("/edit/:id",user.edit); //mostra vista editar profile
