@@ -19,10 +19,10 @@ const model = {
         let nuevo = {
             id: productos.length > 0 ? productos[productos.length -1].id + 1: 1,
             name: data.name,
-            //brand: //,
+            brand: data.brand,
             description: data.description,
-            //image: //
-            //category: //
+            image: file.filename,
+            category:data.category,
             price: data.price
             
         }    
