@@ -1,57 +1,37 @@
-[{
+[
+  {
     "id": 1,
     "name": "Tobey",
+    "brand": 2,
     "description": "Sanderson",
     "image": "product1.jpg",
     "category": 76,
     "price": "$2.73"
-  }, {
+  },
+  {
     "id": 2,
     "name": "Robbin",
+    "brand": 4,
     "description": "Firmin",
     "image": "product2.jpg",
     "category": 44,
     "price": "$8.53"
-  }, {
+  },
+  {
     "id": 3,
     "name": "Fletch",
+    "brand": 3,
     "description": "Ironmonger",
     "image": "product3.jpg",
     "category": 62,
     "price": "$2.17"
-  }, {
+  },
+  {
     "id": 4,
-    "name": "Rodie",
-    "description": "Hebburn",
-    "image": "product4.jpg",
-    "category": 84,
-    "price": "$7.18"
-  }, {
+    "brand": null
+  },
+  {
     "id": 5,
-    "name": "Kat",
-    "description": "Handslip",
-    "image": "product5.jpg",
-    "category": 67,
-    "price": "$3.36"
-  }, {
-    "id": 6,
-    "name": "Valentia",
-    "description": "Alten",
-    "image": "product6.jpg",
-    "category": 21,
-    "price": "$8.81"
-  }, {
-    "id": 7,
-    "name": "Stacy",
-    "description": "Braunston",
-    "image": "product7.jpg",
-    "category": 30,
-    "price": "$9.04"
-  }, {
-    "id": 8,
-    "name": "Shelba",
-    "description": "Wincott",
-    "image": "product8.jpg",
-    "category": 54,
-    "price": "$4.47"
-  }]
+    "brand": null
+  }
+]
