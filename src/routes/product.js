@@ -5,16 +5,18 @@ const product = require('../controllers/product');
 const multer = require('multer');
 const path = require('path');
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'public/uploads/products')
-        },
-      filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname));
+let dest = multer.diskStorage({
+  destination: function (req, file, cb) {
+      let extension = path.extname(file.originalname);
+      if(extension.indexOf("jpg") > 0){
+          cb(null, path.resolve(__dirname,"../../public/uploads","products"))
       }
-    })
-     
-    const upload = multer({storage})
+  },
+  filename: function (req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
+  }
+})
+const upload = multer({storage:dest});
 
 
 router.get('/productDetail', product.productDetail);
