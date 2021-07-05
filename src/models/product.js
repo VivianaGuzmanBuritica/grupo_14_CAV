@@ -1,5 +1,7 @@
 const path = require('path');
 const fs = require('fs');
+const categoryModel = require('./category.js');
+const brandModel = require('./brand.js');
 
 const model = {
     all: function() {
@@ -28,19 +30,22 @@ const model = {
         }    
         productos.push(nuevo)
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
-        return true;    
+        console.log('creado con exito');
+        return true;
+       
+            
     },
 
     edit: function (data,file,id) {
         const directory = path.resolve(__dirname,"../data","products.json")
         let productos = this.all();
         productos.map(producto => {
-            if(producto.id == id ){
+             if(producto.id == id ){
                 producto.name = data.name,
                 producto.brand = parseInt(data.brand),
                 producto.description = data.description,
                 producto.image = file.filename,
-                producto.category = data.category.map(category => parseInt(category)),
+                producto.category = data.category,
                 producto.price = data.price
                 return producto
             }
