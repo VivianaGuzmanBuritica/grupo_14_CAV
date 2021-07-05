@@ -13,42 +13,65 @@
 <body>
     <%- include("../partials/header") %>
         <main>
-            <form action="/editProduct?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/editProduct/<%= product.id %>?_method=PUT" method="post"  enctype="multipart/form-data">
+               
                 <h2>Editar producto</h2>
+                
+                <fieldset>
+                    <label>ID de producto:</label>
+                    <input type="text" name="id" id="id" value="<%= product.id %>">
+                </fieldset>
+
+
                 <fieldset>
                     <label>Nombre de producto:</label>
-                    <input type="text" name="name" id="name" required placeholder="Nombre de producto">
+                    <input type="text" name="name" id="name" value="<%= product.name %>">
                 </fieldset>
 
                 <label id="description">Descripción:</label>
+                
                 <fieldset>
-
-                    <textarea name="description" id="description" placeholder='Escribe aquí'></textarea>
+                    <textarea name="description" id="description" placeholder="<%= product.description %>"></textarea>
                 </fieldset>
 
                 <fieldset>
+                    <figure><img src="/uploads/products/<%=product.image%>" alt=""></figure>
+               
                     <label>Ajuntar imagen</label>
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image" required>
                 </fieldset>
+
+                
+                 <fieldset>
+                    <label>Marca:</label>
+                    <input list="brand" name="brand" placeholder="<%= product.brand %>">
+                </fieldset>
+
+                <fieldset>
+                    <datalist id="brand">
+                        <option value="Alacena">
+                        <option value="Bebidas">
+                        <option value="Congelados">
+                    </datalist>
 
                 <fieldset>
                     <label>Categoría:</label>
-                    <input list="category" name="category">
+                    <input list="category" name="category" placeholder="<%= product.category %>">
                 </fieldset>
 
                 <fieldset>
-                    <datalist id="category" placeholder="Categoría">
+                    <datalist id="category">
                         <option value="Alacena">
                         <option value="Bebidas">
                         <option value="Congelados">
                     </datalist>
 
                     <label>Precio:</label>
-                    <input type="number" min="0" name="price" id="price" placeholder="$300">
+                    <input type="number" min="0" name="price" id="price" id="name" value="<%= product.price %>">
                 </fieldset>
 
                 <fieldset>
-                    <button type="submit">Crear producto</button>
+                    <button type="submit">Editar producto</button>
                 </fieldset>
 
             </form>

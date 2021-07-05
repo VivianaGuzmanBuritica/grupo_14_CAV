@@ -72,6 +72,6 @@ const model = {
     }
 };
 
-console.log(model.findByEmail('email','daniela@gmail.com'))
+
 
 module.exports = model;
