@@ -82,20 +82,20 @@
   },
   {
     "id": 17,
-    "name": "queso",
-    "brand": "COCA",
-    "description": "",
-    "image": "image-1625454131687.jpg",
-    "category": "Bebidas",
-    "price": "50"
+    "name": "Chocoarroz",
+    "brand": null,
+    "description": "Chocoarroz dulce de leche",
+    "image": "image-1625456272934.jpg",
+    "category": "Alacenas",
+    "price": "45"
   },
   {
     "id": 18,
     "name": "postre light vainilla",
     "brand": null,
-    "description": "postre light vainilla 50g",
-    "image": "image-1625452435057.jpg",
-    "category": "Alacena",
-    "price": "46"
+    "description": "",
+    "image": "image-1625530872036.jpg",
+    "category": "Alacenas",
+    "price": "40"
   }
 ]

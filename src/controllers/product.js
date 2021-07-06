@@ -24,8 +24,8 @@ const productController = {
     deleteProduct: (req,res) => {
         let result = product.delete(req.params.id);
         return result == true ? res.redirect("/") : res.send("Error")
-    }, 
-
+    },
+    
 }
 
 module.exports = productController;
