@@ -13,7 +13,7 @@ main{
     justify-content: center;
     text-align: center;
     padding: 20px;
-    background-color: #fce59b;
+    /*background-color: #fce59b;*/
 }
 
 main h4{
@@ -41,8 +41,9 @@ h2{
     text-decoration: none;
 }
 
-.article > img {
+.article img {
     width: 150px;
+    height: 150px;
 }
 
 .article:hover{

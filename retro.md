@@ -44,5 +44,25 @@ Dividir tareas individualmente provoca falta de integración, se propone para el
 ### 5. Dejar de hacer.
  Incluir archivos o carpetas en el proyecto que se encuentren desvinculados con su funcionalidad, pues estos ocupan espacio en la memoria del mismo y se pueden prestar para confusiones.
 
+ # RETROSPECTIVA AL TERCER SPRINT
+
+## Dinámica de la estrella de mar:
+
+### 1. Comenzar a hacer:
+
+
+### 2. Hacer más:
+Consultar más dudas con los tutores (en el afán por resolver solos, a veces se traba el avance sobre algunos
+puntos)
+
+### 3. Continuar haciendo.
+Mantener contacto fluido y brindarnos retroalimentación entre nosotros respecto al trabajo realizado
+
+### 4. Hacer menos.
+
+
+### 5. Dejar de hacer.
+
+
 
 

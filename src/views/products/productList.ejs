@@ -2,17 +2,41 @@
 <html lang="es">
 
 <head>
-    <%- include("../partials/head") %> 
-    <title>CAV</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <%- include("../partials/head") %>
+        <title>CAV</title>
+        <link rel="stylesheet" href="/css/index.css">
 </head>
-
 
 <body>
     <%- include("../partials/header") %>
+        <main>
+            <section >
+                <% list.forEach(product=> { %>
+                    <article class="article">
+                        <% if (product.image) { %>
+                            <figure><img src="/uploads/products/<%= product.image%>" alt=""></figure>
+                            <% } else { %>
+                                <figure><img src="/images/default.jpg" alt=""></figure>
+                                <% } %>
+                                    <section>
+                                        <p>
+                                            <%= product.name %>
+                                        </p>
+                                        <p>$<%= product.price %>
+                                        </p>
+                                        <div class="botones-home">
+                                            <span class="botones"><a href="/productDetail/<%= product.id %>"><i
+                                                        class="far fa-eye"></i>DETALLES</span></a>
+                                            <a href="productCart"><span class="botones"><i
+                                                        class="fas fa-shopping-cart"></i>COMPRAR</span></a>
+                                        </div>
 
-  
-    <%- include("../partials/footer") %>
+                                    </section>
+                    </article>
+                    <% }) %>
+            </section>
+        </main>
+        <%- include("../partials/footer") %>
 </body>
 
 </html>

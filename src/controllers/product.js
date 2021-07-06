@@ -6,7 +6,7 @@ const { all } = require('../models/product');
 
 const productController = {
     list: (req,res) => res.render('products/productList',{list: product.all()}),// variable list??
-    productDetail:(req, res) => res.render('products/productDetail'),
+    productDetail:(req, res) => res.render('products/productDetail',{product:product.one(req.params.id)}), // para mostrar en navegador req.body?
     newProduct:(req, res) => res.render('products/newProduct'),
     createProduct: (req,res) => {
         let result = product.new(req.body,req.file)

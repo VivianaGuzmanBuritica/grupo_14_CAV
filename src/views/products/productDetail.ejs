@@ -3,52 +3,50 @@
 
 <head>
     <%- include("../partials/head") %>
-    <title>Detalle del producto</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/productDetail.css">
+        <title>Detalle del producto</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/productDetail.css">
 </head>
 
 <body>
     <%- include("../partials/header") %>
-    <main>
-        
-        <section class="miniaturas">
-            <figure>
-                <img src="/skus/1084.jpg" class="imagenes"></img>
-                <img src="/skus/1085.jpg"class="imagenes"></img>
-                <img src="/skus/1085.jpg"class="imagenes"></img>
-            </figure>
-        </section>
-        <section class="fotoProducto">
-            <figure>
-                <img src="/skus/1084.jpg" class="foto"></img>
-                <figcaption>
-                    <p class='porcentaje'>10% off</p>
-                </figcaption>
-            </figure>
-        </section>
-    <section class="detalleProducto">
-        <section class="caracteristicaProducto">
-            <article>
-                <h2>Nombre de producto</h2>
-                <h3>Marca</h3>
-                <h3>Código producto: 300845</h3>
-
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum debitis fuga repudiandae unde. Odit
-                    ab
-                    eum dignissimos fuga molestia</p>
-            </article>
-        </section>
-        <section class="cantidadCarrito">
-            <form>
-                <input type="number" min="0" placeholder="0">
-                    <button type="submit"><a href='/productCart'>IR AL CARRITO</a></button>
-                    <button type="submit"><a href='/editProduct'>EDITAR PRODUCTO</a></button>
-            </form>
-        </section>
-    </section>
-    </main>
-    <%- include("../partials/footer") %>
+        <main>
+            <section class="miniaturas">
+                <figure>
+                    <img src="/uploads/products/<%= product.image%>" class="imagenes"></img>
+                    <img src="/uploads/products/<%= product.image%>" class="imagenes"></img>
+                    <img src="/uploads/products/<%= product.image%>" class="imagenes"></img>
+                </figure>
+            </section>
+            <section class="fotoProducto">
+                <figure>
+                    <img src="/uploads/products/<%= product.image%>" class="foto"></img>
+                    <figcaption>
+                        <p class='porcentaje'>10% off</p>
+                    </figcaption>
+                </figure>
+            </section>
+            <section class="detalleProducto">
+                <section class="caracteristicaProducto">
+                    <article>
+                        <h2><%= product.name %></h2>
+                        <h3><%= product.brand %></h3>
+                        <h3>Código producto: <%= product.id %></h3>
+                        <p><%= product.description %></p>
+                        <p>$<%= product.price %></p>
+                    </article>
+                </section>
+                <section class="cantidadCarrito">
+                    <form>
+                        <input type="number" min="0" placeholder="0">
+                        
+                        <button type="submit"><a href='/productCart'>IR AL CARRITO</a></button>
+                        <button type="submit"><a href='/editProduct'>EDITAR PRODUCTO</a></button>
+                    </form>
+                </section>
+            </section>
+        </main>
+        <%- include("../partials/footer") %>
 </body>
 
 </html>
