@@ -15,19 +15,19 @@
     <%- include("../partials/header") %>
         <main>
             <div class="icono"><i class="fas fa-user-alt"></i></div>
-            <p> Foto Perfil<!--%= 'req.body.fotoPerfil' %>--></p>
+            <p> Foto Perfil<!--%= 'user.fotoPerfil' %>--></p>
             <form action="/usuario/perfil" method="POST" enctype="multipart/form-data">
 
                 <fieldset>
                     
-                    <p>Nombre:<!--%=  req.body.name %>--></p>
-                    <p>email:<!--%=  req.body.email%>--></p>
-                    <p>domicilio:<!--%=  req.body.domicilio%>--></p>
-                    <p>tipo:<!--%=  req.body.tipo%>--></p>
-                    <p>interes:<!--%=  req.body.interes%>--></p>
-                    <p>fechaNacimiento:<!--%= req.body.fechaNacimiento%>--></p>
-                    <p>password:<!--%= req.body.password%>--></p>
-                    <p>confirmPassword:<!--%= req.body.confirmPassword%>--></p>
+                    <p>Nombre:<!--%=  user.name %>--></p>
+                    <p>email:<!--%=  user.email%>--></p>
+                    <p>domicilio:<!--%=  user.domicilio%>--></p>
+                    <p>tipo:<!--%=  user.tipo%>--></p>
+                    <p>interes:<!--%=  user.interes%>--></p>
+                    <p>fechaNacimiento:<!--%= user.fechaNacimiento%>--></p>
+                    <p>password:<!--%= user.password%>--></p>
+                    <p>confirmPassword:<!--%= user.confirmPassword%>--></p>
                    
                     <button type="submit">Editar perfil</button>
                   
