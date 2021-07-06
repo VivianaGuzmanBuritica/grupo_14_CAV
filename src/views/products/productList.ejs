@@ -4,12 +4,28 @@
 <head>
     <%- include("../partials/head") %> 
     <title>CAV</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/productList.css">
 </head>
 
 
 <body>
     <%- include("../partials/header") %>
+
+    <section id="list-products">
+        <% list.forEach(product => { %>
+        <article>
+            <% if (product.image) { %>
+                <figure><img src="/uploads/products/<%= product.image%>" alt=""></figure>
+            <% } else { %>
+                <figure><img src="/images/default.jpg" alt=""></figure>
+            <% } %>
+            <section>
+                <h2><%= product.name %></h2>
+                <a href="/product/<%= product.id %>">show more</a>
+            </section>
+        </article>
+        <% }) %>
+    </section>
 
   
     <%- include("../partials/footer") %>
