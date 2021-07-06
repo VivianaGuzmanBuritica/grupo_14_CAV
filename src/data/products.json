@@ -1,11 +1,11 @@
 [
   {
     "id": 8,
-    "name": "Tallarines Matarrazzo",
-    "brand": "Matarazzo",
-    "description": "Tallarines Matarazzo  500 G",
-    "image": "image-1625405310683.jpg",
-    "category": "Alacena",
+    "name": "Milanesa de soja",
+    "brand": null,
+    "description": "Milanesa de soja lucc",
+    "image": "image-1625613848299.jpg",
+    "category": "",
     "price": "150"
   },
   {
@@ -29,10 +29,10 @@
   {
     "id": 11,
     "name": "Tirabuzon Matarrazzo",
-    "brand": "Matarazzo",
+    "brand": null,
     "description": "Tirabuzon",
-    "image": "image-1625405509399.jpg",
-    "category": "Alacena",
+    "image": "image-1625613665123.jpg",
+    "category": "",
     "price": "200"
   },
   {

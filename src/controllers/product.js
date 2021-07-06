@@ -18,7 +18,7 @@ const productController = {
         console.log(req.url);
         console.log(req.body);
         let result = product.edit(req.body,req.file,req.params.id)
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
+        return result == true ? res.redirect("/productList") : res.send("Error al cargar la informacion") 
     },
 
     deleteProduct: (req,res) => {
