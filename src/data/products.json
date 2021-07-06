@@ -97,5 +97,14 @@
     "image": "image-1625452435057.jpg",
     "category": "Alacena",
     "price": "46"
+  },
+  {
+    "id": 19,
+    "name": "producto 1",
+    "brand": "La Paulina",
+    "description": "producto1",
+    "image": "image-1625487626818.jpg",
+    "category": "Bebidas",
+    "price": "50"
   }
 ]
