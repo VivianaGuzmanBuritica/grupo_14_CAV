@@ -78,5 +78,15 @@
     "fechaNacimiento": "2021-07-13",
     "password": "2222",
     "confirmPassword": "2222"
+  },
+  {
+    "name": "Angela",
+    "email": "angela@gmail.com",
+    "domicilio": "",
+    "tipo": "Autoservico",
+    "interes": "aliemntos",
+    "fechaNacimiento": "",
+    "password": "aa",
+    "confirmPassword": "aa"
   }
 ]
