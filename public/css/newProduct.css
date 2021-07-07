@@ -48,6 +48,12 @@ fieldset button{
     
 }
 
+fieldset button a{
+    text-decoration: none;
+    color: white;
+    
+}
+
 button:hover{
     background-color: #007965;
     animation: boton 500ms normal;
