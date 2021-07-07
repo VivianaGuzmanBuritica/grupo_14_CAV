@@ -97,5 +97,14 @@
     "image": "image-1625530872036.jpg",
     "category": "Alacenas",
     "price": "40"
+  },
+  {
+    "id": 19,
+    "name": "Atun en aceite",
+    "brand": null,
+    "description": "Atun en aceite campagñola 180 gramos",
+    "image": "image-1625614363304.jpg",
+    "category": "",
+    "price": "555"
   }
 ]
