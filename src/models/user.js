@@ -33,7 +33,7 @@ const model = {
             interes: data.interes,
             fechaNacimiento: data.fechaNacimiento,
             fotoPerfil:file.filename,
-            image: file.filename
+           
         }    
         usuarios.push(nuevo)
         fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
@@ -50,9 +50,9 @@ const model = {
             usuario.tipo= data.tipo,
             usuario.interes= data.interes,
             usuario.fechaNacimiento= data.fechaNacimiento,
-            usuario.fotoPerfil=file.filename,
-            usuario.image= file.filename
-                return usuario
+            usuario.fotoPerfil=file.filename
+           
+              
             }
             return usuario
         })

@@ -46,10 +46,8 @@ Dividir tareas individualmente provoca falta de integración, se propone para el
 
  # RETROSPECTIVA AL TERCER SPRINT
 
-## Dinámica de la estrella de mar:
-
 ### 1. Comenzar a hacer:
-
+Despejar dudas oportunamente con los profesores a travez del canal establecido en Slack.
 
 ### 2. Hacer más:
 Consultar más dudas con los tutores (en el afán por resolver solos, a veces se traba el avance sobre algunos
@@ -59,10 +57,8 @@ puntos)
 Mantener contacto fluido y brindarnos retroalimentación entre nosotros respecto al trabajo realizado
 
 ### 4. Hacer menos.
-
+ Usar el tiempo de manera mas eficiente sin perder de foco los objetivos del sprint. 
 
 ### 5. Dejar de hacer.
-
-
-
+Procrastincar las entregas en pos de investigar a fondo cada elemento que inlcuimos en el código. Si bien es una buena práctica que ayuda a evitar errores, no ayuda a hacer un uso eficiente del tiempo ni contribuye a la finalizacion de proyecto.
 
