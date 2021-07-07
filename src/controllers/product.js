@@ -15,8 +15,7 @@ const productController = {
     edit:(req, res,log) => res.render('products/editProduct',{product:product.one(req.params.id)}),
     
     editProduct: function(req,res){
-        console.log(req.url);
-        console.log(req.body);
+        
         let result = product.edit(req.body,req.file,req.params.id)
         return result == true ? res.redirect("/productList") : res.send("Error al cargar la informacion") 
     },

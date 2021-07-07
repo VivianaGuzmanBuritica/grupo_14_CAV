@@ -10,12 +10,12 @@
   },
   {
     "id": 9,
-    "name": "Tallarines Matarrazzo",
-    "brand": "Matarazzo",
-    "description": "Tallarines Matarazzo  500 G",
-    "image": "image-1625405415638.jpg",
-    "category": "Alacena",
-    "price": "150"
+    "name": "Milanesa de soja Luccetti",
+    "brand": null,
+    "description": "Milanesa de soja Luccetti por 300 gramos libre de gluten",
+    "image": "image-1625617600450.jpg",
+    "category": "Congelados",
+    "price": "350"
   },
   {
     "id": 10,
@@ -50,15 +50,6 @@
     "brand": "Exquisita",
     "description": "quese",
     "image": "image-1625406002553.jpg",
-    "category": "Bebidas",
-    "price": "200"
-  },
-  {
-    "id": 14,
-    "name": "queso",
-    "brand": "Exquisita",
-    "description": "quese",
-    "image": "image-1625406522409.jpg",
     "category": "Bebidas",
     "price": "200"
   },
@@ -106,5 +97,14 @@
     "image": "image-1625614363304.jpg",
     "category": "",
     "price": "555"
+  },
+  {
+    "id": 20,
+    "name": "creveza corona",
+    "brand": "corona",
+    "description": "creveza corona 330",
+    "image": "image-1625617508076.jpg",
+    "category": "Bebidas",
+    "price": "315"
   }
 ]
