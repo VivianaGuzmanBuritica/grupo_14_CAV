@@ -67,7 +67,4 @@ const model = {
 
 }
 
-
-console.log(model.one(8));
-
 module.exports = model
