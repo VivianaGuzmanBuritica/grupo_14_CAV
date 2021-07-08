@@ -36,15 +36,6 @@
     "price": "200"
   },
   {
-    "id": 12,
-    "name": "Tirabuzon Matarrazzo",
-    "brand": "Matarazzo",
-    "description": "Tirabuzon",
-    "image": "image-1625405574434.jpg",
-    "category": "Alacena",
-    "price": "200"
-  },
-  {
     "id": 13,
     "name": "queso",
     "brand": "Exquisita",
