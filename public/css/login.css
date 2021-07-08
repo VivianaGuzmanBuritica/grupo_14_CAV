@@ -19,6 +19,12 @@ form *{
     
 }
 
+main figure img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
 fieldset p a{
     color: black;
     text-decoration: none;

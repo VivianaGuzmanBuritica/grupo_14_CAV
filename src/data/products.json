@@ -63,15 +63,6 @@
     "price": "500"
   },
   {
-    "id": 16,
-    "name": "queso",
-    "brand": "Exquisita",
-    "description": "zzzz",
-    "image": "image-1625406576282.jpg",
-    "category": "Alacena",
-    "price": "500"
-  },
-  {
     "id": 17,
     "name": "Chocoarroz",
     "brand": null,
