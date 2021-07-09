@@ -10,12 +10,12 @@
   },
   {
     "id": 9,
-    "name": "Tallarines Matarrazzo",
-    "brand": "Matarazzo",
-    "description": "Tallarines Matarazzo  500 G",
-    "image": "image-1625405415638.jpg",
-    "category": "Alacena",
-    "price": "150"
+    "name": "Te en saquitos 25uni.",
+    "brand": null,
+    "description": "Te en saquitos por 25 unidades",
+    "image": "image-1625701276887.jpg",
+    "category": "Congelados",
+    "price": "350"
   },
   {
     "id": 10,
@@ -41,15 +41,6 @@
     "brand": "Exquisita",
     "description": "quese",
     "image": "image-1625406002553.jpg",
-    "category": "Bebidas",
-    "price": "200"
-  },
-  {
-    "id": 14,
-    "name": "queso",
-    "brand": "Exquisita",
-    "description": "quese",
-    "image": "image-1625406522409.jpg",
     "category": "Bebidas",
     "price": "200"
   },

@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Christian",
     "email": "cmn@vemart.com.ar",
     "domicilio": "Novello",
@@ -7,9 +8,11 @@
     "interes": "aliemntos",
     "fechaNacimiento": "2021-07-06",
     "password": "1234",
-    "confirmPassword": "1354"
+    "confirmPassword": "1354",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 2,
     "name": "nico",
     "email": "",
     "domicilio": "vedia 285",
@@ -17,9 +20,11 @@
     "interes": "aliemntos",
     "fechaNacimiento": "2021-06-09",
     "password": "aq",
-    "confirmPassword": "aqaq"
+    "confirmPassword": "aqaq",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 3,
     "name": "martin",
     "email": "cmn@vemart.com.ar",
     "domicilio": "acha",
@@ -27,9 +32,11 @@
     "interes": "lacteos",
     "fechaNacimiento": "2021-07-07",
     "password": "ccc",
-    "confirmPassword": "sss"
+    "confirmPassword": "sss",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 4,
     "name": "Christian",
     "email": "cmn@vemart.com.ar",
     "domicilio": "Novello",
@@ -37,9 +44,11 @@
     "interes": "aliemntos",
     "fechaNacimiento": "2021-07-07",
     "password": "cccc",
-    "confirmPassword": "cccc"
+    "confirmPassword": "cccc",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 5,
     "name": "Christian",
     "email": "cmn@vemart.com.ar",
     "domicilio": "Novello",
@@ -47,9 +56,11 @@
     "interes": "aliemntos",
     "fechaNacimiento": "2021-07-07",
     "password": "assss",
-    "confirmPassword": "assss"
+    "confirmPassword": "assss",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 6,
     "name": "Christian",
     "email": "cmn@vemart.com.ar",
     "domicilio": "Novello",
@@ -57,9 +68,11 @@
     "interes": "bebidas",
     "fechaNacimiento": "",
     "password": "assss",
-    "confirmPassword": "sss"
+    "confirmPassword": "sss",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 7,
     "name": "Christian",
     "email": "cmn@vemart.com.ar",
     "domicilio": "Novello",
@@ -67,9 +80,11 @@
     "interes": "lacteos",
     "fechaNacimiento": "2021-06-30",
     "password": "assss",
-    "confirmPassword": "ssss"
+    "confirmPassword": "ssss",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 8,
     "name": "Viviana",
     "email": "viviana@gmail.com",
     "domicilio": "cali",
@@ -77,9 +92,11 @@
     "interes": "congelados",
     "fechaNacimiento": "2021-07-13",
     "password": "2222",
-    "confirmPassword": "2222"
+    "confirmPassword": "2222",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
   },
   {
+    "id": 9,
     "name": "Angela",
     "email": "angela@gmail.com",
     "domicilio": "",
@@ -87,6 +104,17 @@
     "interes": "aliemntos",
     "fechaNacimiento": "",
     "password": "aa",
-    "confirmPassword": "aa"
+    "confirmPassword": "aa",
+    "fotoPerfil": "fotoPerfil-1625694265904.jpg"
+  },
+  {
+    "name": "Silvana",
+    "email": "sil@vemart.com.ar",
+    "domicilio": "rosario 599",
+    "tipo": "Autoservico",
+    "interes": "aliemntos",
+    "fechaNacimiento": "2021-07-13",
+    "password": "aaaa",
+    "confirmPassword": "aaaa"
   }
 ]
