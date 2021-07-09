@@ -10,10 +10,10 @@
   },
   {
     "id": 9,
-    "name": "Milanesa de soja Luccetti",
+    "name": "Te en saquitos 25uni.",
     "brand": null,
-    "description": "Milanesa de soja Luccetti por 300 gramos libre de gluten",
-    "image": "image-1625617600450.jpg",
+    "description": "Te en saquitos por 25 unidades",
+    "image": "image-1625701276887.jpg",
     "category": "Congelados",
     "price": "350"
   },
@@ -88,14 +88,5 @@
     "image": "image-1625614363304.jpg",
     "category": "",
     "price": "555"
-  },
-  {
-    "id": 20,
-    "name": "creveza corona",
-    "brand": "corona",
-    "description": "creveza corona 330",
-    "image": "image-1625617508076.jpg",
-    "category": "Bebidas",
-    "price": "315"
   }
 ]
