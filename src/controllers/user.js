@@ -20,6 +20,7 @@ const userController = {
         const directory = path.resolve(__dirname,"../data","users.json");
         let usuarios = user.all();
          let register = {
+            id: req.body.id ,
             name: req.body.name,
             email: req.body.email,
             domicilio: req.body.domicilio,

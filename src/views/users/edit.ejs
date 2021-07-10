@@ -8,29 +8,40 @@
 <body> 
     <%- include("../partials/header") %> 
     <main>
-        <form class="register" action="/register" method="POST" enctype="multipart/form-data">
+
+        <figure><img src=<%= user.avatar1 %> alt=""></figure>
+
+        <form class="/register" action="/edit/<%= user.id %>" method="POST" enctype="multipart/form-data">
+            
+            <fieldset>
+                <legend><b>User ID</b></legend>   
+                <label for="name"></label>
+                <input type="text" name="name" id="name" value="<%= user.id %>">
+                </fieldset>
+
+
             <fieldset>
             <legend><b>Nombre y apellido</b></legend>   
             <label for="name"></label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" value="<%= user.name %>">
             </fieldset>
             
             <fieldset>
             <legend><b>Nombre de usuario</b></legend>
             <label for="username"></label>
-            <input type="text" name="username" id="usernames">
+            <input type="text" name="username" id="usernames" value="<%= user.email %>" >
             </fieldset>
 
             
             <fieldset>
                 <legend><b>Domicilio</b></legend>
                 <label for="domicilio"></label>
-                <input type="text" name="domicilio" id="domicilio">
+                <input type="text" name="domicilio" id="domicilio" value="<%= user.domicilio %>">
             </fieldset>
             
             <fieldset>
                 <legend><b>Tipo de comercio</b></legend>
-                <input list="tipo" name="tipo">
+                <input list="tipo" name="tipo" value="<%= user.tipo %>">
                 <datalist id="tipo">
                     <option value="Autoservico">
                     <option value="Almacen">
