@@ -6,6 +6,10 @@ form *{
     width: 40%;      
 }
 
+main{
+padding:70px;
+}
+
 .icono i{
     margin-top: 15px;
     width: 100px;
@@ -45,22 +49,30 @@ fieldset input, fieldset button{
     border: none;
     width: 300px;
     margin-top: 18px;  
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    background-color: #eee;
 }
 
 fieldset button{
-    background-color: #00af91;
+    background-color: #f58634;
     color: white;
     justify-content: center;
     margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 22px;
+    border: none;
     
 }
 
 button:hover{
-    background-color: #007965;
+    background-color:#ee6809;
     animation: boton 500ms normal;
 }
 
 @keyframes boton{
-    0%{background-color:#00af91;}
-    100%{background-color: #007965;}
+    0%{background-color:#f58634;}
+    100%{background-color: #ee6809;}
 }

@@ -10,257 +10,45 @@ body{
     font-family: Roboto, sans-serif;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #f58634;
-}
-
-.navbar{
-    display: none;
-}
-
-#burger-menu{
-    padding-top: 20px;
-    padding-left: 20px;
-    display: inline-block;
-}
-
-.logo{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    justify-content: center;
-    width: 20%; 
-}
-
-header a{
-    text-decoration: none;
-    color:black;
-}
-
-#ayuda{
-    display: none;
-}
-
-#carrito{
-    display: block;
-    font-size: 10px;
-    text-align: center;
-    padding: 10px;
-}
-
-main{
-    display: block;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    background-color: #fce59b;
-}
-
 h2{
-    padding: 20px;
+   font-size: 40px;
+   text-align: left;
+   width: 50vmin;
+  
 }
 
-.article{
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
-    border: solid 1px #ebebeb;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 )
-}
-
-#botones-home{
-    display: flex;
-    margin: 5px;
-    justify-content: center;
-}
-
-.botones{
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    border: solid black 1px;
-    font-size: 10px;
-    padding: 5px;
-}
-
-footer{
-    text-align: center;
+h3{
+    color:rgb( 100 , 100 , 100 );
+    padding-top: 5px;
     font-size: 18px;
-    background-color: #007965;
-    padding: 10px
+    text-align: left;
+    width: 50vmin;   
 }
 
-#newsletter{
-    display: flex;
-    text-align: center;
-    padding: 5px;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
+.titulo{
+    border-bottom: solid 1px rgb( 100 , 100 , 100 );
+    padding: 18px;
 }
 
-footer a {
-    color: black;
-    text-decoration:none;
-}
-
-.links-footer{
+main form {
     margin: 30px;
-    font-weight:900;
-}
-
-#iconos{
-    padding: 5px;
-    color: #00af91;
-}
-
-.rrss{
-    margin: 20px;
-}
-
-.search{
-    padding: 5px;
-    border: solid #fce59b;
-    border-radius: 10%;
-}
-
-
-@media(min-width:481px) {
     
-    #burger-menu{
-        display: none;
-    }
-    
-    .navbar{
-        display: flex;
-        justify-content: left;
-    }
-    
-    #menu{
-        font-size: 10px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        justify-content: space-evenly;
-        text-align: center;
-        align-items: center;
-    }
-    
-    .item{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    .logo{
-        display: flex;
-        justify-content: left;
-        margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-    width: 60px;
+}
+form input{
 }
 
-header{
-    display: flex;
-    flex-direction: row;
-    background-color: #ffcc29;
-    flex-wrap: nowrap;
+.text_input{
+    padding-top: 10px;
+  
+    
 }
 
-#ayuda{
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 10px;
-    padding-top: 20px;
-}
+.text_input input{
+    width: 50vmin;
 
-#carrito{
-    font-size: 10px;
-    padding: 10px;
-    padding-top: 20px;
-    text-align: center;
-}
-
-main{
-    display: block;
-    justify-content: center;
-    text-align: center;
 }
 
 
-}
-
-@media(min-width:769px) {
-    
-    .logo{
-        text-align: left;
-    }
-    
-    .item{
-        font-size: 14px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    
-    #ayuda{
-        font-size: 14px;
-        padding: 20px;
-    }
-    
-    #carrito{
-        font-size: 14px;
-        padding: 20px;
-    }
-    
-    footer{
-        display: flex;
-        text-align: center;
-        align-items: center;
-        font-size: 12px;
-        background-color: #007965;
-        padding: 20px;
-        justify-content: space-between;
-        
-    }
-    
-    #newsletter{
-        display: flex;
-        text-align: center;
-        padding: 5px;
-        margin: 10px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .newsletter{
-        display: block;
-        align-items: center;
-    }
-    
-    footer a {
-        color: black;
-        text-decoration:none;
-    }
-    
-    .links-footer{
-        margin: 20px;
-        font-weight:900;
-    }
-    
-    #iconos{
-        padding: 5px;
-        color: #00af91;
-    }
-    
-  /*************************************************** Formulario *******************************************/
-}
 form *{
     border: none;
 }
@@ -275,10 +63,6 @@ form.register{
     padding: 10px 10vw;
     
 }   
-
- 
-
-
 
     form.register fieldset {
     padding: 5px 10px;
@@ -295,19 +79,33 @@ fieldset.interes {
   
   }
 
-
-
  input[type=submit], input[type=reset] {
     
     background-color: #f58634;
+    font-size: 22px;
     border: none;
     color: white;
     padding: 10px 50px;
     text-decoration: none;
     border-radius: 8px;
     margin: 12px 2px;
-    
-    
+    width: 60vmin;
+    text-align: center;
+    animation: boton 500ms normal;
+   
+}
+
+input[type=submit]:hover{
+    background-color:#ee6809;
+    animation: boton 500ms normal;
+}
+@keyframes boton{
+    0%{background-color:#f58634;}
+    100%{background-color: #ee6809;}
+}
+#rubro{
+width: 50vmin;
+padding-top: 10px;
 }
 input {
    

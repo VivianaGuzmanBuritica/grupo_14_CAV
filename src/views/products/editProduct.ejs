@@ -4,8 +4,7 @@
 <head>
     <%- include("../partials/head") %>
         <title>CAV</title>
-        <link rel="stylesheet" href="/css/index.css">
-        </link>
+        
         <link rel="stylesheet" href="/css/newProduct.css">
         </link>
 </head>
@@ -14,21 +13,23 @@
     <%- include("../partials/header") %>
         <main>
             <form action="/editProduct/<%= product.id %>?_method=PUT" method="post"  enctype="multipart/form-data">
-               
-                <h2>Editar producto</h2>
-                
-                <fieldset>
-                    <label>ID de producto:</label>
+                <div class="titulo">
+                    <h2 for="name">Editar producto</h2>
+                    <h3>Es fácil y rápido</h3>
+                </div>
+                <div class="text_input">
+                <fieldset id='id'>
+                    <label><b>ID de producto</b></label>
                     <input type="text" name="id" id="id" value="<%= product.id %>">
                 </fieldset>
 
 
                 <fieldset>
-                    <label>Nombre de producto:</label>
+                    <label><b>Nombre de producto</b></label>
                     <input type="text" name="name" id="name" value="<%= product.name %>">
                 </fieldset>
 
-                <label id="description">Descripción:</label>
+                <label id="description"><b>Descripción</b></label>
                 
                 <fieldset>
                     <textarea name="description" id="description" placeholder="<%= product.description %>"></textarea>
@@ -37,13 +38,13 @@
                 <fieldset>
                     <figure><img src="/uploads/products/<%=product.image%>" alt=""></figure>
                
-                    <label>Ajuntar imagen</label>
+                    <label><b>Ajuntar imagen</b></label>
                     <input type="file" name="image" id="image" required>
                 </fieldset>
 
                 
                  <fieldset>
-                    <label>Marca:</label>
+                    <label><b>Marca</b></label>
                     <input list="brand" name="brand" placeholder="<%= product.brand %>">
                 </fieldset>
 
@@ -55,7 +56,7 @@
                     </datalist>
 
                 <fieldset>
-                    <label>Categoría:</label>
+                    <label><b>Categoría</b></label>
                     <input list="category" name="category" placeholder="<%= product.category %>">
                 </fieldset>
 
@@ -66,13 +67,13 @@
                         <option value="Congelados">
                     </datalist>
 
-                    <label>Precio:</label>
+                    <label><b>Precio</b></label>
                     <input type="number" min="0" name="price" id="price" id="name" value="<%= product.price %>">
                 </fieldset>
-
+             </div>
                 <fieldset>
                     <button type="submit">Editar producto</button>
-                    <button type="submit"><a href="/deleteProduct/<%= product.id %>">ELIMINAR PRODUCTO</a></button>
+                    <button type="submit"><a href="/deleteProduct/<%= product.id %>">Eliminar producto</a></button>
                 </fieldset>
 
             </form>
