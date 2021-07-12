@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("../partials/head") %>
+        <title>CAV</title>
+        <link rel="stylesheet" href="/css/userList.css">
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+        <% user.forEach(user => { %>
+            
+            <section id="list-users">
+                <article>
+                <figure><img src="/uploads/avatars/<%= user.fotoPerfil%>" alt=""></figure>
+                <h2><%= user.name %></h2>
+                
+                <a href="/usuario/<%= user.id %>">show more</a>
+            </section>
+        </article>
+        <% }) %>
+    </section>
+    <%- include("../partials/footer") %>
+</body>
+
+</html>

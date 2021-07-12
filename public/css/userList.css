@@ -6,8 +6,35 @@ form *{
     width: 40%;      
 }
 
-main{
-padding:70px;
+#list-users{
+    margin-left: 25vw;
+    width: 50vw;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    max-height: 40vh;
+    padding: 1%;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+#list-users article{
+    display: flex;
+    height: 25vh;
+    padding: 1%;
+    
+    flex-wrap: wrap;
+    box-shadow: 0 0 .5rem 0 rgba(100,100,100,.3);
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 75%;
+    padding-right: 1rem;
+    
 }
 
 .icono i{
@@ -23,7 +50,7 @@ padding:70px;
     
 }
 
-main figure img{
+figure img{
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -49,30 +76,17 @@ fieldset input, fieldset button{
     border: none;
     width: 300px;
     margin-top: 18px;  
-    border-width: 2px;
-    border-style: inset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-    background-color: #eee;
 }
 
 fieldset button{
-    background-color: #f58634;
+    background-color: #00af91;
     color: white;
     justify-content: center;
     margin-bottom: 15px;
-    border-radius: 8px;
-    font-size: 22px;
-    border: none;
     
 }
 
 button:hover{
-    background-color:#ee6809;
+    background-color: #007965;
     animation: boton 500ms normal;
-}
-
-@keyframes boton{
-    0%{background-color:#f58634;}
-    100%{background-color: #ee6809;}
 }

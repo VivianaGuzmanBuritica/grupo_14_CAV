@@ -3,38 +3,35 @@ const router = express.Router();
 const user = require('../controllers/user');
 const multer = require('multer');
 const path = require('path');
-const {body} = require("express-validator");
+const validaciones = require('../middlewares/validateRegister')
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'public/uploads/avatars')
-        },
+
+    let destino = multer.diskStorage({
+      destination: function (req, file, cb) {
+          let extension = path.extname(file.originalname);
+          if(extension  ===  "PNG"|| "jpeg"||"jpg"||"JPG"){
+              cb(null, path.resolve(__dirname,'../../public/uploads/avatars'))
+          }else{
+            console.log("error al cargar la imagen")
+          }
+      },
       filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname));
+          cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname).toLocaleLowerCase())
       }
     })
-     
-    const upload = multer({storage})
+    const upload = multer({storage:destino});
 
-// Validaciones
-
-const validaciones = [
-  body("name").notEmpty().withMessage("Campo obligatorio"),
-  body("email").notEmpty().withMessage("Campo obligatorio").bail()
-  .isEmail().withMessage("El email no es válido"),
-  body("domicilio").notEmpty().withMessage("Campo obligatorio"),
-  body("date").notEmpty().withMessage("Campo obligatorio"),
-  body("password").notEmpty().withMessage("Campo obligatorio").bail()
-  .isLength({min:8}).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
-];
+ 
 
 router.get('/ingresar', user.login);
-router.post('/ingresar',[upload.any()],user.userLogin);
+router.post('/ingresar', [upload.any()],user.userLogin);
 
 router.get('/registro',user.register);
-router.post('/registro',validaciones,[upload.any()],user.userRegister); 
+router.post('/registro',[upload.any(),validaciones],user.userRegister); 
+router.post('/registro',[upload.single('fotoPerfil')],user.newUser); 
 
-router.get('/perfil', user.profile);
+
+router.get('/perfil', user.userList);
 router.post('/perfil', user.profile);
 
 router.get("/:id",user.show); //mostrar vista profile REVISAR "/profile/:id"

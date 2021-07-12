@@ -2,6 +2,7 @@ const user = require('../models/user');
 const path = require('path');
 const fs = require('fs');
 const  { validationResult} = require("express-validator");
+const { userRegister } = require('../models/user');
 
 
 const userController = {
@@ -9,16 +10,19 @@ const userController = {
 
     register: (req, res) => res.render('users/register'),
 
-    profile:(req, res)=> res.render('users/profile'),
+    userList:(req, res)=> res.render('users/userList',{ user: user.all()}),
+
+    profile:(req, res)=> res.render('users/profile',{ user: user.one(req.body.mail) }),
     
-    userLogin: function (req, res) {
-      let usuarios = user.findByEmail('email', req.body.email);
-    
-    return res.redirect('perfil') 
+
+    newUser:(req,res) => {
+        let nuevo = user.userRegister(req.body,req.file);
+       return nuevo == true ? res.redirect('/') : res.send("Error al cargar la informacion") 
     },
 
     userRegister: function (req, res) {
         let errors = validationResult(req);
+      //  return res.send({errors:errors.array(),body:req.body})
         if(errors.isEmpty()){
             const directory = path.resolve(__dirname,"../data","users.json");
             let usuarios = user.all();
@@ -45,8 +49,15 @@ const userController = {
             res.render('users/register', {errors: errors.array()})
         }
     },
- 
-    show: (req, res) => res.render("users/profile", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
+        
+    userLogin: function (req, res) {
+        console.log(req.body);
+        let usuarios = user.findByEmail('email', req.body.email);
+        console.log(usuarios)
+        //return res.redirect('profile') 
+    },
+   
+    show: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
     edit: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }),//mostrar vista perfila editar//
     update: (req, res) => {
         let result = user.edit(req.body, req.file, req.params.id)
