@@ -82,11 +82,11 @@
   },
   {
     "id": 21,
-    "name": "ejemplo",
-    "brand": "ejemplo",
-    "description": "ejemplo123",
-    "image": "image-1625872707929.jpg",
-    "category": "ejemplo",
-    "price": "6"
+    "name": "salchicha",
+    "brand": null,
+    "description": "salchicha",
+    "image": "image-1626061369309.jpg",
+    "category": "Congelados",
+    "price": "400"
   }
 ]

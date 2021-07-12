@@ -24,7 +24,6 @@ const model = {
     },
 
     userRegister: function (data, file) {
-        console.log(data);
         const directory = path.resolve(__dirname,"../data","users.json");
             let usuarios = this.all();
             let register = {
@@ -40,9 +39,7 @@ const model = {
                     
         };
         usuarios.push(register);
-        console.log(usuarios);
         fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
-
         return true;   
       
     },

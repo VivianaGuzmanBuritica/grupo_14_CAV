@@ -10,6 +10,12 @@ body{
     font-family: Roboto, sans-serif;
 }
 
+figure img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
 h2{
    font-size: 40px;
    text-align: left;
@@ -34,8 +40,7 @@ main form {
     margin: 30px;
     
 }
-form input{
-}
+
 
 .text_input{
     padding-top: 10px;

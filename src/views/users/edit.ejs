@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("../partials/head") %>
     <title>REGISTRATE</title>
     <link rel="stylesheet" href="/css/register.css"></link>
 </head>
@@ -9,10 +8,10 @@
     <%- include("../partials/header") %> 
     <main>
 
-        <figure><img src=<%= user.avatar %> alt=""></figure>
-
+        
         <form class="/register" action="/edit/<%= user.id %>" method="POST" enctype="multipart/form-data">
             
+            <figure><img src="/uploads/avatars/<%= user.fotoPerfil%>" alt=""></figure>
             <fieldset>
                 <legend><b>User ID</b></legend>   
                 <label for="name"></label>
@@ -92,7 +91,7 @@
                 <fieldset>
                 <legend><b>Fecha de nacimiento</b></legend>
                 <label for="date"></label>
-                <input type="date" name="fechaNacimiento" id="fecha nacimiento">
+                <input type="date" name="fechaNacimiento" id="fecha nacimiento" value="<%= user.fechaNacimiento %>">>
                 </fieldset>
 
             <fieldset>

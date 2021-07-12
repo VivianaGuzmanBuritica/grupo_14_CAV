@@ -15,9 +15,7 @@ const userController = {
     
 
     newUser:(req,res) => {
-        console.log(req.body);
         let nuevo = user.userRegister(req.body,req.file);
-
        return nuevo == true ? res.redirect('/') : res.send("Error al cargar la informacion") 
     },
 
@@ -28,9 +26,7 @@ const userController = {
         //return res.redirect('profile') 
     },
    
-    
- 
-    show: (req, res) => res.render("users/profile", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
+    show: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
     edit: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }),//mostrar vista perfila editar//
     update: (req, res) => {
         let result = user.edit(req.body, req.file, req.params.id)
