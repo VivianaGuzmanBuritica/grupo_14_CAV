@@ -55,36 +55,27 @@
     "password": "santy321"
   },
   {
-    "id": 6,
-    "name": "nico",
-    "email": "nico@gmail.com",
-    "domicilio": "casa",
-    "tipo": "Kiosco",
-    "interes": "lacteos",
-    "fotoPerfil": "fotoPerfil-1626058330711.jpg",
-    "fechaNacimiento": "2021-07-16",
-    "password": "nico"
-  },
-  {
     "id": 7,
-    "name": "martin",
-    "email": "cmn@vemart.com",
+    "name": "Martin",
     "domicilio": "acaha",
     "tipo": "Autoservico",
-    "interes": "congelados",
-    "fotoPerfil": "fotoPerfil-1626058483804.png",
-    "fechaNacimiento": "",
-    "password": "1321323"
+    "fotoPerfil": "fotoPerfil-1626101107937.jpg",
+    "fechaNacimiento": "2021-07-07",
+    "password": "1321323",
+    "email": "cmn@vemart.com.ar"
   },
   {
     "id": 8,
-    "name": "pepe",
-    "email": "pepe@gamil.com",
-    "domicilio": "su casa",
-    "tipo": "Almacen",
-    "interes": "aliemntos",
-    "fotoPerfil": "fotoPerfil-1626058825221.jpg",
-    "fechaNacimiento": "",
-    "password": "assss"
+    "name": "leandro",
+    "email": "Leandro@vemart.com.ar",
+    "domicilio": "Larralde2323",
+    "tipo": "Autoservico",
+    "interes": [
+      "aliemntos",
+      "bebidas"
+    ],
+    "fotoPerfil": "fotoPerfil-1626105775750.jpg",
+    "fechaNacimiento": "1973-08-23",
+    "password": "soy1"
   }
 ]
