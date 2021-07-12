@@ -4,22 +4,25 @@
 <head>
     <%- include("../partials/head") %>
     <title>CAV</title>
-    <link rel="stylesheet" href="/css/index.css"></link>
-    <link rel="stylesheet" href="/css/newProduct.css"></link>
+     <link rel="stylesheet" href="/css/newProduct.css"></link>
 </head>
 
 <body>
     <%- include("../partials/header") %>
     <main>
         <form action="/newProduct" method="POST" enctype="multipart/form-data">
-            <h2>Nuevo producto</h2>
+            <div class="titulo">
+                <h2 for="name">Nuevo producto</h2>
+                <h3>Es fácil y rápido</h3>
+            </div>
+            <div class="text_input">
             <fieldset>
-                <label>Nombre de producto:</label>
+                <label><b>Nombre de producto</b></label>
                 <input type="text" name="name" id="name" required placeholder="Nombre de producto">
             </fieldset>
 
             <fieldset>
-                <label>Marca:</label>
+                <label><b>Marca</b></label>
                 <input list="brand" name="brand">
             </fieldset>
             </fieldset>
@@ -33,19 +36,19 @@
                     </datalist>
             </fieldset>
 
-            <label id="description">Descripción:</label>
+            <label id="description"><b>Descripción</b></label>
             <fieldset>
                 
                 <textarea name="description" id="description" placeholder='Escribe aquí'></textarea>
             </fieldset>
 
             <fieldset>
-                <label>Adjuntar imagen</label>
+                <label><b>Adjuntar imagen</b></label>
                 <input type="file" name="image" id="image">
             </fieldset>
 
             <fieldset>
-                <label>Categoría:</label>
+                <label><b>Categoría</b></label>
                 <input list="category" name="category">
             </fieldset>
 
@@ -56,10 +59,10 @@
                     <option value="Congelados">
                 </datalist>
                 
-                <label>Precio:</label>
+                <label><b>Precio</b></label>
                 <input type="number" min="0" name="price" id="price" placeholder="$300">
             </fieldset>
-
+            </div>
             <fieldset>
                 <button type="submit">Crear producto</button>
             </fieldset>
