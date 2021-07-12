@@ -88,5 +88,14 @@
     "image": "image-1625614363304.jpg",
     "category": "",
     "price": "555"
+  },
+  {
+    "id": 21,
+    "name": "ejemplo",
+    "brand": "ejemplo",
+    "description": "ejemplo123",
+    "image": "image-1625872707929.jpg",
+    "category": "ejemplo",
+    "price": "6"
   }
 ]

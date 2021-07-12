@@ -1,14 +1,16 @@
 const path = require('path');
 const fs = require('fs');
-const { getMaxListeners } = require('process');
+
 
 const model = {
     all: function () {
         const directory = path.resolve(__dirname, '../data', 'users.json')
         const file = fs.readFileSync(directory, 'UTF-8')
         const convert = JSON.parse(file)
-        return convert
+        return convert;
+       
     },
+
     one: function (id) {
         let usuarios = this.all();
         let resultado = usuarios.find(usuario => usuario.id == id)
@@ -21,24 +23,30 @@ const model = {
         return resultado;
     },
 
-    new: function (data,file) {
-        const directory = path.resolve(__dirname,"../data","users.json")
-        let usuarios = this.all();
-        let nuevo = {
-            id: usuarios.length > 0 ? usuarios[usuarios.length -1].idUser + 1: 1,
+    userRegister: function (data, file) {
+        console.log(data);
+        const directory = path.resolve(__dirname,"../data","users.json");
+            let usuarios = this.all();
+            let register = {
+            id: usuarios.length > 0 ? usuarios[usuarios.length -1].id + 1: 1,
             name: data.name,
             email: data.email,
             domicilio: data.domicilio,
             tipo: data.tipo,
             interes: data.interes,
+            fotoPerfil: file.filename,
             fechaNacimiento: data.fechaNacimiento,
-            fotoPerfil:file.filename,
-           
-        }    
-        usuarios.push(nuevo)
+            password: data.password
+                    
+        };
+        usuarios.push(register);
+        console.log(usuarios);
         fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
-        return true;    
+
+        return true;   
+      
     },
+
     edit: function (data,file,id) {
         const directory = path.resolve(__dirname,"../data","users.json")
         let usuarios = this.all();
