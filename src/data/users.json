@@ -8,7 +8,8 @@
     "interes": "bebidas",
     "fotoPerfil": "fotoPerfil-1626033147188.png",
     "fechaNacimiento": "1974-08-29",
-    "password": "hola"
+    "password": "hola",
+    "administrador": true
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "interes": "vida",
     "fotoPerfil": "fotoPerfil-1626033257899.jpeg",
     "fechaNacimiento": "2020-12-06",
-    "password": "cocolindo"
+    "password": "cocolindo",
+    "administrador": false
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "interes": "lacteos",
     "fotoPerfil": "fotoPerfil-1626033534525.jpg",
     "fechaNacimiento": "1988-04-08",
-    "password": "sil2020"
+    "password": "sil2020",
+    "administrador": false
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "interes": "lacteos",
     "fotoPerfil": "fotoPerfil-1626056708527.jpg",
     "fechaNacimiento": "2003-04-28",
-    "password": "tomassss"
+    "password": "tomassss",
+    "administrador": false
   },
   {
     "id": 5,
@@ -52,39 +56,46 @@
     "interes": "congelados",
     "fotoPerfil": "fotoPerfil-1626056780405.png",
     "fechaNacimiento": "2005-04-18",
-    "password": "santy321"
-  },
-  {
-    "id": 6,
-    "name": "nico",
-    "email": "nico@gmail.com",
-    "domicilio": "casa",
-    "tipo": "Kiosco",
-    "interes": "lacteos",
-    "fotoPerfil": "fotoPerfil-1626058330711.jpg",
-    "fechaNacimiento": "2021-07-16",
-    "password": "nico"
-  },
-  {
-    "id": 7,
-    "name": "martin",
-    "email": "cmn@vemart.com",
-    "domicilio": "acaha",
-    "tipo": "Autoservico",
-    "interes": "congelados",
-    "fotoPerfil": "fotoPerfil-1626058483804.png",
-    "fechaNacimiento": "",
-    "password": "1321323"
+    "password": "santy321",
+    "administrador": false
   },
   {
     "id": 8,
-    "name": "pepe",
-    "email": "pepe@gamil.com",
-    "domicilio": "su casa",
-    "tipo": "Almacen",
-    "interes": "aliemntos",
-    "fotoPerfil": "fotoPerfil-1626058825221.jpg",
-    "fechaNacimiento": "",
-    "password": "assss"
+    "name": "leandro",
+    "email": "Leandro@vemart.com.ar",
+    "domicilio": "Larralde2323",
+    "tipo": "Autoservico",
+    "interes": [
+      "aliemntos",
+      "bebidas"
+    ],
+    "fotoPerfil": "fotoPerfil-1626105775750.jpg",
+    "fechaNacimiento": "1973-08-23",
+    "password": "soy1",
+    "administrador": false
+  },
+  {
+    "id": 9,
+    "name": "Seba",
+    "email": "seba@gmail.com",
+    "domicilio": "Solier 2025",
+    "tipo": "Esatcion de servicio",
+    "interes": "bebidas",
+    "fotoPerfil": "fotoPerfil-1626106298961.jpg",
+    "fechaNacimiento": "1980-11-13",
+    "password": "assssewe",
+    "administrador": false
+  },
+  {
+    "id": 10,
+    "name": "Alejandro",
+    "email": "ale@vemart.com.ar",
+    "domicilio": "belgrano 2125",
+    "tipo": "Consumo Interno",
+    "interes": "bebidas",
+    "fotoPerfil": "fotoPerfil-1626106481010.jpg",
+    "fechaNacimiento": "1960-10-20",
+    "password": "agn2020",
+    "administrador": false
   }
 ]

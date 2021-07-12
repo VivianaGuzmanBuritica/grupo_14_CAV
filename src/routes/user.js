@@ -36,7 +36,7 @@ router.post('/perfil', user.profile);
 
 router.get("/:id",user.show); //mostrar vista profile REVISAR "/profile/:id"
 router.get("/edit/:id",user.edit); //mostra vista editar profile
-router.put("/update/:id",[upload.single("image")],user.update); ///guarda la version editada
-router.delete("/delete/:id",user.delete);
+router.put("/update/:id",[upload.single("fotoPerfil")],user.update); ///guarda la version editada
+router.get("/delete/:id",user.delete);
 
 module.exports= router;

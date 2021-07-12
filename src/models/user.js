@@ -35,7 +35,8 @@ const model = {
             interes: data.interes,
             fotoPerfil: file.filename,
             fechaNacimiento: data.fechaNacimiento,
-            password: data.password
+            password: data.password,
+            administrador: false
                     
         };
         usuarios.push(register);
@@ -65,13 +66,11 @@ const model = {
         return true;
     },
     delete: function (id) {
-        const directory = path.resolve(__dirname,"../data","products.json")
+        const directory = path.resolve(__dirname,"../data","users.json")
         let usuarios = this.all();
         let deleted = this.one(id);
-        // eliminamos la imagen de la carpeta upload
-        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/products",deleted.image))
-        // filtarmos el usuario que deaseamos eliminar
-        usuarios = usuarios.filter(usuario => usuario.idUser != deleted.id )
+        fs.unlinkSync(path.resolve(__dirname,"../../public/uploads/avatars",deleted.fotoPerfil))
+        usuarios = usuarios.filter(usuario => usuario.id != deleted.id )
         fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
         return true;
     }

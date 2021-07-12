@@ -1,0 +1,140 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: Roboto, sans-serif;
+}
+
+figure img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+h2{
+   font-size: 40px;
+   text-align: left;
+   width: 50vmin;
+  
+}
+
+h3{
+    color:rgb( 100 , 100 , 100 );
+    padding-top: 5px;
+    font-size: 18px;
+    text-align: left;
+    width: 50vmin;   
+}
+
+.titulo{
+    border-bottom: solid 1px rgb( 100 , 100 , 100 );
+    padding: 18px;
+}
+
+main form {
+    margin: 30px;
+    
+}
+
+
+.text_input{
+    padding-top: 10px;
+  
+    
+}
+
+.text_input input{
+    width: 50vmin;
+
+}
+
+
+form *{
+    border: none;
+}
+
+form.editar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    margin-top: 20px;
+    padding: 2%;
+    
+}   
+
+    form.register fieldset {
+    padding: 5px 10px;
+    text-align: justify;
+    margin-bottom: 10px;
+
+} 
+
+fieldset.interes {
+   padding: 10px 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+  
+  }
+
+ input[type=submit], input[type=reset] {
+    
+    background-color: #f58634;
+    font-size: 22px;
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 12px 2px;
+    width: 60vmin;
+    text-align: center;
+    animation: boton 500ms normal;
+   
+}
+
+input[type=submit]:hover{
+    background-color:#ee6809;
+    animation: boton 500ms normal;
+}
+@keyframes boton{
+    0%{background-color:#f58634;}
+    100%{background-color: #ee6809;}
+}
+#rubro{
+width: 50vmin;
+padding-top: 10px;
+}
+input {
+   
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    border-radius: 6px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 5px 3px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    background-color: #eee;
+    width: auto;
+}

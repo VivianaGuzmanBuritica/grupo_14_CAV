@@ -61,11 +61,11 @@ const userController = {
     edit: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }),//mostrar vista perfila editar//
     update: (req, res) => {
         let result = user.edit(req.body, req.file, req.params.id)
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion")
+        return result == true ? res.redirect("/usuario/perfil") : res.send("Error al cargar la informacion")
     },//guarda el profile editado//
     delete: (req,res) => {
         let result = user.delete(req.params.id);
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
+        return result == true ? res.redirect("/usuario/perfil") : res.send("Error al cargar la informacion") 
     },//borrar usuario
    
 
