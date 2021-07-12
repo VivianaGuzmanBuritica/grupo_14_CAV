@@ -8,6 +8,11 @@
 <body> 
     <%- include("../partials/header") %> 
     <main>
+        <% if (locals.errors){
+            errors.array.forEach(error => { %>
+            <p class="feedback"><%= error.msg %> </p>
+        <% })
+        } %> 
         <form class="register" action="/usuario/registro" method="POST" enctype="multipart/form-data">
             <fieldset>
             <legend><b>Nombre y apellido</b></legend>   
@@ -87,13 +92,13 @@
             <fieldset>
             <legend><b>Contraseña</b></legend>
             <label for="password"></label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password">
             </fieldset>
 
             <fieldset>
                 <legend><b>Confirmar contraseña</b></legend>
                 <label for="password"></label>
-                <input type="password" name="confirmPassword" id="confirmPassword" required>
+                <input type="password" name="confirmPassword" id="confirmPassword">
                 </fieldset>
                 
 

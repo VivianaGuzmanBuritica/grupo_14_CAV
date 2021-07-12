@@ -116,5 +116,23 @@
     "fechaNacimiento": "2021-07-13",
     "password": "aaaa",
     "confirmPassword": "aaaa"
+  },
+  {
+    "name": "ssss",
+    "email": "agustinadm93@gmail.com",
+    "domicilio": "Di Marco",
+    "tipo": "",
+    "fechaNacimiento": "",
+    "password": "ssss",
+    "confirmPassword": "ssss"
+  },
+  {
+    "name": "",
+    "email": "",
+    "domicilio": "",
+    "tipo": "",
+    "fechaNacimiento": "",
+    "password": "1234",
+    "confirmPassword": "1234"
   }
 ]

@@ -1,6 +1,7 @@
 const user = require('../models/user');
 const path = require('path');
 const fs = require('fs');
+const  { validationResult} = require("express-validator");
 
 
 const userController = {
@@ -17,28 +18,32 @@ const userController = {
     },
 
     userRegister: function (req, res) {
-        const directory = path.resolve(__dirname,"../data","users.json");
-        let usuarios = user.all();
-         let register = {
-            id: req.body.id ,
-            name: req.body.name,
-            email: req.body.email,
-            domicilio: req.body.domicilio,
-            tipo: req.body.tipo,
-            interes: req.body.interes,
-            fotoPerfil: req.body.fotoPerfil,
-            fechaNacimiento: req.body.fechaNacimiento,
-            password: req.body.password,
-            confirmPassword: req.body.confirmPassword,
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            const directory = path.resolve(__dirname,"../data","users.json");
+            let usuarios = user.all();
+            let register = {
+                id: req.body.id ,
+                name: req.body.name,
+                email: req.body.email,
+                domicilio: req.body.domicilio,
+                tipo: req.body.tipo,
+                interes: req.body.interes,
+                fotoPerfil: req.body.fotoPerfil,
+                fechaNacimiento: req.body.fechaNacimiento,
+                password: req.body.password,
+                confirmPassword: req.body.confirmPassword,
             
-        };
-        usuarios.push(register)
-        fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
-        console.log(usuarios);
+            };
+            usuarios.push(register)
+            fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
+            console.log(usuarios);
 
-        res.redirect('ingresar')
-        return true;   
-      
+            res.redirect('ingresar')
+            return true;   
+        } else {
+            res.render('users/register', {errors: errors.array()})
+        }
     },
  
     show: (req, res) => res.render("users/profile", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
