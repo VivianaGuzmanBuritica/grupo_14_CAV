@@ -98,14 +98,29 @@
     "password": "agn2020",
     "administrador": false
   },
-   {
+  {
+    "id": 19,
     "name": "Leon Amariles",
     "email": "leon@gmail.com",
     "domicilio": "Cali",
     "tipo": "Almacen",
     "interes": "aliemntos",
+    "fotoPerfil": "fotoPerfil-1626106481010.jpg",
     "fechaNacimiento": "2021-06-29",
     "password": "$2a$10$BJVYwy3Zj5mjqa6sc1a.ZeXR6Eb.UVbV6TTe97HKd.XO6jw7hbN.C",
-    "confirmPassword": "hola1234"
+    "confirmPassword": "hola1234",
+    "administrador": false
+  },
+  {
+    "id": 20,
+    "name": "dani",
+    "email": "vivianaguzmanburitica@gmail.com",
+    "domicilio": "Buriticá",
+    "tipo": "Autoservico",
+    "interes": "bebidas",
+    "fotoPerfil": "fotoPerfil-1626305422561.jpg",
+    "fechaNacimiento": "2021-07-03",
+    "password": "$2a$10$DAVolV5rCDIfUNRWlB8fvuvuzC65rMSJCyAayjZ1G0w.nY3X4Nc9S",
+    "administrador": false
   }
 ]

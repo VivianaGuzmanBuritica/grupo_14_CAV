@@ -21,35 +21,6 @@ const userController = {
        return nuevo == true ? res.redirect('/') : res.send("Error al cargar la informacion") 
     },
 
-    userRegister: function (req, res) {
-        let errors = validationResult(req);
-      //  return res.send({errors:errors.array(),body:req.body})
-        if(errors.isEmpty()){
-            const directory = path.resolve(__dirname,"../data","users.json");
-            let usuarios = user.all();
-            let register = {
-                id: req.body.id ,
-                name: req.body.name,
-                email: req.body.email,
-                domicilio: req.body.domicilio,
-                tipo: req.body.tipo,
-                interes: req.body.interes,
-                fotoPerfil: req.body.fotoPerfil,
-                fechaNacimiento: req.body.fechaNacimiento,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                confirmPassword: req.body.confirmPassword,
-            
-            };
-            usuarios.push(register)
-            fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
-            console.log(usuarios);
-
-            res.redirect('ingresar')
-            return true;   
-        } else {
-            res.render('users/register', {errors: errors.array()})
-        }
-    },
         
     userLogin: function (req, res) {
         console.log(req.body);

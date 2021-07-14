@@ -36,7 +36,7 @@ const model = {
             interes: data.interes,
             fotoPerfil: file.filename,
             fechaNacimiento: data.fechaNacimiento,
-            password: bcryptjs.hashSync(req.body.password, 10),
+            password: bcryptjs.hashSync(data.password, 10),
             administrador: false
                     
         };
