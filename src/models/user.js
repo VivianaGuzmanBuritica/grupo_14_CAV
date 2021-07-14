@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const bcryptjs= require('bcryptjs');
 
 
 const model = {
@@ -35,7 +36,7 @@ const model = {
             interes: data.interes,
             fotoPerfil: file.filename,
             fechaNacimiento: data.fechaNacimiento,
-            password: data.password,
+            password: bcryptjs.hashSync(req.body.password, 10),
             administrador: false
                     
         };

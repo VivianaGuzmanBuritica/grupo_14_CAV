@@ -97,5 +97,15 @@
     "fechaNacimiento": "1960-10-20",
     "password": "agn2020",
     "administrador": false
+  },
+   {
+    "name": "Leon Amariles",
+    "email": "leon@gmail.com",
+    "domicilio": "Cali",
+    "tipo": "Almacen",
+    "interes": "aliemntos",
+    "fechaNacimiento": "2021-06-29",
+    "password": "$2a$10$BJVYwy3Zj5mjqa6sc1a.ZeXR6Eb.UVbV6TTe97HKd.XO6jw7hbN.C",
+    "confirmPassword": "hola1234"
   }
 ]

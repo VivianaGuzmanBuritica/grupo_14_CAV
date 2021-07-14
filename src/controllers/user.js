@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const  { validationResult} = require("express-validator");
 const { userRegister } = require('../models/user');
+const bcryptjs= require('bcryptjs');
 
 
 const userController = {
@@ -35,7 +36,7 @@ const userController = {
                 interes: req.body.interes,
                 fotoPerfil: req.body.fotoPerfil,
                 fechaNacimiento: req.body.fechaNacimiento,
-                password: req.body.password,
+                password: bcryptjs.hashSync(req.body.password, 10),
                 confirmPassword: req.body.confirmPassword,
             
             };

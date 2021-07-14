@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/VivianaGuzmanBuritica/grupo_14_CAV#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
     "cookies-parser": "^1.2.0",
     "ejs": "^3.1.6",
