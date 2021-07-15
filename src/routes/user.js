@@ -28,7 +28,7 @@ router.post('/ingresar', [upload.any()],user.userLogin);
 
 router.get('/registro',user.register);
 //router.post('/registro',[upload.any(),validaciones],user.userRegister); 
-router.post('/registro',[upload.single('fotoPerfil')],user.newUser); 
+router.post('/registro',[upload.single('fotoPerfil'),validaciones],user.newUser); 
 
 
 router.get('/perfil', user.userList);
