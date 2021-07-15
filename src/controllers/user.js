@@ -24,7 +24,7 @@ const userController = {
             console.log('metodo new user' + nuevo);
             return nuevo == true ? res.redirect('ingresar') : res.send("Error al cargar la informacion")
         }
-        else { res.render('users/register', { errors: errors.array() }) }
+        else { res.render('users/register', { errors: errors.array(), old: req.body }) }
     },
 
     userLogin: function (req, res) {

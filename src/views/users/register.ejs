@@ -11,112 +11,116 @@
 <body>
     <%- include("../partials/header") %>
         <main>
-            <% if (locals.errors){
-            errors.forEach(error => { %>
-            <p class="feedback"><%= error.msg %> </p>
-        <% })
-        } %> 
-            <form class="register" action="/usuario/registro" method="POST" enctype="multipart/form-data">
-                <div class="titulo">
-                    <h2 for="name">Registrate</h2>
-                    <h3>Es fácil y rápido</h3>
-                </div>
-                <div class="text_input">
-                    <fieldset>
-                        <legend><b>Nombre y apellido</b></legend>
-                        <label for="name"></label>
-                        <input type="text" name="name" id="name">
-                    </fieldset>
+            <% if (locals.errors){ errors.forEach(error=> { %>
+                <p class="feedback">
+                    <%= error.msg %>
+                </p>
+                <% }) } %>
+                    <form class="register" action="/usuario/registro" method="POST" enctype="multipart/form-data">
+                        <div class="titulo">
+                            <h2 for="name">Registrate</h2>
+                            <h3>Es fácil y rápido</h3>
+                        </div>
+                        <div class="text_input">
+                            <fieldset>
+                                <legend><b>Nombre y apellido</b></legend>
+                                <label for="name"></label>
+                                <input type="text" name="name" id="name"
+                                    value='<%= locals.old && old.name ? old.name : '' %>'>
 
-                    <fieldset>
-                        <legend><b>Correo electronico</b></legend>
-                        <label for="email"></label>
-                        <input type="email" name="email" id="email">
-                    </fieldset>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend><b>Correo electronico</b></legend>
+                                <label for="email"></label>
+                                <input type="email" name="email" id="email"
+                                value='<%= locals.old && old.email ? old.email : '' %>'>
+                            </fieldset>
 
 
-                    <fieldset>
-                        <legend><b>Domicilio</b></legend>
-                        <label for="domicilio"></label>
-                        <input type="text" name="domicilio" id="domicilio">
-                    </fieldset>
+                            <fieldset>
+                                <legend><b>Domicilio</b></legend>
+                                <label for="domicilio"></label>
+                                <input type="text" name="domicilio" id="domicilio"
+                                value='<%= locals.old && old.domicilio ? old.domicilio : '' %>'>
+                            </fieldset>
 
-                    <fieldset>
-                        <legend><b>Tipo de comercio</b></legend>
-                        <input list="tipo" name="tipo">
-                        <datalist id="tipo">
-                            <option value="Autoservico">
-                            <option value="Almacen">
-                            <option value="Kiosco">
-                            <option value="Esatcion de servicio">
-                        </datalist>
+                            <fieldset>
+                                <legend><b>Tipo de comercio</b></legend>
+                                <input list="tipo" name="tipo">
+                                <datalist id="tipo">
+                                    <option value="Autoservico">
+                                    <option value="Almacen">
+                                    <option value="Kiosco">
+                                    <option value="Esatcion de servicio">
+                                </datalist>
 
-                    </fieldset>
-                </div>
-                <div id='rubro'>
-                    <fieldset class="interes">
+                            </fieldset>
+                        </div>
+                        <div id='rubro'>
+                            <fieldset class="interes">
 
-                        <legend><b>Rubros de interes</b></legend>
+                                <legend><b>Rubros de interes</b></legend>
 
-                        <label for="Alimentos">
-                            <input type="checkbox" name="interes" id="alimentos" value="aliemntos">
-                            Alimentos
-                        </label>
+                                <label for="Alimentos">
+                                    <input type="checkbox" name="interes" id="alimentos" value="alimentos">
+                                    Alimentos
+                                </label>
 
-                        <label for="bebidas">
-                            <input type="checkbox" name="interes" id="bebidas" value="bebidas">
-                            Bebidas
-                        </label>
+                                <label for="bebidas">
+                                    <input type="checkbox" name="interes" id="bebidas" value="bebidas">
+                                    Bebidas
+                                </label>
 
-                        <label for="lacteos">
-                            <input type="checkbox" name="interes" id="lacteos" value="lacteos">
-                            Lacteos
-                        </label>
+                                <label for="lacteos">
+                                    <input type="checkbox" name="interes" id="lacteos" value="lacteos">
+                                    Lacteos
+                                </label>
 
-                        <label for="congelados">
-                            <input type="checkbox" name="interes" id="congelados" value="congelados">
-                            Alim. congelados
-                        </label>
+                                <label for="congelados">
+                                    <input type="checkbox" name="interes" id="congelados" value="congelados">
+                                    Alim. congelados
+                                </label>
 
-                        <label for="vida">
-                            <input type="checkbox" name="interes" id="vida" value="vida">
-                            <label for="vida">
-                                Vida sana
-                            </label>
-                    </fieldset>
-                </div>
-                <div class="text_input">
+                                <label for="vida">
+                                    <input type="checkbox" name="interes" id="vida" value="vida">
+                                    <label for="vida">
+                                        Vida sana
+                                    </label>
+                            </fieldset>
+                        </div>
+                        <div class="text_input">
 
-                    <fieldset class="fotoperfil">
-                        <legend><b>Foto de perfil</b></legend>
-                        <label for="foto">
-                            <input type="file" name="fotoPerfil" id="foto perfil">
-                        </label>
-                    </fieldset>
+                            <fieldset class="fotoperfil">
+                                <legend><b>Foto de perfil</b></legend>
+                                <label for="foto">
+                                    <input type="file" name="fotoPerfil" id="foto perfil"   value='<%= locals.old && old.fotoPerfil ? old.fotoPerfil : '' %>'>
+                                </label>
+                            </fieldset>
 
-                    <fieldset>
-                        <legend><b>Fecha de nacimiento</b></legend>
-                        <label for="date"></label>
-                        <input type="date" name="fechaNacimiento" id="fecha nacimiento">
-                    </fieldset>
+                            <fieldset>
+                                <legend><b>Fecha de nacimiento</b></legend>
+                                <label for="date"></label>
+                                <input type="date" name="fechaNacimiento" id="fecha nacimiento"    value='<%= locals.old && old.fechaNacimiento ? old.fechaNacimiento : '' %>'>
+                            </fieldset>
 
-                    <fieldset>
-                        <legend><b>Contraseña</b></legend>
-                        <label for="password"></label>
-                        <input type="password" name="password" id="password" required>
-                    </fieldset>
+                            <fieldset>
+                                <legend><b>Contraseña</b></legend>
+                                <label for="password"></label>
+                                <input type="password" name="password" id="password" required>
+                            </fieldset>
 
-                    <fieldset>
-                        <legend><b>Confirmar contraseña</b></legend>
-                        <label for="password"></label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" required>
-                    </fieldset>
+                            <fieldset>
+                                <legend><b>Confirmar contraseña</b></legend>
+                                <label for="password"></label>
+                                <input type="password" name="confirmPassword" id="confirmPassword" required>
+                            </fieldset>
 
-                </div>
-                <input type="submit" class='boton' value="Crear">
-                <input type="reset" class='boton' value="Reset">
+                        </div>
+                        <input type="submit" class='boton' value="Crear">
+                        <input type="reset" class='boton' value="Reset">
 
-            </form>
+                    </form>
         </main>
         <%- include("../partials/footer") %>
 </body>
