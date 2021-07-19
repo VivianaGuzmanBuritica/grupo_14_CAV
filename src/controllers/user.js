@@ -25,6 +25,8 @@ const userController = {
         }
         else { res.render('users/register', {  errors: errors.mapped(),
             old: req.body}) }
+        
+           // return res.redirect('') 
     },
 
 
