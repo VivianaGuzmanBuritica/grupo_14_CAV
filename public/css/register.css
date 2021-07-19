@@ -100,6 +100,10 @@ main form {
 
 }
 
+fieldset select {
+    width: 50vmin;
+   
+}
 
 form *{
     border: none;
@@ -131,7 +135,7 @@ fieldset.interes {
   
   }
 
- input[type=submit], input[type=reset] {
+ input[type=submit],    [type=reset] {
     
     background-color: #f58634;
     font-size: 22px;
@@ -159,7 +163,7 @@ input[type=submit]:hover{
 width: 50vmin;
 padding-top: 10px;
 }
-input {
+input, select {
    
     text-rendering: auto;
     color: -internal-light-dark(black, white);

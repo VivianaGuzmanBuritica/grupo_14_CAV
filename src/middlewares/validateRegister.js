@@ -13,6 +13,8 @@ const validaciones = [
     //body("fotoPerfil").notEmpty().withMessage("La foto es campo obligatorio"),
     //body("date").notEmpty().withMessage("Nacimiento es campo obligatorio"),
     body("password").notEmpty().withMessage("Contraseña es campo obligatorio").bail()
+    .isLength({min:8}).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
+    body("confirmPassword").notEmpty().withMessage("Confirmar la contraseña es campo obligatorio").bail()
     .isLength({min:8}).withMessage("La contraseña debe tener 8 caracteres como mínimo")
   ];
 

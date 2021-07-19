@@ -15,17 +15,18 @@ const userController = {
 
     profile: (req, res) => res.render('users/profile', { user: user.one(req.body.mail) }),
 
-
     newUser: (req, res) => {
         let errors = validationResult(req);
-        
+
         if (errors.isEmpty()) {
             let nuevo = user.userRegister(req.body, req.file);
             console.log('metodo new user' + nuevo);
             return nuevo == true ? res.redirect('ingresar') : res.send("Error al cargar la informacion")
         }
-        else { res.render('users/register', { errors: errors.array(), old: req.body }) }
+        else { res.render('users/register', {  errors: errors.mapped(),
+            old: req.body}) }
     },
+
 
     userLogin: function (req, res) {
         console.log(req.body);
