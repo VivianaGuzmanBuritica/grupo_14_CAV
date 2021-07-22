@@ -1,0 +1,36 @@
+form *{
+    margin: 0 auto;
+    background-color:#fff;
+    border-radius: 8px;
+    border:none;
+    width: 40%;      
+}
+
+section{
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    width: 20%;
+}
+
+button {
+    padding: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+p {
+    display:block;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+

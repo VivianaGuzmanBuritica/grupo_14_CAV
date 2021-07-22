@@ -13,25 +13,33 @@ const userController = {
 
     userList: (req, res) => res.render('users/userList', { user: user.all() }),
 
-    profile: (req, res) => res.render('users/profile', { user: user.one(req.body.mail) }),
-
+    profile: (req, res) => res.render('users/userProfile', 
+    { user: req.session != undefined && req.session.usuario!= undefined ? req.session.usuario : null}),
 
     newUser: (req, res) => {
         let errors = validationResult(req);
-        
+
         if (errors.isEmpty()) {
             let nuevo = user.userRegister(req.body, req.file);
             console.log('metodo new user' + nuevo);
             return nuevo == true ? res.redirect('ingresar') : res.send("Error al cargar la informacion")
         }
-        else { res.render('users/register', { errors: errors.array(), old: req.body }) }
+        else { res.render('users/register', {  errors: errors.mapped(),
+            old: req.body}) }
+        
+           // return res.redirect('') 
     },
+
 
     userLogin: function (req, res) {
         console.log(req.body);
-        let usuarios = user.findByEmail('email', req.body.email);
-        console.log(usuarios)
-        //return res.redirect('profile') 
+        let usuario = user.findByEmail('email', req.body.email);
+        console.log(usuario)
+        if (usuario) {
+            req.session.usuario = usuario
+        return res.redirect('/usuario/perfil') 
+        }
+        return res.redirect('/usuario/ingresar') 
     },
 
     show: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//

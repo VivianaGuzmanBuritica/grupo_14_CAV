@@ -27,12 +27,11 @@ router.get('/ingresar', user.login);
 router.post('/ingresar', [upload.any()],user.userLogin);
 
 router.get('/registro',user.register);
-//router.post('/registro',[upload.any(),validaciones],user.userRegister); 
 router.post('/registro',[upload.single('fotoPerfil'),validaciones],user.newUser); 
 
 
-router.get('/perfil', user.userList);
-router.post('/perfil', user.profile);
+router.get('/lista', user.userList);
+router.get('/perfil', user.profile);
 
 router.get("/:id",user.show); //mostrar vista profile REVISAR "/profile/:id"
 router.get("/edit/:id",user.edit); //mostra vista editar profile

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("../partials/head") %>
+        <title>CAV</title>
+        <link rel="stylesheet" href="/css/userProfile.css">
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+
+    <h1>MIS DATOS</h1>
+    
+    <% if (user) { %>
+        <section id="profile">
+            <article>
+            <figure><img src="/uploads/avatars/<%= user.fotoPerfil%>" alt=""></figure>
+            <h2><%= user.name %></h2>
+
+        </article>
+        
+        <p>DOMICILIO</p>
+        <%= user.domicilio %>
+        <p>TIPO DE COMERCIO</p>
+        <%= user.tipo %>
+        <p>INTERESES</p>
+        <%= user.interes %>
+        <p>FECHA DE NACIMIENTO</p>
+        <%= user.fechaNacimiento %>
+
+        </section>
+
+        <button><a href="/usuario/<%= user.id %>">Editar Perfil</a></button>
+
+    <% } %>
+
+    <%- include("../partials/footer") %>
+</body>
+
+</html>

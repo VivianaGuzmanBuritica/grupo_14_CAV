@@ -109,5 +109,17 @@
     "password": "$2a$10$BJVYwy3Zj5mjqa6sc1a.ZeXR6Eb.UVbV6TTe97HKd.XO6jw7hbN.C",
     "confirmPassword": "hola1234",
     "administrador": false
+  },
+  {
+    "id": 20,
+    "name": "Viviana",
+    "email": "viviana@gmail.com",
+    "domicilio": "Buriticá",
+    "tipo": "Autoservicio",
+    "interes": "bebidas",
+    "fotoPerfil": "fotoPerfil-1626730462202.png",
+    "fechaNacimiento": "2021-07-14",
+    "password": "$2a$10$8iC.Ht9wEdQBkw8TIbQXA.qt1/e5.BZdguCR2ZdLAMj96fgMTowpe",
+    "administrador": false
   }
 ]

@@ -11,116 +11,161 @@
 <body>
     <%- include("../partials/header") %>
         <main>
-            <% if (locals.errors){ errors.forEach(error=> { %>
-                <p class="feedback">
-                    <%= error.msg %>
-                </p>
-                <% }) } %>
-                    <form class="register" action="/usuario/registro" method="POST" enctype="multipart/form-data">
-                        <div class="titulo">
-                            <h2 for="name">Registrate</h2>
-                            <h3>Es fácil y rápido</h3>
-                        </div>
-                        <div class="text_input">
-                            <fieldset>
-                                <legend><b>Nombre y apellido</b></legend>
-                                <label for="name"></label>
-                                <input type="text" name="name" id="name"
-                                    value='<%= locals.old && old.name ? old.name : '' %>'>
-
-                            </fieldset>
-
-                            <fieldset>
-                                <legend><b>Correo electronico</b></legend>
-                                <label for="email"></label>
-                                <input type="email" name="email" id="email"
-                                value='<%= locals.old && old.email ? old.email : '' %>'>
-                            </fieldset>
 
 
-                            <fieldset>
-                                <legend><b>Domicilio</b></legend>
-                                <label for="domicilio"></label>
-                                <input type="text" name="domicilio" id="domicilio"
-                                value='<%= locals.old && old.domicilio ? old.domicilio : '' %>'>
-                            </fieldset>
+            <form class="register" action="/usuario/registro" method="POST" enctype="multipart/form-data">
+                <div class="titulo">
+                    <h2 for="name">Registrate</h2>
+                    <h3>Es fácil y rápido</h3>
+                </div>
+                <div class="text_input">
+                    <fieldset>
+                        <legend><b>Nombre y apellido</b></legend>
+                        <label for="name"></label>
+                        <input type="text" name="name" id="name"
+                            value='<%= locals.old && old.name ? old.name : null %>'>
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="feedback">
+                                <%= errors.name.msg %>
+                            </div>
+                            <% }%>
 
-                            <fieldset>
-                                <legend><b>Tipo de comercio</b></legend>
-                                <input list="tipo" name="tipo">
-                                <datalist id="tipo">
-                                    <option value="Autoservico">
-                                    <option value="Almacen">
-                                    <option value="Kiosco">
-                                    <option value="Esatcion de servicio">
-                                </datalist>
+                    </fieldset>
 
-                            </fieldset>
-                        </div>
-                        <div id='rubro'>
-                            <fieldset class="interes">
+                    <fieldset>
+                        <legend><b>Correo electronico</b></legend>
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email"
+                            value='<%= locals.old && old.email ? old.email : '' %>'>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="feedback">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% }%>
 
-                                <legend><b>Rubros de interes</b></legend>
+                    </fieldset>
 
-                                <label for="Alimentos">
-                                    <input type="checkbox" name="interes" id="alimentos" value="alimentos">
-                                    Alimentos
-                                </label>
 
-                                <label for="bebidas">
-                                    <input type="checkbox" name="interes" id="bebidas" value="bebidas">
-                                    Bebidas
-                                </label>
+                    <fieldset>
+                        <legend><b>Domicilio</b></legend>
+                        <label for="domicilio"></label>
+                        <input type="text" name="domicilio" id="domicilio"
+                            value='<%= locals.old && old.domicilio ? old.domicilio : '' %>'>
+                        <% if (locals.errors && errors.domicilio) { %>
+                            <div class="feedback">
+                                <%= errors.domicilio.msg %>
+                            </div>
+                            <% }%>
+                    </fieldset>
 
-                                <label for="lacteos">
-                                    <input type="checkbox" name="interes" id="lacteos" value="lacteos">
-                                    Lacteos
-                                </label>
+                    <fieldset>
+                        <legend><b>Tipo de comercio</b></legend>
+                        <select id="tipo" name="tipo">
 
-                                <label for="congelados">
-                                    <input type="checkbox" name="interes" id="congelados" value="congelados">
-                                    Alim. congelados
-                                </label>
+                            <option value="">Elige un tipo de servicio</option>
+                            <% let tipos=[ 'Autoservicio' , 'Almacen' , 'Kiosco' , 'Estación de Servicio' ] %>
+                                <% for (const oneTipo of tipos){ %>
+                                    <option value="<%= oneTipo %>" <%=locals.old && (oneTipo===old.tipo) ? 'selected' :
+                                        null %> >
+                                        <%= oneTipo %>
+                                    </option>
+                                    <% } %>
 
-                                <label for="vida">
-                                    <input type="checkbox" name="interes" id="vida" value="vida">
-                                    <label for="vida">
-                                        Vida sana
-                                    </label>
-                            </fieldset>
-                        </div>
-                        <div class="text_input">
+                        </select>
+                        <% if (locals.errors && errors.tipo) { %>
+                            <div class="feedback">
+                                <%= errors.tipo.msg %>
+                            </div>
+                            <% }%>
 
-                            <fieldset class="fotoperfil">
-                                <legend><b>Foto de perfil</b></legend>
-                                <label for="foto">
-                                    <input type="file" name="fotoPerfil" id="foto perfil"   value='<%= locals.old && old.fotoPerfil ? old.fotoPerfil : '' %>'>
-                                </label>
-                            </fieldset>
+                    </fieldset>
+                </div>
+                <div id='rubro'>
+                    <fieldset class="interes">
 
-                            <fieldset>
-                                <legend><b>Fecha de nacimiento</b></legend>
-                                <label for="date"></label>
-                                <input type="date" name="fechaNacimiento" id="fecha nacimiento"    value='<%= locals.old && old.fechaNacimiento ? old.fechaNacimiento : '' %>'>
-                            </fieldset>
+                        <legend><b>Rubros de interes</b></legend>
 
-                            <fieldset>
-                                <legend><b>Contraseña</b></legend>
-                                <label for="password"></label>
-                                <input type="password" name="password" id="password" required>
-                            </fieldset>
+                        <label for="Alimentos">
+                            <input type="checkbox" name="interes" id="alimentos" value="alimentos">
+                            Alimentos
+                        </label>
 
-                            <fieldset>
-                                <legend><b>Confirmar contraseña</b></legend>
-                                <label for="password"></label>
-                                <input type="password" name="confirmPassword" id="confirmPassword" required>
-                            </fieldset>
+                        <label for="bebidas">
+                            <input type="checkbox" name="interes" id="bebidas" value="bebidas">
+                            Bebidas
+                        </label>
 
-                        </div>
-                        <input type="submit" class='boton' value="Crear">
-                        <input type="reset" class='boton' value="Reset">
+                        <label for="lacteos">
+                            <input type="checkbox" name="interes" id="lacteos" value="lacteos">
+                            Lacteos
+                        </label>
 
-                    </form>
+                        <label for="congelados">
+                            <input type="checkbox" name="interes" id="congelados" value="congelados">
+                            Alim. congelados
+                        </label>
+
+                        <label for="vida">
+                            <input type="checkbox" name="interes" id="vida" value="vida">
+                            <label for="vida">
+                                Vida sana
+                            </label>
+                    </fieldset>
+                </div>
+                <div class="text_input">
+
+                    <fieldset class="fotoperfil">
+                        <legend><b>Foto de perfil</b></legend>
+                        <label for="foto"></label>
+                        <input type="file" name="fotoPerfil" id="foto perfil"
+                            value='<%= locals.old && old.fotoPerfil ? old.fotoPerfil : '' %>'>
+                        <% if (locals.errors && errors.fotoPerfil) { %>
+                            <div class="feedback">
+                                <%= errors.fotoPerfil.msg %>
+                            </div>
+                            <% }%>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><b>Fecha de nacimiento</b></legend>
+                        <label for="date"></label>
+                        <input type="date" name="fechaNacimiento" id="fecha nacimiento"
+                            value='<%= locals.old && old.fechaNacimiento ? old.fechaNacimiento : '' %>'>
+                        <% if (locals.errors && errors.fechaNacimiento) { %>
+                            <div class="feedback">
+                                <%= errors.fechaNacimiento.msg %>
+                            </div>
+                            <% }%>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><b>Contraseña</b></legend>
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="feedback">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% }%>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><b>Confirmar contraseña</b></legend>
+                        <label for="password"></label>
+                        <input type="password" name="confirmPassword" id="confirmPassword">
+                        <% if (locals.errors && errors.confirmPassword) { %>
+                            <div class="feedback">
+                                <%= errors.confirmPassword.msg %>
+                            </div>
+                            <% }%>
+                    </fieldset>
+
+                </div>
+                <input type="submit" class='boton' value="Crear">
+                <input type="reset" class='boton' value="Reset">
+
+            </form>
         </main>
         <%- include("../partials/footer") %>
 </body>

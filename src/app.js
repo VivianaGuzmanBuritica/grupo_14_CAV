@@ -2,6 +2,7 @@ const express= require("express");
 const app= express();
 const path= require("path");
 const method = require('method-override');
+const session = require("express-session");
 
 // server start
 app.set("port", process.env.PORT || 3003)
@@ -20,6 +21,10 @@ app.set('views', path.resolve(__dirname, './views'));
 app.use(express.urlencoded({extended:false}));
 app.use(method("_method")) // ?_method=PUT
 app.use(express.json());
+
+
+//terminar express session
+app.use(session({resave: true, saveUninitialized: true, secret: "CAV"}));
 
 // routes
 const main = require('./routes/main');
