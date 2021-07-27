@@ -62,3 +62,29 @@ Mantener contacto fluido y brindarnos retroalimentación entre nosotros respecto
 ### 5. Dejar de hacer.
 Procrastincar las entregas en pos de investigar a fondo cada elemento que inlcuimos en el código. Si bien es una buena práctica que ayuda a evitar errores, no ayuda a hacer un uso eficiente del tiempo ni contribuye a la finalizacion de proyecto.
 
+# RETROSPECTIVA AL CUARTO SPRINT
+
+### 1. Comenzar a hacer:
+Definir una estructura y priorización del trabajo más organizado en función de los objetivos del sprint.
+### 2. Hacer más:
+Realizar mejoras relacionados con sprints anterioriores con el proposito de optimizar el código y la experiencia del usuario
+
+### 3. Continuar haciendo.
+Abordar los desafios del sprint oportunamente para liberar presión sobre la fecha de entrega.
+
+### 4. Hacer menos.
+Incluir componentes en el proyecto que carecen de relevancia, y que por el contrario requieren de su desarrollo, perdiendo tiempo y el foco de la funcionalidad del e-commerce 
+
+### 5. Dejar de hacer.
+Posponer la retrospectiva pues es una buena herramienta para la planeación del sprint a encarar.
+
+# RETROSPECTIVA AL QUINTO SPRINT
+
+### 1. Comenzar a hacer:
+### 2. Hacer más:
+
+### 3. Continuar haciendo.
+
+### 4. Hacer menos.
+
+### 5. Dejar de hacer.
