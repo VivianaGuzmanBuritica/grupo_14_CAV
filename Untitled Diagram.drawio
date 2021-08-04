@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-08-04T20:01:12.314Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" etag="GBUhf4jv1aPhETtiMIiW" version="14.9.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-04T20:13:00.636Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36" etag="XllNkAX_P4qPlnQeHDj8" version="14.9.4" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Producto">
-    <mxGraphModel dx="1695" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2274" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -229,6 +229,9 @@
         </mxCell>
         <mxCell id="pgkYh4DVe6Vaskdhu9Dn-11" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="360" y="460" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pgkYh4DVe6Vaskdhu9Dn-12" value="1:N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=15;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="210" y="100" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
