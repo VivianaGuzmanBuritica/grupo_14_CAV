@@ -2,29 +2,21 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-
     try {
-      await queryInterface.createTable('products', {
-        id_producto: {
+      await queryInterface.createTable('marcasCategorias', {
+        id_marcaCategoria:{
           type: Sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true
         },
-        nombre: {
-          type: Sequelize.STRING,
-        },
-        ìd_marca: {
+
+        id_marca: {
           type: Sequelize.INTEGER,
           reference:{
             model: 'marcas',
             key:'id_marca'
           }
-        },
-        descripcion: {
-          type: Sequelize.STRING,
-        },
-        imagen: {
-          type: Sequelize.INTEGER,
+
         },
         id_categoria: {
           type: Sequelize.INTEGER,
@@ -33,9 +25,6 @@ module.exports = {
             key:'id_categoria'
           }
         },
-        precio: {
-          type: Sequelize.INTEGER,
-        }, 
         createAt:{
           type:Sequelize.DATE,
           allowNull: false,
@@ -46,7 +35,6 @@ module.exports = {
           allowNull: false,
           defaultValue: Sequelize.now
         }
-
       });
 
     } catch (error) {
@@ -58,7 +46,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     try {
-      await queryInterface.dropTable('products');
+      await queryInterface.dropTable('users');
 
     } catch (error) {
       throw error
