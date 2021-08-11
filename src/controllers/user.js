@@ -37,7 +37,10 @@ const userController = {
         console.log(usuario)
         if (usuario) {
             req.session.usuario = usuario
-        return res.redirect('/usuario/perfil') 
+        return res.redirect('/usuario/perfil') }
+        
+        if(req.body.recordame != undefined) {
+            res.cookie("recordame", usuario.email, {maxAge: 60000})
         }
         return res.redirect('/usuario/ingresar') 
     },

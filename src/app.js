@@ -3,6 +3,7 @@ const app= express();
 const path= require("path");
 const method = require('method-override');
 const session = require("express-session");
+const cookieParser = require('cookie-parser');
 
 // server start
 app.set("port", process.env.PORT || 3003)
@@ -25,6 +26,9 @@ app.use(express.json());
 
 //terminar express session
 app.use(session({resave: true, saveUninitialized: true, secret: "CAV"}));
+
+//cookies
+app.use(cookieParser());
 
 // routes
 const main = require('./routes/main');
