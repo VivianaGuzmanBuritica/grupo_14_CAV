@@ -28,5 +28,20 @@ module.exports = function (Sequelize, dataTypes) {
     }
 
     let Marca = Sequelize.define(alias, cols, config);
+
+    Marca.associate = function(models){
+        Marca.hasMany(models.Product, {
+            as: 'productos',
+            foreignkey: 'id_marca'
+        });
+    Marca.belongsToMany(models.Categoria, {
+            as: 'categorias',
+            through: 'marcasCategorias',
+            foreignkey: 'id_marca',
+            otherkey:'id_categoria',
+            timestamps: true
+        });
+
+    }
     return Marca;
 }

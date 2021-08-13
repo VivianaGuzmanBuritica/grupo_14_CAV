@@ -13,7 +13,7 @@ module.exports = {
         nombre: {
           type: Sequelize.STRING,
         },
-        ìd_marca: {
+        id_marca: {
           type: Sequelize.INTEGER,
           reference:{
             model: 'marcas',

@@ -41,5 +41,7 @@ module.exports = function (Sequelize, dataTypes) {
     }
 
     let MarcaCategoria = Sequelize.define(alias, cols, config);
+    
+
     return MarcaCategoria;
 }

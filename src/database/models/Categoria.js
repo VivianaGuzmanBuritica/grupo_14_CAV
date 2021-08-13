@@ -28,5 +28,20 @@ module.exports = function (Sequelize, dataTypes) {
     }
 
     let Categoria = Sequelize.define(alias, cols, config);
+
+    Categoria.associate = function(models){
+        Categoria.hasMany(models.Product, {
+            as: 'productos',
+            foreignkey: 'id_categoria'
+        });
+        Categoria.belongsToMany(models.Marca, {
+            as: 'marcas',
+            through: 'marcasCategorias',
+            foreignkey: 'id_categoria',
+            otherkey:'id_marca',
+            timestamps: true
+        });
+    }
+
     return Categoria;
 }

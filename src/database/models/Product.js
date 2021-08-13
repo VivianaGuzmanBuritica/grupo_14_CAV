@@ -10,8 +10,8 @@ module.exports = function (Sequelize, dataTypes) {
         nombre: {
             type: dataTypes.STRING,
         },
-        ìd_marca: {
-            type: dataTypes.INTEGER,       
+        id_marca: {
+            type: dataTypes.INTEGER,
         },
         descripcion: {
             type: dataTypes.STRING,
@@ -20,7 +20,7 @@ module.exports = function (Sequelize, dataTypes) {
             type: dataTypes.INTEGER,
         },
         id_categoria: {
-            type: dataTypes.INTEGER,          
+            type: dataTypes.INTEGER,
         },
         precio: {
             type: dataTypes.INTEGER,
@@ -37,11 +37,24 @@ module.exports = function (Sequelize, dataTypes) {
         }
     }
 
-    let config ={
-            tanleName:'product',
-            timestamps: true
+    let config = {
+        tanleName: 'product',
+        timestamps: true
     }
 
     let Product = Sequelize.define(alias, cols, config);
-    return Product;
-}
+
+    Product.associate = function (models) {
+        Product.belongsTo(models.Marca, {
+            as: 'marca',
+            foreignkey: 'id_marca'
+        });
+        
+        Product.belongsTo(models.Categoria, {
+                as: 'categoria',
+                foreignkey: 'id_categoria'
+            })
+        }
+
+        return Product;
+    }
