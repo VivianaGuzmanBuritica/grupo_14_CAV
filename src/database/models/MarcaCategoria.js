@@ -1,29 +1,27 @@
 module.exports = function (Sequelize, dataTypes) {
 
-    let alias = 'Product';
+    let alias = 'MarcaCategoria';
     let cols = {
-        id_producto: {
+        id_marcaCategoria: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        nombre: {
-            type: dataTypes.STRING,
-        },
-        ìd_marca: {
-            type: dataTypes.INTEGER,       
-        },
-        descripcion: {
-            type: dataTypes.STRING,
-        },
-        imagen: {
+
+        id_marca: {
             type: dataTypes.INTEGER,
+            reference: {
+                model: 'marcas',
+                key: 'id_marca'
+            }
+
         },
         id_categoria: {
-            type: dataTypes.INTEGER,          
-        },
-        precio: {
             type: dataTypes.INTEGER,
+            reference: {
+                model: 'categorias',
+                key: 'id_categoria'
+            }
         },
         createAt: {
             type: dataTypes.DATE,
@@ -37,11 +35,11 @@ module.exports = function (Sequelize, dataTypes) {
         }
     }
 
-    let config ={
-            tanleName:'product',
-            timestamps: true
+    let config = {
+        tanleName: 'marcasCategorias',
+        timestamps: true
     }
 
-    let Product = Sequelize.define(alias, cols, config);
-    return Product;
+    let MarcaCategoria = Sequelize.define(alias, cols, config);
+    return MarcaCategoria;
 }
