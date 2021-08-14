@@ -4,6 +4,12 @@ const path= require("path");
 const method = require('method-override');
 const session = require("express-session");
 const cookieParser = require('cookie-parser');
+const db = require("./database/models/index")
+
+// base de datos
+db.sequelize.sync().then(()=> {
+    console.log("modelos sincronizados")
+})
 
 // server start
 app.set("port", process.env.PORT || 3003)
@@ -42,6 +48,8 @@ app.use('/usuario', user);
 
 const productCart = require('./routes/productCart');
 app.use(productCart);
+
+
 
 
 
