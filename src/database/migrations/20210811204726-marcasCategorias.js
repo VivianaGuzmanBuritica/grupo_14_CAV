@@ -46,7 +46,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     try {
-      await queryInterface.dropTable('users');
+      await queryInterface.dropTable('marcasCategorias');
 
     } catch (error) {
       throw error
