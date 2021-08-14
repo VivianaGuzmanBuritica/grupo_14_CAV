@@ -1,9 +1,47 @@
 const path = require('path');
 const fs = require('fs');
 const bcryptjs= require('bcryptjs');
+let db = require('../database/models');
 
 
 const model = {
+    all: function (req, res) {
+        db.User.findAll()
+          .then(function(user) {
+              res.render('users/userList',{user:user});
+           }
+              );
+          },
+   
+       register: function(req, res) {
+           db.User.findAll()
+               .then(function(users) {
+               res.render('users/register', {users});
+               });
+       },
+   
+       
+        userRegister: function (data, file) {
+           db.User.create(
+               {
+                   name: data.name,
+                   email: data.email,
+                   domicilio: data.domicilio,
+                   tipo: data.tipo,
+                   rubro_interes: data.rubro_interes,
+                   fotoPerfil: file.filename,
+                   fechaNacimiento: data.fechaNacimiento,
+                   password: data.password,
+                   administrador: false
+                   })
+                   .then(function() {
+                    return true; 
+                       });  
+           
+       },
+
+
+    /*
     all: function () {
         const directory = path.resolve(__dirname, '../data', 'users.json')
         const file = fs.readFileSync(directory, 'UTF-8')
@@ -75,8 +113,8 @@ const model = {
         fs.writeFileSync(directory,JSON.stringify(usuarios,null,2));
         return true;
     }
+    */
 };
-
 
 
 module.exports = model;

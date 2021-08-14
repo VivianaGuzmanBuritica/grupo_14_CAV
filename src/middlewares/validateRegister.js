@@ -26,7 +26,6 @@ const validaciones = [
       else{
         let fileExtension = path.extname(file.originalname).toLocaleLowerCase();
         
-        console.log("cmn "+fileExtension)
         if(!acceptedExtensions.includes(fileExtension)){
           throw new Error(`Las extensiones permitidas son' ${acceptedExtensions.join(', ')}`);
         }
