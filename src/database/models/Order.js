@@ -5,16 +5,16 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            allowNull:false,
+            notNull:true,
             autoIncrement: true,
 
         },
         id_usuario: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
+         /*   references: {
                 model: "User",
                 key: "id"
-            }
+            }*/
         },
         id_carrito: {
             type: DataTypes.INTEGER.UNSIGNED,

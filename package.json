@@ -4,8 +4,9 @@
   "description": "Compra Alimentos Virutual - CAV, por Angustina Di Marco, Cristian Christian Novello y Viviana Guzmán",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js -e css,html, ejs, json ",
-    "test": "clear && nodemon src/node app.js -e, css, ejs, html, json"
+    "start": "node src/app.js -e css,html, ejs, json",
+    "test": "clear && nodemon src/node app.js -e, css, ejs, html, json",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,10 @@
     "express-validator": "^6.12.0",
     "method-override": "^3.0.0",
     "multer": "^1.4.2",
-    "mysql2": "^2.3.0"
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
-  }
+    }
 }

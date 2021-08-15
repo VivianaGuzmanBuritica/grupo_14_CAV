@@ -6,6 +6,12 @@ const relationProductCartController = {
         let productoAgregado = await db.RelationProductCart.create(nuevoProducto)
         return productoAgregado
     },
+    eliminarProducto: (req,res) => {
+        let productoAEliminar = req.body
+        let carritoModificado = await db.RelationProductCart.destroy(productoAEliminar)
+        return carritoModificado
+
+    }
 
 };
 

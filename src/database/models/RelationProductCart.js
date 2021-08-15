@@ -1,47 +1,41 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "RelationProductCart"
-
+    let alias = "Relationproductcart"
+ 
     let cols = {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            allowNull:false,
-            autoIncrement: true,
-
+            notNull:true,
+            autoIncrement: true
         },
-        id_producto: {
+        id_product: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
-                model: "Product",
-                key: "id_producto"
-            }
+            notNull:true,
         },
         cantidad: {
             type: DataTypes.INTEGER.UNSIGNED,
-            allowNull: false
+            notNull:true,
         },
         id_carrito: {
             type: DataTypes.INTEGER.UNSIGNED,
             references: {
-                model: "Cart",
-                key: "id"
+                model: 'Cart',
+                key: 'id',
             }
         },
         subtotal: {
             type: DataTypes.DECIMAL.UNSIGNED,
-            allowNull: false
-        },
+            notNull:true,
+        }
     }
-
+    
     let config = {
         timestamps: false,
-        tableName: "relacion_producto_carrito",
+        tableName: 'relacion_producto_carrito',
         underscored: true
     }
 
+    const Relationproductcart = sequelize.define(alias, cols, config)
 
-    const RelationProductCart = sequelize.define(alias, cols, config)
-
-    return RelationProductCart
-}
-
+    return Relationproductcart
+};

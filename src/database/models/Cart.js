@@ -5,13 +5,13 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            allowNull:false,
+            notNull:true,
             autoIncrement: true,
 
         },
         total: {
             type: DataTypes.DECIMAL.UNSIGNED,
-            allowNull:false,
+            notNull:true,
         },
         id_pedido: {
             type: DataTypes.INTEGER.UNSIGNED,
@@ -22,8 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         pagado: {
             type: DataTypes.BOOLEAN,
-            allowNull: false
-
+            notNull:true,
         }
     }
 
@@ -35,6 +34,8 @@ module.exports = (sequelize, DataTypes) => {
 
 
     const Cart = sequelize.define(alias, cols, config)
+
+    // relaciones con otros modelos
 
     return Cart
 }

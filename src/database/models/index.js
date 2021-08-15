@@ -15,13 +15,23 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+sequelize
+    .authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully!');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+        process.exit(1);
+});
+
 fs
   .readdirSync(__dirname)
   .filter(file => {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+    const model = require(path.join(__dirname, file))(sequelize,  Sequelize.DataTypes);;
     db[model.name] = model;
   });
 
