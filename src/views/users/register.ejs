@@ -63,7 +63,7 @@
                         <select id="tipo" name="tipo">
 
                             <option value="">Elige un tipo de servicio</option>
-                            <% let tipos=[ 'Autoservicio' , 'Almacen' , 'Kiosco' , 'Estación de Servicio' ] %>
+                            <% let tipos=[1, 'Autoservicio' , 'Almacen' , 'Kiosco' , 'Estación de Servicio' ] %>
                                 <% for (const oneTipo of tipos){ %>
                                     <option value="<%= oneTipo %>" <%=locals.old && (oneTipo===old.tipo) ? 'selected' :
                                         null %> >
@@ -86,7 +86,7 @@
                         <legend><b>Rubros de interes</b></legend>
 
                         <label for="Alimentos">
-                            <input type="checkbox" name="interes" id="alimentos" value="alimentos">
+                            <input type="checkbox" name="interes" id="alimentos" value="1">
                             Alimentos
                         </label>
 
