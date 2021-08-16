@@ -6,23 +6,15 @@ module.exports = {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            notNull:true,
+            allowNull:false,
             autoIncrement: true,
-
         },
         id_usuario: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
-                model: "User",
-                key: "id"
-            }
+            allowNull:false,
         },
         id_carrito: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
-                model: "Carrito",
-                key: "id"
-            }
         },
     });
     },

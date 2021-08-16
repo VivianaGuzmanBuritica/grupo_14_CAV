@@ -7,28 +7,22 @@ module.exports = {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            notNull:true,
+            allowNull:false,
             autoIncrement: true
         },
         id_producto: {
             type: DataTypes.INTEGER.UNSIGNED,
-            notNull:true,
+            allowNull:false,
         },
         cantidad: {
             type: DataTypes.INTEGER.UNSIGNED,
-            notNull:true,
         },
         id_carrito: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
-                model: 'Carrito',
-                key: 'id',
-            }
+            allowNull:false,
         },
         subtotal: {
-            type: DataTypes.DECIMAL.UNSIGNED,
-            notNull:true,
-        }
+            type: DataTypes.DECIMAL.UNSIGNED,        }
     });
      
   },

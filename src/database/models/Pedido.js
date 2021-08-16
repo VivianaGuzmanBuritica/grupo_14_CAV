@@ -5,23 +5,16 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            notNull:true,
+            allowNull:false,
             autoIncrement: true,
 
         },
         id_usuario: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
-                model: "User",
-                key: "id"
-            }
+            allowNull:false,
         },
         id_carrito: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
-                model: "Carrito",
-                key: "id"
-            }
         },
     }
 
@@ -38,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       Pedido.associate = function(models){
         Pedido.hasOne(models.Carrito,{
             as: 'carrito',
-            foreignKey: 'id_carrito'
+            foreignKey: 'id_pedido'
         });
         Pedido.belongsTo(models.user,{
             as: 'usuario',

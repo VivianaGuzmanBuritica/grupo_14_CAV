@@ -5,32 +5,22 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
-            notNull:true,
+            allowNull:false,
             autoIncrement: true
         },
         id_producto: {
             type: DataTypes.INTEGER.UNSIGNED,
-            notNull:true,
-            references: {
-                model: 'Product',
-                key: 'id_producto',
-            }
+            allowNull:false,
         },
         cantidad: {
             type: DataTypes.INTEGER.UNSIGNED,
-            notNull:true,
         },
         id_carrito: {
             type: DataTypes.INTEGER.UNSIGNED,
-            references: {
-                model: 'Carrito',
-                key: 'id',
-            }
+            allowNull:false,
         },
         subtotal: {
-            type: DataTypes.DECIMAL.UNSIGNED,
-            notNull:true,
-        }
+            type: DataTypes.DECIMAL.UNSIGNED,        }
     }
     
     let config = {
@@ -43,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
 
     // relaciones con otros modelos
     ProductoCarrito.associate = function(models){
-        ProductoCarrito.hasOne(models.Carrito,{
+        ProductoCarrito.belongsTo(models.Carrito,{
         as: 'carrito',
         foreignKey: 'id_carrito'
         }),

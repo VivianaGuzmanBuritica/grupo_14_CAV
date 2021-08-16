@@ -5,29 +5,25 @@ module.exports = (sequelize, DataTypes) => {
       id: {
           type: DataTypes.INTEGER.UNSIGNED,
           primaryKey: true,
-          notNull:true,
+          allowNull:false,
           autoIncrement: true,
 
       },
       total: {
           type: DataTypes.DECIMAL.UNSIGNED,
-          notNull:true,
+          allowNull:false,
       },
       id_pedido: {
           type: DataTypes.INTEGER.UNSIGNED,
-          references: {
-              model: "Pedido",
-              key: "id"
-          }
       },
       pagado: {
           type: DataTypes.BOOLEAN,
-          notNull:true,
+          allowNull:false,
       }
   }
 
   let config = {
-      timestamps: false,
+      timestamps: true,
       tableName: "carrito",
       underscored: true
   }
@@ -43,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       }),
       Carrito.hasMany(models.ProductoCarrito,{
         as: 'productocarrito',
-        foreignKey: 'id_'
+        foreignKey: 'id_carrito'
     })
   }
 

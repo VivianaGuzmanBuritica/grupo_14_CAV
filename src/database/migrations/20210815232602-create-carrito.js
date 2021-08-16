@@ -5,26 +5,22 @@ module.exports = {
       id: {
           type: DataTypes.INTEGER.UNSIGNED,
           primaryKey: true,
-          notNull:true,
+          allowNull:false,
           autoIncrement: true,
 
       },
       total: {
           type: DataTypes.DECIMAL.UNSIGNED,
-          notNull:true,
+          allowNull:false,
       },
       id_pedido: {
           type: DataTypes.INTEGER.UNSIGNED,
-          references: {
-              model: "Pedido",
-              key: "id"
-          }
       },
       pagado: {
           type: DataTypes.BOOLEAN,
-          notNull:true,
+          allowNull:false,
       }
-    });
+  });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('carrito');
