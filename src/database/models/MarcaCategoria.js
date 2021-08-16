@@ -2,13 +2,13 @@ module.exports = function (Sequelize, dataTypes) {
 
     let alias = 'MarcaCategoria';
     let cols = {
-        id_marcaCategoria: {
+        id_brandCategory: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
 
-        id_marca: {
+        id_brand: {
             type: dataTypes.INTEGER,
             reference: {
                 model: 'marcas',
@@ -16,7 +16,7 @@ module.exports = function (Sequelize, dataTypes) {
             }
 
         },
-        id_categoria: {
+        id_category: {
             type: dataTypes.INTEGER,
             reference: {
                 model: 'categorias',
@@ -25,12 +25,12 @@ module.exports = function (Sequelize, dataTypes) {
         },
         createAt: {
             type: dataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
             defaultValue: dataTypes.now
         },
         updatedAt: {
             type: dataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
             defaultValue: dataTypes.now
         }
     }

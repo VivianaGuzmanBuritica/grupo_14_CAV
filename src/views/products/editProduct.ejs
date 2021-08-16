@@ -12,7 +12,7 @@
 <body>
     <%- include("../partials/header") %>
         <main>
-            <form action="/editProduct/<%= product.id %>?_method=PUT" method="post"  enctype="multipart/form-data">
+            <form action="/editProduct/<%= product.id_product %>?_method=PUT" method="post"  enctype="multipart/form-data">
                 <div class="titulo">
                     <h2 for="name">Editar producto</h2>
                     <h3>Es fácil y rápido</h3>
@@ -20,7 +20,7 @@
                 <div class="text_input">
                 <fieldset id='id'>
                     <label><b>ID de producto</b></label>
-                    <input type="text" name="id" id="id" value="<%= product.id %>">
+                    <input type="text" name="id" id="id" value="<%= product.id_product %>">
                 </fieldset>
 
 
@@ -45,7 +45,7 @@
                 
                  <fieldset>
                     <label><b>Marca</b></label>
-                    <input list="brand" name="brand" placeholder="<%= product.brand %>">
+                    <input list="brand" name="brand" placeholder="<%= product.id_brand %>">
                 </fieldset>
 
                 <fieldset>
@@ -57,7 +57,7 @@
 
                 <fieldset>
                     <label><b>Categoría</b></label>
-                    <input list="category" name="category" placeholder="<%= product.category %>">
+                    <input list="category" name="category" placeholder="<%= product.id_category %>">
                 </fieldset>
 
                 <fieldset>
@@ -73,7 +73,7 @@
              </div>
                 <fieldset>
                     <button type="submit">Editar producto</button>
-                    <button type="submit"><a href="/deleteProduct/<%= product.id %>">Eliminar producto</a></button>
+                    <button type="submit"><a href="/deleteProduct/<%= product.id_product %>">Eliminar producto</a></button>
                 </fieldset>
 
             </form>

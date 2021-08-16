@@ -2,22 +2,22 @@ module.exports = function (Sequelize, dataTypes) {
 
     let alias = 'Marca';
     let cols = {
-        id_marca: {
+        id_brand: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        nombre_marca: {
+        name_brand: {
             type: dataTypes.STRING,
         },
         createAt: {
             type: dataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
             defaultValue: dataTypes.now
         },
         updatedAt: {
             type: dataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
             defaultValue: dataTypes.now
         }
     }
@@ -32,13 +32,13 @@ module.exports = function (Sequelize, dataTypes) {
     Marca.associate = function(models){
         Marca.hasMany(models.Product, {
             as: 'productos',
-            foreignkey: 'id_marca'
+            foreignkey: 'id_brand'
         });
     Marca.belongsToMany(models.Categoria, {
             as: 'categorias',
             through: 'marcasCategorias',
-            foreignkey: 'id_marca',
-            otherkey:'id_categoria',
+            foreignkey: 'id_brand',
+            otherkey:'id_category',
             timestamps: true
         });
 

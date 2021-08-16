@@ -11,7 +11,7 @@
     <%- include("../partials/header") %>
         <main>
             <section>
-                <% list.forEach(product=> { %>
+                <% for (let i = 0; i< product.length; i++) {%>
                     <article class="article">
                         <% if (product.image) { %>
                             <figure><img src="/uploads/products/<%= product.image%>" alt=""></figure>
@@ -25,7 +25,7 @@
                                         <p>$<%= product.price %>
                                         </p>
                                         <div class="botones-home">
-                                            <span class="botones"><a href="/productDetail/<%= product.id %>"><i
+                                            <span class="botones"><a href="/productDetail/<%= product.id_product %>"><i
                                                         class="far fa-eye"></i>DETALLES</span></a>
                                             <a href="productCart"><span class="botones"><i
                                                         class="fas fa-shopping-cart"></i>COMPRAR</span></a>
@@ -33,7 +33,7 @@
 
                                     </section>
                     </article>
-                    <% }) %>
+                    <% } %>
             </section>
         </main>
         <%- include("../partials/footer") %>

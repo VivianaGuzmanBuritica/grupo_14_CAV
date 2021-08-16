@@ -30,8 +30,8 @@
                 <section class="caracteristicaProducto">
                     <article>
                         <h2><%= product.name %></h2>
-                        <h3><%= product.brand %></h3>
-                        <h3>Código producto: <%= product.id %></h3>
+                        <h3><%= product.id_brand %></h3>
+                        <h3>Código producto: <%= product.id_product %></h3>
                         <p><%= product.description %></p>
                         <p>$<%= product.price %></p>
                     </article>
@@ -41,7 +41,7 @@
                         <input type="number" min="0" placeholder="0">
                         
                         <button type="submit"><a href='/productCart'>IR AL CARRITO</a></button>
-                        <button type="submit"><a href="/editProduct/<%= product.id %>">EDITAR PRODUCTO</a></button>
+                        <button type="submit"><a href="/editProduct/<%= product.id_product %>">EDITAR PRODUCTO</a></button>
                     </form>
                 </section>
             </section>

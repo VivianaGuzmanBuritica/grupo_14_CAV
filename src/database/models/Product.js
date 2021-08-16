@@ -2,37 +2,37 @@ module.exports = function (Sequelize, dataTypes) {
 
     let alias = 'Product';
     let cols = {
-        id_producto: {
+        id_product: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        nombre: {
+        name: {
             type: dataTypes.STRING,
         },
-        id_marca: {
+        id_brand: {
             type: dataTypes.INTEGER,
         },
-        descripcion: {
+        decription: {
             type: dataTypes.STRING,
         },
-        imagen: {
+        image: {
             type: dataTypes.INTEGER,
         },
-        id_categoria: {
+        id_category: {
             type: dataTypes.INTEGER,
         },
-        precio: {
+        price: {
             type: dataTypes.INTEGER,
         },
         createAt: {
             type: dataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
             defaultValue: dataTypes.now
         },
         updatedAt: {
             type: dataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
             defaultValue: dataTypes.now
         }
     }
@@ -46,13 +46,13 @@ module.exports = function (Sequelize, dataTypes) {
 
     Product.associate = function (models) {
         Product.belongsTo(models.Marca, {
-            as: 'marca',
-            foreignkey: 'id_marca'
+            as: 'marcas',
+            foreignkey: 'id_brand'
         });
         
         Product.belongsTo(models.Categoria, {
-                as: 'categoria',
-                foreignkey: 'id_categoria'
+                as: 'categorias',
+                foreignkey: 'id_category'
             })
         }
 
