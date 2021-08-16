@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const { all } = require('../models/product');
+//const db = require('../database/models');//base de datos
 
 const productController = {
     list: (req,res) => res.render('products/productList',{list: product.all()}),
@@ -23,7 +24,16 @@ const productController = {
         let result = product.delete(req.params.id);
         return result == true ? res.redirect("/productList") : res.send("Error")
     },
+
+    //CRUD base de datos
     
+    //listar:(req,res)=>{
+       // db.Product.findAll().then(function(productos){
+           //res.render('products/productList',{productos: productos})
+    //})
+
+   // }
+
 }
 
 module.exports = productController;

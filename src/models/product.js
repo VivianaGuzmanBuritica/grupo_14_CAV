@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const categoryModel = require('./category.js');
+//const categoryModel = require('./category.js');
 const brandModel = require('./brand.js');
 
 const model = {

@@ -121,5 +121,53 @@
     "fechaNacimiento": "2021-07-14",
     "password": "$2a$10$8iC.Ht9wEdQBkw8TIbQXA.qt1/e5.BZdguCR2ZdLAMj96fgMTowpe",
     "administrador": false
+  },
+  {
+    "id": 21,
+    "name": "Jose Novello",
+    "email": "jose@vemart.com.ar",
+    "domicilio": "Acha 230",
+    "tipo": "Autoservicio",
+    "interes": "alimentos",
+    "fotoPerfil": "fotoPerfil-1628906514954.png",
+    "fechaNacimiento": "2021-08-10",
+    "password": "$2a$10$beMXx0cTMGPS8/8c.7gN/erAj6HZULmlOK4ozoVW4AJ.zVhd5sSpa",
+    "administrador": false
+  },
+  {
+    "id": 22,
+    "name": "Jose Novello",
+    "email": "Jose@vemart.com.ar",
+    "domicilio": "Acha 230",
+    "tipo": "Autoservicio",
+    "interes": "alimentos",
+    "fotoPerfil": "fotoPerfil-1628906731108.png",
+    "fechaNacimiento": "2021-08-11",
+    "password": "$2a$10$fc7vk8mcc.0yIR6ulejG5u5rx7T8zK1zmJJBaLmBE/0vdceUESJhu",
+    "administrador": false
+  },
+  {
+    "id": 23,
+    "name": "Jose Novello",
+    "email": "Jose@vemart.com.ar",
+    "domicilio": "Acha 230",
+    "tipo": "Autoservicio",
+    "interes": "alimentos",
+    "fotoPerfil": "fotoPerfil-1628906766464.png",
+    "fechaNacimiento": "2021-08-11",
+    "password": "$2a$10$YXviPIhjyLfAhAuhoaV0t.jxjaJwdzV29mkS6nAFa93ZYdljIcj.K",
+    "administrador": false
+  },
+  {
+    "id": 24,
+    "name": "Jose Novello",
+    "email": "Jose@vemart.com.ar",
+    "domicilio": "Acha 230",
+    "tipo": "Autoservicio",
+    "interes": "alimentos",
+    "fotoPerfil": "fotoPerfil-1628906861811.png",
+    "fechaNacimiento": "2021-08-11",
+    "password": "$2a$10$YNsm0wNb5B.oy0gkvKlcU.HenKggYm03eARn049NZAaGaZjxp9tLa",
+    "administrador": false
   }
 ]
