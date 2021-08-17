@@ -30,12 +30,12 @@ const model = {
         console.log(data)
         db.Product.create({
             //id_product: req.body.id_product
-            name: 'pudin',//data.name,
-            id_brand: '1',//data.id_brand,
-            description: 'vainilla',//data.description,
+            name: data.name,
+            id_brand: data.id_brand,
+            description: data.description,
             image: file.image,
-            id_category: '2',//data.id_category,
-            price: '100',//data.price
+            id_category: data.id_category,
+            price: data.price
         })
             .then(function () {
                 return true;
