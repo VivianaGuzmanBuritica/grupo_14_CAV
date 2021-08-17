@@ -6,12 +6,12 @@ const { all } = require('../models/product');
 //const db = require('../database/models');//base de datos
 
 const productController = {
-    list: (req,res) => res.render('products/productList',{list: product.all()}),
+    list: (req,res) => res.render('products/productList',{product: product.all()}),
     productDetail:(req, res) => res.render('products/productDetail',{product:product.one(req.params.id)}), 
     newProduct:(req, res) => res.render('products/newProduct'),
     createProduct: (req,res) => {
         let result = product.new(req.body,req.file)
-        return result == true ? res.redirect("/productList") : res.send("Error al cargar la informacion")   
+        return result == true ? res.redirect("/productList") : res.send("Error al cargar la información")   
     },
     edit:(req, res,log) => res.render('products/editProduct',{product:product.one(req.params.id)}),
     

@@ -39,7 +39,7 @@ module.exports = function (Sequelize, dataTypes) {
 
     let config = {
         tanleName: 'product',
-        timestamps: true
+        timestamps: false
     }
 
     let Product = Sequelize.define(alias, cols, config);

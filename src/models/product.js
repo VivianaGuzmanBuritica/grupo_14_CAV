@@ -10,6 +10,7 @@ const model = {
             .then(function (product) {
                 res.render('products/productList', { product: product })
             })
+            .catch(function(e){alert('Error, intente más tarde all')})
         //     const directory = path.resolve(__dirname,"../data","products.json")
         //     const file = fs.readFileSync(directory,"utf8")
         //     const convert = JSON.parse(file)
@@ -21,6 +22,7 @@ const model = {
                 .then(function (product) {
                     res.render('products/productDetail', { product: product })
                 })
+                .catch(function(e){alert('Error, intente más tarde one')})
             //  function (id) {
             //     let productos = this.all();
             //     let resultado = productos.find(producto => producto.id == id)
@@ -40,6 +42,7 @@ const model = {
             .then(function () {
                 return true;
             })
+            .catch(function(e){alert('Error, intente más tarde new')})
     },
     // function (data,file) {
     //     const directory = path.resolve(__dirname,"../data","products.json")
