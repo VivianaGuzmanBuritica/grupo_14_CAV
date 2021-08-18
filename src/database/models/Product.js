@@ -48,13 +48,22 @@ module.exports = function (Sequelize, dataTypes) {
         Product.belongsTo(models.Marca, {
             as: 'marca',
             foreignkey: 'id_marca'
-        });
+        }),
         
         Product.belongsTo(models.Categoria, {
                 as: 'categoria',
                 foreignkey: 'id_categoria'
             })
-        }
+
+        //Product.hasMany(models.ProductoCarrito, {
+         //   as: 'productocarrito',
+         //   foreignkey: 'id_producto'
+        // });
+    
+    }
 
         return Product;
-    }
+
+}
+
+

@@ -61,6 +61,10 @@ module.exports = function(sequelize,dataTypes){
             foreignKey: "tipo",
             otherkey: "id_tipo_comercio",
             timestamps:false
+        }),
+        User.hasMany(models.Pedido, {
+            as: "usuario",
+            foreignKey: "id_usuario",
         });
     }
 */

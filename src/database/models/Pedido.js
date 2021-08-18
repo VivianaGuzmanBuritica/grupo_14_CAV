@@ -33,10 +33,10 @@ module.exports = (sequelize, DataTypes) => {
             as: 'carrito',
             foreignKey: 'id_pedido'
         });
-        Pedido.belongsTo(models.user,{
-            as: 'usuario',
-            foreignKey: 'id_usuario'
-        })
+      //  Pedido.belongsTo(models.user,{
+        //    as: 'usuario',
+        //    foreignKey: 'id_usuario'
+       // })
     }
 
     return Pedido

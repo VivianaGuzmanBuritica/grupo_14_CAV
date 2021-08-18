@@ -1,19 +1,21 @@
-
+const db = require("../database/models");
 
 const productCartController = {
     carrito:(req, res) => res.render('products/productCart'),
+    agregarProducto: async function (req, res) {
+        let nuevoProducto = req.body
+        let productoAgregado = await db.RelationProductCart.create(nuevoProducto)
+        return productoAgregado
+    },
 
     //crear carrito
     //calcular total
     //pagar (modificar campo pagado en la bd a true)
 
- /*   const db = require("../models");
+ /*   
 
  {
-    aregarProducto:(req, res) => {
-        let nuevoProducto = req.body
-        let productoAgregado = await db.RelationProductCart.create(nuevoProducto)
-        return productoAgregado
+  
     },
     eliminarProducto: (req,res) => {
         let productoAEliminar = req.body
@@ -23,8 +25,10 @@ const productCartController = {
     }
 
 };
- */
 
-};
+*/ 
 
-module.exports = productCartController; 
+}
+
+module.exports = productCartController
+
