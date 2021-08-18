@@ -13,11 +13,11 @@ module.exports = function (Sequelize, dataTypes) {
         id_brand: {
             type: dataTypes.INTEGER,
         },
-        decription: {
+        description: {
             type: dataTypes.STRING,
         },
         image: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.STRING,
         },
         id_category: {
             type: dataTypes.INTEGER,

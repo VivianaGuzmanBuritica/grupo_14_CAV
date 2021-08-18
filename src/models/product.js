@@ -16,6 +16,7 @@ const model = {
         //     const convert = JSON.parse(file)
         //     return convert
     },
+   
     one:
         function (req, res) {
             db.Product.findByPk(req.params.id)
@@ -29,13 +30,13 @@ const model = {
             //     return resultado;
         },
     new: function (data, file) {
-        console.log(data)
+        // console.log(data, file)
         db.Product.create({
             //id_product: req.body.id_product
             name: data.name,
             id_brand: data.id_brand,
             description: data.description,
-            image: file.image,
+            image: file.filename,
             id_category: data.id_category,
             price: data.price
         })
@@ -83,12 +84,12 @@ const model = {
     //     const directory = path.resolve(__dirname, "../data", "products.json")
     //     let productos = this.all();
     //     productos.map(producto => {
-    //         if (producto.id == id) {
+    //         if (producto.id_product == id_product) {
     //             producto.name = data.name,
-    //                 producto.brand = parseInt(data.brand),
+    //                 producto.id_brand = parseInt(data.brand),
     //                 producto.description = data.description,
     //                 producto.image = file.filename,
-    //                 producto.category = data.category,
+    //                 producto.id_category = data.category,
     //                 producto.price = data.price
     //             return producto
     //         }

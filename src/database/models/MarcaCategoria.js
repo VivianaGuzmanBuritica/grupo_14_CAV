@@ -37,7 +37,7 @@ module.exports = function (Sequelize, dataTypes) {
 
     let config = {
         tanleName: 'marcasCategorias',
-        timestamps: true
+        timestamps: false
     }
 
     let MarcaCategoria = Sequelize.define(alias, cols, config);

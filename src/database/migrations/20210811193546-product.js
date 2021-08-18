@@ -24,7 +24,7 @@ module.exports = {
           type: Sequelize.STRING,
         },
         image: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING,
         },
         id_category: {
           type: Sequelize.INTEGER,
