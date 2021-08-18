@@ -12,6 +12,7 @@ const productController = {
             .then(function (product) {
                 res.render('products/productList', { product: product })
             })
+            .catch(function(e){console.log(e)})
     },
 
     productDetail: (req, res) => {

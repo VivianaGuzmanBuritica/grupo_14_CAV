@@ -23,7 +23,7 @@ const model = {
                 .then(function (product) {
                     res.render('products/productDetail', { product: product })
                 })
-                .catch(function(e){alert('Error, intente más tarde one')})
+                .catch(function(e){console.log(e)})
             //  function (id) {
             //     let productos = this.all();
             //     let resultado = productos.find(producto => producto.id == id)

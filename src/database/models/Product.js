@@ -38,7 +38,7 @@ module.exports = function (Sequelize, dataTypes) {
     }
 
     let config = {
-        tanleName: 'product',
+        tableName: 'products',
         timestamps: false
     }
 
@@ -52,7 +52,8 @@ module.exports = function (Sequelize, dataTypes) {
         
         Product.belongsTo(models.Categoria, {
                 as: 'categorias',
-                foreignkey: 'id_category'
+                foreignkey: 'id_category',
+                targetKey: 'id_category'
             })
         }
 

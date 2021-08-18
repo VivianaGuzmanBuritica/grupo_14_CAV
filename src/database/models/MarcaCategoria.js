@@ -36,7 +36,7 @@ module.exports = function (Sequelize, dataTypes) {
     }
 
     let config = {
-        tanleName: 'marcasCategorias',
+        tableName: 'marcasCategorias',
         timestamps: false
     }
 
