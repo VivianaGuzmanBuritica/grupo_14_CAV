@@ -32,13 +32,13 @@ module.exports = function (Sequelize, dataTypes) {
     Marca.associate = function(models){
         Marca.hasMany(models.Product, {
             as: 'productos',
-            foreignkey: 'id_brand'
+            foreignKey: 'id_brand'
         });
     Marca.belongsToMany(models.Categoria, {
             as: 'categorias',
             through: 'marcasCategorias',
-            foreignkey: 'id_brand',
-            otherkey:'id_category',
+            foreignKey: 'id_brand',
+            otherKey:'id_category',
             timestamps: true
         });
 
