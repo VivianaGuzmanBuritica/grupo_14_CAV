@@ -49,19 +49,16 @@
                         <input type="file" name="image" id="image">
                     </fieldset>
 
+                
                     <fieldset>
                         <label><b>Categoría</b></label>
-                        <input list="category" >
-                    </fieldset>
+                        <select id="category" name="id_category">
+                            <%for (let i=0; i< categorias.length; i++){ %>
 
-                    <fieldset>
-                        <select id="category" placeholder="Categoría" name="id_category">
-                            <!-- <%# for (let i=0; i< categorias.length; i++){ %>
-
-                                <option value='<%#= categorias[i].id_category %>'>
-                                    <%#=categorias[i].name_category %>
+                                <option value='<%= categorias[i].id_category %>'>
+                                    <%=categorias[i].name_category %>
                                 </option>
-                                <%# } %> -->
+                                <% } %>
                             </select>
 
                         <label><b>Precio</b></label>

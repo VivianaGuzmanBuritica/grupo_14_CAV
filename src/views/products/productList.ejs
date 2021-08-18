@@ -11,10 +11,10 @@
     <%- include("../partials/header") %>
         <main>
             <section>
-                <% for (let i = 0; i< product.length; i++) {//product.forEach(product=> { %>
+                <% for (let i = 0; i< product.length; i++) {%>
                     <article class="article">
                         <% if (product[i].image) { %>
-                            <figure><img src="/uploads/products/<%= product.image%>" alt=""></figure>
+                            <figure><img src="/uploads/products/<%= product[i].image%>" alt=""></figure>
                             <% } else { %>
                                 <figure><img src="/images/default.jpg" alt=""></figure>
                                 <% } %>
