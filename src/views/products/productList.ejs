@@ -11,21 +11,21 @@
     <%- include("../partials/header") %>
         <main>
             <section>
-                <% list.forEach(product=> { %>
+                <% for (let i = 0; i< product.length; i++) {//product.forEach(product=> { %>
                     <article class="article">
-                        <% if (product.image) { %>
+                        <% if (product[i].image) { %>
                             <figure><img src="/uploads/products/<%= product.image%>" alt=""></figure>
                             <% } else { %>
                                 <figure><img src="/images/default.jpg" alt=""></figure>
                                 <% } %>
                                     <section>
                                         <p>
-                                            <%= product.name %>
+                                            <%= product[i].name %>
                                         </p>
-                                        <p>$<%= product.price %>
+                                        <p>$<%= product[i].price %>
                                         </p>
                                         <div class="botones-home">
-                                            <span class="botones"><a href="/productDetail/<%= product.id %>"><i
+                                            <span class="botones"><a href="/productDetail/<%= product[i].id_product %>"><i
                                                         class="far fa-eye"></i>DETALLES</span></a>
                                             <a href="productCart"><span class="botones"><i
                                                         class="fas fa-shopping-cart"></i>COMPRAR</span></a>
@@ -33,7 +33,7 @@
 
                                     </section>
                     </article>
-                    <% }) %>
+                    <% } %>
             </section>
         </main>
         <%- include("../partials/footer") %>

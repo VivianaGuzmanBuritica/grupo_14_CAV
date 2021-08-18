@@ -4,22 +4,22 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     try {
       await queryInterface.createTable('categorias', {
-        id_categoria: {
+        id_category: {
           type: Sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true
         },
-        nombre_categoria: {
+        name_category: {
           type: Sequelize.STRING,
         },
         createAt:{
           type:Sequelize.DATE,
-          allowNull: false,
+          allowNull: true,
           defaultValue: Sequelize.now
         },
         updatedAt:{
           type:Sequelize.DATE,
-          allowNull: false,
+          allowNull: true,
           defaultValue: Sequelize.now
         }
       });

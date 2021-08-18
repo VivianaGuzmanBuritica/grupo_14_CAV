@@ -4,13 +4,13 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     try {
       await queryInterface.createTable('marcasCategorias', {
-        id_marcaCategoria:{
+        id_brandCategory:{
           type: Sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true
         },
 
-        id_marca: {
+        id_brand: {
           type: Sequelize.INTEGER,
           reference:{
             model: 'marcas',
@@ -18,7 +18,7 @@ module.exports = {
           }
 
         },
-        id_categoria: {
+        id_category: {
           type: Sequelize.INTEGER,
           reference:{
             model: 'categorias',
@@ -27,12 +27,12 @@ module.exports = {
         },
         createAt:{
           type:Sequelize.DATE,
-          allowNull: false,
+          allowNull: true,
           defaultValue: Sequelize.now
         },
         updatedAt:{
           type:Sequelize.DATE,
-          allowNull: false,
+          allowNull: true,
           defaultValue: Sequelize.now
         }
       });

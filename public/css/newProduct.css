@@ -61,7 +61,7 @@ h2{
      text-align: left;
  }
 
-fieldset input {
+fieldset input, select {
     
     padding: 5px;
     border-radius: 5px;
@@ -74,6 +74,10 @@ fieldset input {
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial;
     background-color: #eee;
+}
+
+select {
+    width: 25vw; 
 }
 
 fieldset button{
