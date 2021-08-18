@@ -36,8 +36,8 @@ module.exports = (sequelize, DataTypes) => {
         ProductoCarrito.belongsTo(models.Carrito,{
         as: 'carrito',
         foreignKey: 'id_carrito'
-        }),
-        ProductoCarrito.belongsTo(models.Producto,{
+        });
+        ProductoCarrito.belongsTo(models.Product,{
             as: 'producto',
             foreignKey: 'id_producto'
         });

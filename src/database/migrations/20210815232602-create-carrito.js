@@ -1,23 +1,24 @@
 'use strict';
 module.exports = {
+
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('carrito', {
       id: {
-          type: DataTypes.INTEGER.UNSIGNED,
+          type: Sequelize.INTEGER,
           primaryKey: true,
           allowNull:false,
           autoIncrement: true,
 
       },
       total: {
-          type: DataTypes.DECIMAL.UNSIGNED,
+          type: Sequelize.INTEGER,
           allowNull:false,
       },
       id_pedido: {
-          type: DataTypes.INTEGER.UNSIGNED,
+          type: Sequelize.INTEGER,
       },
       pagado: {
-          type: DataTypes.BOOLEAN,
+          type: Sequelize.BOOLEAN,
           allowNull:false,
       }
   });
