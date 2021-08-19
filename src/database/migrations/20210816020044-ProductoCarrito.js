@@ -5,24 +5,25 @@ module.exports = {
       await queryInterface.createTable('relacion_producto_carrito', 
       {
         id: {
-            type: DataTypes.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             primaryKey: true,
             allowNull:false,
             autoIncrement: true
         },
         id_producto: {
-            type: DataTypes.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull:false,
         },
         cantidad: {
-            type: DataTypes.INTEGER.UNSIGNED,
+            type:Sequelize.INTEGER,
         },
         id_carrito: {
-            type: DataTypes.INTEGER.UNSIGNED,
+            type: Sequelize.INTEGER,
             allowNull:false,
         },
         subtotal: {
-            type: DataTypes.DECIMAL.UNSIGNED,        }
+            type: Sequelize.INTEGER,     
+             }
     });
      
   },

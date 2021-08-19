@@ -3,73 +3,78 @@
 
 <head>
     <%- include("../partials/head") %>
-    <title>CAV</title>
-     <link rel="stylesheet" href="/css/newProduct.css"></link>
+        <title>CAV</title>
+        <link rel="stylesheet" href="/css/newProduct.css">
+        </link>
 </head>
 
 <body>
     <%- include("../partials/header") %>
-    <main>
-        <form action="/newProduct" method="POST" enctype="multipart/form-data">
-            <div class="titulo">
-                <h2 for="name">Nuevo producto</h2>
-                <h3>Es fácil y rápido</h3>
-            </div>
-            <div class="text_input">
-            <fieldset>
-                <label><b>Nombre de producto</b></label>
-                <input type="text" name="name" id="name" required placeholder="Nombre de producto">
-            </fieldset>
+        <main>
+            <form action="/newProduct" method="POST" enctype="multipart/form-data">
+                <div class="titulo">
+                    <h2 for="name">Nuevo producto</h2>
+                    <h3>Es fácil y rápido</h3>
+                </div>
+                <div class="text_input">
+                    <fieldset>
+                        <label><b>Nombre de producto</b></label>
+                        <input type="text" name="name" id="name" required placeholder="Nombre de producto">
+                    </fieldset>
 
-            <fieldset>
-                <label><b>Marca</b></label>
-                <input list="brand" name="brand">
-            </fieldset>
-            </fieldset>
-                <datalist id="brand" placeholder="Marca">
-                    <option value="Exquisita">
-                    <option value="La Paulina">
-                    <option value="Matarazzo">
-                    <option value="Blancaflor">
-                    <option value="Chamigo">
-                    <option value="Hileret">
-                    </datalist>
-            </fieldset>
+                    <fieldset>
+                        <label><b>Marca</b></label>
+                        <!-- <input list="brand" > -->
+                    </fieldset>
+                    <fieldset>
+                        <select id="brand" placeholder="Marca" name="id_brand">
+                            <% for (let i=0; i< marcas.length; i++){ %>
 
-            <label id="description"><b>Descripción</b></label>
-            <fieldset>
-                
-                <textarea name="description" id="description" placeholder='Escribe aquí'></textarea>
-            </fieldset>
+                                <option value='<%= marcas[i].id_brand %>'>
+                                    <%=marcas[i].name_brand %>
+                                </option>
+                                <% } %>
 
-            <fieldset>
-                <label><b>Adjuntar imagen</b></label>
-                <input type="file" name="image" id="image">
-            </fieldset>
+                        </select>
+                    </fieldset>
 
-            <fieldset>
-                <label><b>Categoría</b></label>
-                <input list="category" name="category">
-            </fieldset>
+                    <label id="description"><b>Descripción</b></label>
+                    <fieldset>
 
-            <fieldset>
-                <datalist id="category" placeholder="Categoría">
-                    <option value="Alacena">
-                    <option value="Bebidas">
-                    <option value="Congelados">
-                </datalist>
-                
-                <label><b>Precio</b></label>
-                <input type="number" min="0" name="price" id="price" placeholder="$300">
-            </fieldset>
-            </div>
-            <fieldset>
-                <button type="submit">Crear producto</button>
-            </fieldset>
+                        <textarea name="description" id="description" placeholder='Escribe aquí'></textarea>
+                    </fieldset>
 
-        </form>
-    </main>
-    <%- include("../partials/footer") %>
+                    <fieldset>
+                        <label><b>Adjuntar imagen</b></label>
+                        <input type="file" name="image" id="image">
+                    </fieldset>
+
+                    <fieldset>
+                        <label><b>Categoría</b></label>
+                        <input list="category" >
+                    </fieldset>
+
+                    <fieldset>
+                        <select id="category" placeholder="Categoría" name="id_category">
+                            <!-- <%# for (let i=0; i< categorias.length; i++){ %>
+
+                                <option value='<%#= categorias[i].id_category %>'>
+                                    <%#=categorias[i].name_category %>
+                                </option>
+                                <%# } %> -->
+                            </select>
+
+                        <label><b>Precio</b></label>
+                        <input type="number" min="0" name="price" id="price" placeholder="$300">
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <button type="submit">Crear producto</button>
+                </fieldset>
+
+            </form>
+        </main>
+        <%- include("../partials/footer") %>
 </body>
 
 </html>
