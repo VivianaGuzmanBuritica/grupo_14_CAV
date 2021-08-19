@@ -30,9 +30,9 @@ const model = {
             //     return resultado;
         },
     new: function (data, file) {
-        // console.log(data, file)
+        
         db.Product.create({
-            //id_product: req.body.id_product
+         
             name: data.name,
             id_brand: data.id_brand,
             description: data.description,
@@ -77,7 +77,7 @@ const model = {
             price: req.body.price
         },
             { where: { id_product: req.params.id_product } })
-        res.redirect('products/editProduct' + req.params.id_product)
+        //res.redirect('products/editProduct' + req.params.id_product)
     },
 
     // function (data, file, id) {
