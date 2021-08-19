@@ -60,7 +60,7 @@ const productController = {
 
     editProduct: function (req, res) {
         db.Product.update({
-            //id_product: req.body.id_product
+            
             name: req.body.name,
             id_brand: req.body.id_brand,
             description: req.body.description,
@@ -70,8 +70,7 @@ const productController = {
         },
             { where: { id_product: req.params.id } })
       res.redirect('/')
-        // let result = product.edit(req.body, req.file, req.params.id)
-        // return result == result ? res.redirect("/productList") : res.send("Error al cargar la informacion")
+        
     },
 
     deleteProduct: (req, res) => {
