@@ -69,14 +69,14 @@ const productController = {
             price: req.body.price
         },
             { where: { id_product: req.params.id } })
-       res.redirect('/' + req.params.id)
+      res.redirect('/')
         // let result = product.edit(req.body, req.file, req.params.id)
         // return result == result ? res.redirect("/productList") : res.send("Error al cargar la informacion")
     },
 
     deleteProduct: (req, res) => {
         db.Product.destroy({
-            where: { id_product: req.params.id_product }
+            where: { id_product: req.params.id }
         })
         res.redirect("/")
 
