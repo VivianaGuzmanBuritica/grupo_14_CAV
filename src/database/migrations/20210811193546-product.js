@@ -17,7 +17,7 @@ module.exports = {
           type: Sequelize.INTEGER,
           reference:{
             model: 'marcas',
-            key:'id_marca'
+            key:'id_brand'
           }
         },
         description: {
@@ -30,7 +30,7 @@ module.exports = {
           type: Sequelize.INTEGER,
           reference:{
             model: 'categorias',
-            key:'id_categoria'
+            key:'id_category'
           }
         },
         price: {
@@ -38,12 +38,12 @@ module.exports = {
         }, 
         createAt:{
           type:Sequelize.DATE,
-          allowNull: false,
+          allowNull: true,
           defaultValue: Sequelize.now
         },
         updatedAt:{
           type:Sequelize.DATE,
-          allowNull: false,
+          allowNull: true,
           defaultValue: Sequelize.now
         }
 
