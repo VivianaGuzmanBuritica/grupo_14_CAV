@@ -12,67 +12,74 @@ const productController = {
             .then(function (product) {
                 res.render('products/productList', { product: product })
             })
-            .catch(function(e){console.log(e)})
+            .catch(function (e) { console.log(e) })
     },
 
     productDetail: (req, res) => {
         db.Product.findByPk(req.params.id)
             .then(function (product) {
-                res.render('products/productDetail', { product: product })
+                db.Marca.findAll()
+                    .then(function (marcas) {
+                res.render('products/productDetail', {marcas:marcas, product: product })
             })
-        // res.render('products/productDetail',{product:product.one(req.params.id)})
+        })
+
     },
 
     newProduct: (req, res) => {
         db.Marca.findAll()
             .then(function (marcas) {
-                res.render('products/newProduct', { marcas: marcas })
+                db.Categoria.findAll()
+                    .then(function (categorias) {
+                        res.render('products/newProduct', { categorias: categorias, marcas: marcas })
+                    });
+
             })
-       
+
     },
 
-    category: (req, res) =>{
+    category: (req, res) => {
         db.Categoria.findAll()
-        .then(function (categorias) {
-            res.render('products/newProduct', { categorias: categorias })
-        });
+            .then(function (categorias) {
+                res.render('products/newProduct', { categorias: categorias })
+            });
     },
-    
-    createProduct: (req, res) => { //como integrar el modelo  con data, file ?
+
+    createProduct: (req, res) => {
         let result = product.new(req.body, req.file)
         return result == result ? res.redirect("/") : res.send("Error al cargar la información")
     },
-    
-    edit: (req, res, log) => {
+
+    edit: (req, res) => {
         db.Product.findByPk(req.params.id)
             .then(function (product) {
                 res.render('products/editProduct', { product: product })
             })
-        // res.render('products/editProduct',{product:product.one(req.params.id)})
+
     },
 
-    editProduct: function (req, res) { //como integrar el modelo  con data, file ?
-        let result = product.edit(req.body, req.file, req.params.id)
-        return result == result ? res.redirect("/productList") : res.send("Error al cargar la informacion")
+    editProduct: function (req, res) {
+        db.Product.update({
+            
+            name: req.body.name,
+            id_brand: req.body.id_brand,
+            description: req.body.description,
+            image: req.body.image,
+            id_category: req.body.id_category,
+            price: req.body.price
+        },
+            { where: { id_product: req.params.id } })
+      res.redirect('/')
+        
     },
 
     deleteProduct: (req, res) => {
         db.Product.destroy({
-            where: { id_product: req.params.id_product }
+            where: { id_product: req.params.id }
         })
         res.redirect("/")
-        // let result = product.delete(req.params.id);
-        // return result == result ? res.redirect("/productList") : res.send("Error")
+
     },
-
-    //CRUD base de datos
-
-    //listar:(req,res)=>{
-    // db.Product.findAll().then(function(productos){
-    //res.render('products/productList',{productos: productos})
-    //})
-
-    // }
 
 }
 
