@@ -1,8 +1,8 @@
 module.exports = function (Sequelize, dataTypes) {
 
-    let alias = 'tipoComercio';
+    let alias = 'Tipo';
     let cols = {
-        id_tipo_comercio: {
+        id_tipo: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             
@@ -14,11 +14,12 @@ module.exports = function (Sequelize, dataTypes) {
     }
 
     let config = {
-        tanleName: 'tipo_comercio',
+        tableName: 'tipo_user',
         timestamps: false
     }
 
-    let tipoComercio = Sequelize.define(alias, cols, config);
+    let Tipo = Sequelize.define(alias, cols, config);
 
-    return tipoComercio;
+    return Tipo;
 }
+

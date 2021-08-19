@@ -8,7 +8,7 @@ const model = {
     all: function (req, res) {
         db.User.findAll()
           .then(function(user) {
-              res.render('users/userList',{user:user});
+             return
            }
               );
           },
@@ -40,6 +40,28 @@ const model = {
                  
            
        },
+
+       edit: function (data,file, id) {
+        
+        db.User.update({
+                name: data.name,
+                email: data.email,
+                domicilio: data.domicilio,
+                tipo: data.tipo,
+                rubro_interes: data.id_rubro,
+                fotoPerfil: file.filename,
+                fechaNacimiento: data.fechaNacimiento,
+                password: data.password,
+                administrador: false
+               },
+               { where: { id: id } })
+               return
+            },
+        
+        
+
+    
+            
 
 
     /*

@@ -29,7 +29,7 @@ const model = {
             //     let resultado = productos.find(producto => producto.id == id)
             //     return resultado;
         },
-    new: function (data, file) {
+    new: function (data, file, res) {
         
         db.Product.create({
          
@@ -43,7 +43,8 @@ const model = {
             .then(function () {
                 return true;
             })
-            .catch(function(e){alert('Error, intente más tarde new')})
+            .catch(console.log('Error al cargar el productos'));
+            //.catch(function(e){alert('Error, intente más tarde new')})
     },
     // function (data,file) {
     //     const directory = path.resolve(__dirname,"../data","products.json")

@@ -39,9 +39,10 @@ module.exports = function (Sequelize, dataTypes) {
             through: 'marcasCategorias',
             foreignKey: 'id_brand',
             otherKey:'id_category',
-            timestamps: true
+            timestamps: false
         });
 
     }
     return Marca;
+    
 }

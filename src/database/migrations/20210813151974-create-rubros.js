@@ -9,7 +9,7 @@ module.exports = {
         
     },
     
-    rubro_name: {
+    rubro_nombre: {
       type: Sequelize.STRING,
         allowNull: false
     }

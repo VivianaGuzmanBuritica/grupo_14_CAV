@@ -5,35 +5,35 @@ module.exports = {
 
     try {
       await queryInterface.createTable('products', {
-        id_producto: {
+        id_product: {
           type: Sequelize.INTEGER,
           primaryKey: true,
           autoIncrement: true
         },
-        nombre: {
+        name: {
           type: Sequelize.STRING,
         },
-        id_marca: {
+        id_brand: {
           type: Sequelize.INTEGER,
           reference:{
             model: 'marcas',
             key:'id_marca'
           }
         },
-        descripcion: {
+        description: {
           type: Sequelize.STRING,
         },
-        imagen: {
+        image: {
           type: Sequelize.STRING,
         },
-        id_categoria: {
+        id_category: {
           type: Sequelize.INTEGER,
           reference:{
             model: 'categorias',
             key:'id_categoria'
           }
         },
-        precio: {
+        price: {
           type: Sequelize.INTEGER,
         }, 
         createAt:{
