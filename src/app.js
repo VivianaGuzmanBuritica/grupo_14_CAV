@@ -25,6 +25,7 @@ app.use(express.static(path.resolve(__dirname,"../public")))
 app.set('view engine','ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
+
 // Data Configuration 
 app.use(express.urlencoded({extended:false}));
 app.use(method("_method")) // ?_method=PUT

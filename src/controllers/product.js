@@ -38,13 +38,7 @@ const productController = {
 
     },
 
-    category: (req, res) => {
-        db.Categoria.findAll()
-            .then(function (categorias) {
-                res.render('products/newProduct', { categorias: categorias })
-            });
-    },
-
+    
     createProduct: (req, res) => {
         let result = product.new(req.body, req.file)
         return result == result ? res.redirect("/") : res.send("Error al cargar la información")

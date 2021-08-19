@@ -22,8 +22,8 @@ module.exports = {
             allowNull:false,
         },
         subtotal: {
-            type: Sequelize.INTEGER,     
-             }
+          type: DataTypes.INTEGER.UNSIGNED,
+      }
     });
      
   },

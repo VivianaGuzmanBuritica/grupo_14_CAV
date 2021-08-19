@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:false,
             autoIncrement: true
         },
-        id_producto: {
+        id_product: {
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull:false,
         },
@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:false,
         },
         subtotal: {
-            type: DataTypes.DECIMAL.UNSIGNED,        }
+            type: DataTypes.INTEGER.UNSIGNED,
+        }
     }
     
     let config = {

@@ -21,8 +21,8 @@ const userController = {
 
         if (errors.isEmpty()) {
             let nuevo = user.userRegister(req.body, req.file);
-            console.log('metodo new user ' + nuevo);
-            return nuevo == true ?  res.redirect('ingresar') : res.redirect('ingresar')
+            console.log(nuevo);
+            return nuevo != true ?  res.redirect('ingresar') : res.send('Erro al crear el ususrio !!')
         }
         else { res.render('users/register', {  errors: errors.mapped(),
             old: req.body}) }
