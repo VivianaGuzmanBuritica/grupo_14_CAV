@@ -35,7 +35,7 @@ const model = {
                    administrador: false
                    })
                    .then(function() {
-                    return res.redirect('ingresar')
+                    return 
                        });  
                  
            
