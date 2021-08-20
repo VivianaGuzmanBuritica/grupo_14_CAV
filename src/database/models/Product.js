@@ -57,13 +57,14 @@ module.exports = function (Sequelize, dataTypes) {
             });
 
         Product.hasMany(models.ProductoCarrito, {
-                as: 'productocarrito',
-                foreignKey: 'id_producto',
-        
+               as: 'productocarrito',
+             foreignKey: 'id_producto',
             })
+
+        }
 
         
 
         return Product;
     }
-}
+

@@ -61,14 +61,17 @@ module.exports = function(sequelize,dataTypes){
             foreignKey: "tipo",
             otherkey: "id_tipo_comercio",
             
-        });
-    }
-        User.associate = function (models) {
+        }),
         User.belongsTo(models.rubroUser, {
             as: 'rubro',
-            foreignkey: 'id_rubro',
-            
-        });
+            foreignKey: 'id_rubro',   
+        }),
+        User.hasMany(models.Pedido, {
+            as: 'pedidos',
+            foreignKey: 'id_pedido',
+        })
+
     }
+
     return User;
 }

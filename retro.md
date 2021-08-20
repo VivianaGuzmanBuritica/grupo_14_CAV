@@ -81,10 +81,16 @@ Posponer la retrospectiva pues es una buena herramienta para la planeación del 
 # RETROSPECTIVA AL QUINTO SPRINT
 
 ### 1. Comenzar a hacer:
+Reuniones perióducas breves, mas allá de que cada uno se comprometa a hacer su tarea individual
+
 ### 2. Hacer más:
+Mantener la comunicación fluida y la colaboración
 
 ### 3. Continuar haciendo.
+Intercambiando ideas y puntos de vista que favorecen la sinergia y el trabajo en equipo
 
 ### 4. Hacer menos.
+Trabajar en forma aislada unos de otros
 
 ### 5. Dejar de hacer.
+Posponer la ejecución de tareas, que después llevan a un atraso en el cumplimiento de las asignaturas

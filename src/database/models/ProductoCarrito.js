@@ -38,13 +38,11 @@ module.exports = (sequelize, DataTypes) => {
         as: 'carrito',
         foreignKey: 'id_carrito'
         });
-        ProductoCarrito.belongsTo(models.Product,{
-            as: 'producto',
-            foreignKey: 'id_producto'
-        });
-    
-}
-
+       ProductoCarrito.belongsTo(models.Product,{
+        as: 'producto',
+        foreignKey: 'id_producto'
+       })
+    }    
 
     return ProductoCarrito
 };

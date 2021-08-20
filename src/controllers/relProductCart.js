@@ -1,4 +1,4 @@
-const product = require('../models/productoCarrito');
+const relproductCart = require('../models/productoCarrito');
 const path = require('path');
 const fs = require('fs');
 
@@ -7,7 +7,7 @@ const db = require('../database/models');
 
 const relProductCartController = {
 
-
+/*
     findOneProduct: (req,res) => {
         db.ProductoCarrito.findOne
 
@@ -24,7 +24,7 @@ const relProductCartController = {
         return db.ProductoCarrito.destroy({
           where: { productId: id }
         });
-    },
+    },*/
 
 }
 
