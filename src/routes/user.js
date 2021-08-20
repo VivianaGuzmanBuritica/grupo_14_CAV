@@ -30,12 +30,12 @@ router.get('/registro',user.register);
 router.post('/registro',[upload.single('fotoPerfil'),validaciones],user.newUser); 
 
 
-//router.get('/lista', user.userList);
+router.get('/lista', user.userList);
 //router.get('/perfil', user.profile);
 
-//router.get("/:id",user.show); //mostrar vista profile REVISAR "/profile/:id"
+router.get("/:id",user.userDetail); //mostrar vista profile REVISAR "/profile/:id"
 //router.get("/edit/:id",user.edit); //mostra vista editar profile
-//router.put("/update/:id",[upload.single("fotoPerfil")],user.update); ///guarda la version editada
+router.put("/update/:id",[upload.single("fotoPerfil")],user.update); ///guarda la version editada
 //router.get("/delete/:id",user.delete);
 
 module.exports= router;

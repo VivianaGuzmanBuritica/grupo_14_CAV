@@ -38,49 +38,37 @@
                 <label for="domicilio"></label>
                 <input type="text" name="domicilio" id="domicilio" value="<%= user.domicilio %>">
             </fieldset>
+
+
+            <fieldset >
+                <legend><b>Tipo de Comercio</b></legend>
             
-            <fieldset>
-                <legend><b>Tipo de comercio</b></legend>
-                <input list="tipo" name="tipo" value="<%= user.tipo %>">
-                <datalist id="tipo">
-                    <option value="Autoservico">
-                    <option value="Almacen">
-                    <option value="Kiosco">
-                    <option value="Esatcion de servicio">
-                </datalist>
-               
+                <select id="tipo" placeholder="tipo" name="id_tipo">
+                    <% for (let i=0; i< tipo.length; i++){ %>
+
+                        <option value='<%= tipo[i].id_tipo %>'>
+                            <%=tipo[i].tipo_nombre %>
+                        </option>
+                        <% } %>
+
+                </select>
+            </fieldset>
+
+            <fieldset >
+                <legend><b>Rubros de interes</b></legend>
+            
+                <select id="rubro" placeholder="rubro" name="id_rubro">
+                    <% for (let i=0; i< rubro.length; i++){ %>
+
+                        <option value='<%= rubro[i].id_rubro %>'>
+                            <%=rubro[i].rubro_nombre %>
+                        </option>
+                        <% } %>
+
+                </select>
             </fieldset>
             
-            <fieldset class="interes">
-                <legend><b>Rubros de interes</b></legend>
-                
-                <label for="Alimentos">
-                    <input type="checkbox" name="interes" id="alimentos" value="aliemntos">
-                    Alimentos
-                </label>
-                
-                <label for="bebidas">
-                    <input type="checkbox" name="interes" id="bebidas" value="bebidas">
-                    Bebidas
-                </label>
-                
-                <label for="lacteos">
-                    <input type="checkbox" name="interes" id="lacteos" value="lacteos">
-                    Lacteos
-                </label>
-                
-                <label for="congelados">
-                    <input type="checkbox" name="interes" id="congelados" value="congelados">
-                    Alim. congelados
-                </label>
-                
-                <label for="vida">
-                    <input type="checkbox" name="interes" id="vida" value="vida">
-                    <label for="vida">
-                        Vida sana
-                    </label>
-                    
-                </fieldset>
+           
                 
                 <fieldset class="fotoperfil">
                     <legend><b>Foto de perfil</b></legend>

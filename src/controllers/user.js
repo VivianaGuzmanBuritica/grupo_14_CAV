@@ -4,15 +4,48 @@ const fs = require('fs');
 const { validationResult } = require("express-validator");
 //const { userRegister } = require('../models/user');
 const bcrypt = require('bcryptjs');
+const { todos } = require('../models/user');
+const db = require('../database/models');
+
+const Users = db.User;
+const Rubro = db.Rubro;
+const Tipo = db.Tipo;
 
 
 const userController = {
     login: (req, res) => res.render('users/login'),
 
-    register: (req, res) => res.render('users/register'),
+    register: (req, res) => {
+             Rubro.findAll()
+                .then(function (rubro) {
+                    Tipo.findAll()
+                    .then(function(tipo){
+            res.render('users/register', {rubro:rubro, tipo:tipo })
+        })
+    })
+},
 
-    userList: (req, res) => res.render('users/userList', { user: user.all() }),
+    userList: (req, res) => {
+            Users.findAll()
+            .then(function (user) {
+                res.render('users/userList', { user: user })
+            })
+            .catch(function (e) { console.log(e) })
 
+        },
+
+    userDetail: (req, res) => {
+            db.User.findByPk(req.params.id)
+                .then(function (user) {
+                    Rubro.findAll()
+                        .then(function (rubro) {
+                            Tipo.findAll()
+                            .then(function(tipo){
+                    res.render('users/edit', {rubro:rubro, user: user, tipo:tipo })
+                })
+            })
+        })
+        },
     //profile: (req, res) => res.render('users/userProfile', 
     //{ user: req.session != undefined && req.session.usuario!= undefined ? req.session.usuario : null}),
 
@@ -22,14 +55,20 @@ const userController = {
         if (errors.isEmpty()) {
             let nuevo = user.userRegister(req.body, req.file);
             console.log(nuevo);
-            return nuevo != true ?  res.redirect('ingresar') : res.send('Erro al crear el ususrio !!')
+            return nuevo != true ?  res.redirect('ingresar') : res.send('Error al crear el ususrio !!')
         }
         else { res.render('users/register', {  errors: errors.mapped(),
             old: req.body}) }
             console.log(errors);
         
-           // return res.redirect('') 
     },
+
+    show: (req, res) => res.render("users/edit", { user: user.one(req.params.id) }), //mostrata el detalle del perfil del usuario//
+
+    update: (req, res) => {
+        let result = user.edit(req.body, req.file, req.params.id);
+        return result == true ? res.redirect("/usuario/perfil") : res.send("Error al cargar la informacion")
+    },//guarda el profile editado//
 
 /*
     userLogin: function (req, res) {

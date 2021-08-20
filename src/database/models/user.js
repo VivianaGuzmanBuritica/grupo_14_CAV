@@ -54,7 +54,7 @@ module.exports = function(sequelize,dataTypes){
         deletedAt: false
     }
     const User = sequelize.define(alias, cols, config); 
-    
+    /*
         User.associate = function(models){
         User.belongsToMany(models.tipo_comercio, {
             as: "tipo_comercio",
@@ -72,6 +72,6 @@ module.exports = function(sequelize,dataTypes){
         })
 
     }
-
+    */
     return User;
 }
