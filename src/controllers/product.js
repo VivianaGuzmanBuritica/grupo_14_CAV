@@ -19,7 +19,10 @@ const productController = {
     productDetail: (req, res) => {
         db.Product.findByPk(req.params.id)
             .then(function (product) {
-                db.Marca.findAll()
+                db.Marca.findAll(
+                    {
+                    where:{id_brand: '7'}
+                })
                     .then(function (marcas) {
                         res.render('products/productDetail', { marcas: marcas, product: product })
                     })
@@ -63,13 +66,13 @@ const productController = {
     editProduct: async (req, res) => {
         try {
             const product = await db.Product.findByPk(req.params.id);
-            // const updateBrand = await product.setMarca(req.params.id);
-            // const updateCategory = await product.setCategoria(req.params.id);
+            console.log(req.file, req.body)
+          
             const updated = await product.update({
                 name: req.body.name,
                 id_brand: req.body.id_brand,
                 description: req.body.description,
-                image: req.filename,
+                image: req.file.filename,
                 id_category: req.body.id_category,
                 price: req.body.price
             },
