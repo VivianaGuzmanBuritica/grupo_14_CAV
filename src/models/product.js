@@ -67,19 +67,19 @@ const model = {
 
     // },
 
-    edit: function (req, res) {
-        db.Product.update({
-            //id_product: req.body.id_product
-            name: req.body.name,
-            id_brand: req.body.id_brand,
-            description: req.body.description,
-            image: req.body.image,
-            id_category: req.body.id_category,
-            price: req.body.price
-        },
-            { where: { id_product: req.params.id_product } })
-        //res.redirect('products/editProduct' + req.params.id_product)
-    },
+    // edit: function (req, res) {
+    //     db.Product.update({
+    //         //id_product: req.body.id_product
+    //         name: req.body.name,
+    //         id_brand: req.body.id_brand,
+    //         description: req.body.description,
+    //         image: file.filename,
+    //         id_category: req.body.id_category,
+    //         price: req.body.price
+    //     },
+    //         { where: { id_product: req.params.id_product } })
+    //     //res.redirect('products/editProduct' + req.params.id_product)
+    // },
 
     // function (data, file, id) {
     //     const directory = path.resolve(__dirname, "../data", "products.json")

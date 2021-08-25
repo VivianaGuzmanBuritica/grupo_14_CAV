@@ -32,40 +32,48 @@
                 <label id="description"><b>Descripción</b></label>
                 
                 <fieldset>
-                    <textarea name="description" id="description" placeholder="<%= product.description %>"></textarea>
+                    <textarea name="description" id="description" value="<%= product.description %>"></textarea>
                 </fieldset>
 
                 <fieldset>
-                    <figure><img src="/uploads/products/<%=product.image%>" alt=""></figure>
+                    <figure><img src="/uploads/products/<%=product.image%>" value="<%= product.image%>" alt=""></figure>
                
                     <label><b>Ajuntar imagen</b></label>
-                    <input type="file" name="image" id="image" required>
+                    <input type="file" name="image" id="image">
                 </fieldset>
 
                 
                  <fieldset>
                     <label><b>Marca</b></label>
-                    <input list="brand" name="brand" placeholder="<%= product.id_brand %>">
+                    <!-- <input list="brand" name="id_brand" value=""> -->
                 </fieldset>
 
                 <fieldset>
-                    <datalist id="brand">
-                        <option value="Alacena">
-                        <option value="Bebidas">
-                        <option value="Congelados">
-                    </datalist>
+                    <select id="brand" name="id_brand">
+                        <% for (let i=0; i< marcas.length; i++){ %>
+
+                            <option value='<%= marcas[i].id_brand %>'>
+                                <%=marcas[i].name_brand %>
+                            </option>
+                            <% } %>
+
+                    </select>
 
                 <fieldset>
                     <label><b>Categoría</b></label>
-                    <input list="category" name="category" placeholder="<%= product.id_category %>">
+                 
                 </fieldset>
 
                 <fieldset>
-                    <datalist id="category">
-                        <option value="Alacena">
-                        <option value="Bebidas">
-                        <option value="Congelados">
-                    </datalist>
+                    <select id="category" name="id_category">
+                        <%for (let i=0; i< categorias.length; i++){ %>
+
+                            <option value='<%= categorias[i].id_category %>'>
+                                <%=categorias[i].name_category %>
+                            </option>
+                            <% } %>
+                        </select>
+
 
                     <label><b>Precio</b></label>
                     <input type="number" min="0" name="price" id="price" id="name" value="<%= product.price %>">

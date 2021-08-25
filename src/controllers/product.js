@@ -1,9 +1,10 @@
 const product = require('../models/product');
 const path = require('path');
 const fs = require('fs');
-
+const sequelize = require('sequelize');
 const { all } = require('../models/product');
 const db = require('../database/models');
+const { Op } = sequelize;
 
 const productController = {
 
@@ -20,9 +21,9 @@ const productController = {
             .then(function (product) {
                 db.Marca.findAll()
                     .then(function (marcas) {
-                res.render('products/productDetail', {marcas:marcas, product: product })
+                        res.render('products/productDetail', { marcas: marcas, product: product })
+                    })
             })
-        })
 
     },
 
@@ -38,7 +39,7 @@ const productController = {
 
     },
 
-    
+
     createProduct: (req, res) => {
         let result = product.new(req.body, req.file)
         return result == result ? res.redirect("/") : res.send("Error al cargar la información")
@@ -47,25 +48,53 @@ const productController = {
     edit: (req, res) => {
         db.Product.findByPk(req.params.id)
             .then(function (product) {
-                res.render('products/editProduct', { product: product })
+                db.Marca.findAll()
+                    .then(function (marcas) {
+                        db.Categoria.findAll()
+                            .then(function (categorias) {
+                                res.render('products/editProduct', { categorias: categorias, marcas: marcas, product: product })
+                            })
+
+                    })
             })
 
     },
 
-    editProduct: function (req, res) {
-        db.Product.update({
-            
-            name: req.body.name,
-            id_brand: req.body.id_brand,
-            description: req.body.description,
-            image: req.body.image,
-            id_category: req.body.id_category,
-            price: req.body.price
-        },
-            { where: { id_product: req.params.id } })
-      res.redirect('/')
-        
+    editProduct: async (req, res) => {
+        try {
+            const product = await db.Product.findByPk(req.params.id);
+            // const updateBrand = await product.setMarca(req.params.id);
+            // const updateCategory = await product.setCategoria(req.params.id);
+            const updated = await product.update({
+                name: req.body.name,
+                id_brand: req.body.id_brand,
+                description: req.body.description,
+                image: req.filename,
+                id_category: req.body.id_category,
+                price: req.body.price
+            },
+                { where: { id_product: req.params.id } })
+
+            res.redirect('/')
+        } catch (error) {
+            return res.send(error);
+        }
     },
+
+    // editProduct: function (req, res) {
+    //     db.Product.update({
+
+    //         name: req.body.name,
+    //         id_brand: req.body.id_brand,
+    //         description: req.body.description,
+    //         image: req.body.image,
+    //         id_category: req.body.id_category,
+    //         price: req.body.price
+    //     },
+    //         { where: { id_product: req.params.id } })
+    //   res.redirect('/')
+
+    // },
 
     deleteProduct: (req, res) => {
         db.Product.destroy({
