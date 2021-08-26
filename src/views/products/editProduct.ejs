@@ -31,7 +31,7 @@
                           
                 <fieldset>
                     <label id="description"><b>Descripción</b></label>
-                    <textarea name="description" id="description" placeholder="<%= product.description %>"></textarea>
+                    <textarea name="description" id="description" value="<%= product.description %>"></textarea>
                 </fieldset>
 
                 <fieldset>
@@ -51,7 +51,7 @@
                     <select id="brand" name="id_brand" placeholder="<%= marcas.id_brand%>">
                         <% for (let i=0; i< marcas.length; i++){ %>
 
-                            <option value='<%= marcas[i].id_brand %>'>
+                            <option value='<%= marcas[i].id_brand %>' selected>
                                 <%=marcas[i].name_brand %>
                             </option>
                             <% } %>
@@ -67,7 +67,7 @@
                     <select id="category" name="id_category">
                         <%for (let i=0; i< categorias.length; i++){ %>
 
-                            <option value='<%= categorias[i].id_category %>'>
+                            <option value='<%= categorias[i].id_category %>' selected>
                                 <%=categorias[i].name_category %>
                             </option>
                             <% } %>

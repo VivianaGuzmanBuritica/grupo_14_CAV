@@ -15,8 +15,32 @@
             <input type="text" name="busqueda" placeholder="¿Qué estas buscando?" class="search">
             <i class="fas fa-search"></i>
         </form>
-        <section>
         <h2>DESTACADOS DEL MES</h2>
+        <section>
+            <% for (let i = 0; i< product.length; i++) {%>
+                <article class="article">
+                    <% if (product[i].image) { %>
+                        <figure><img src="/uploads/products/<%= product[i].image%>" alt=""></figure>
+                        <% } else { %>
+                            <figure><img src="/images/default.jpg" alt=""></figure>
+                            <% } %>
+                                <section>
+                                    <p>
+                                        <%= product[i].name %>
+                                    </p>
+                                    <p>$<%= product[i].price %>
+                                    </p>
+                                    <div class="botones-home">
+                                        <span class="botones"><a href="/productDetail/<%= product[i].id_product %>"><i
+                                                    class="far fa-eye"></i>DETALLES</span></a>
+                                        <a href="productCart"><span class="botones"><i
+                                                    class="fas fa-shopping-cart"></i>COMPRAR</span></a>
+                                    </div>
+
+                                </section>
+                </article>
+                <% } %>
+        <!-- 
             <article class="article">
                 <h4>Articulo</h4>
                 <img src="/skus/1084.jpg" alt="producto">
@@ -88,7 +112,7 @@
                     <div class="botones-home">
                         <a href="productList"><span class="botones"><i class="far fa-eye"></i>DETALLES</span></a>
                         <a href="productCart"><span class="botones"><i class="fas fa-shopping-cart"></i>COMPRAR</span></a></div>
-                    </article> 
+                    </article>  -->
         </section>
     </main>
     <%- include("./partials/footer") %>
