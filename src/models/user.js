@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const bcryptjs= require('bcryptjs');
+const bcrypt= require('bcryptjs');
 let db = require('../database/models');
 
 
@@ -15,35 +15,44 @@ const model = {
    
        register: function(req, res) {
            db.User.findAll()
-               .then(function(users) {
-               res.render('users/register', {users});
-               });
-       },
+           .then(function(users) {
+            db.Rubro.findAll()
+            .then(function (rubro) {
+                db.Tipo.findAll()
+                .then(function(tipo){
+               res.redirect('//////', {rubro:rubro, tipo:tipo })
+            })
+        })
+    })
+},
    
-       
-        userRegister: function (data, file) {
+       /*
+        userRegister: async function (data, file,res) {
+            
            db.User.create(
                {
                    name: data.name,
                    email: data.email,
                    domicilio: data.domicilio,
-                   tipo: data.tipo,
-                   rubro_interes: data.rubro_interes,
+                   tipo: data.id_tipo,
+                   rubro_interes: data.id_rubro,
                    fotoPerfil: file.filename,
                    fechaNacimiento: data.fechaNacimiento,
-                   password: data.password,
+                   password: bcrypt.hashSync(data.password, 8),
                    administrador: false
                    })
-                   .then(function() {
-                    return 
+                   .catch (function(error) {
+                       console.log('cmn error '+error);
+                       return error;
                        });  
                  
-           
+            return res.render('users/login') 
        },
+       
 
-       edit: function (data,file, id) {
-        
-        db.User.update({
+       edit: async function(data,file, id) {
+        try {
+            db.User.update({
                 name: data.name,
                 email: data.email,
                 domicilio: data.domicilio,
@@ -51,16 +60,18 @@ const model = {
                 rubro_interes: data.id_rubro,
                 fotoPerfil: file.filename,
                 fechaNacimiento: data.fechaNacimiento,
-                password: data.password,
+                password: bcrypt.hashSync(data.password, 8),
                 administrador: false
                },
                { where: { id: id } })
-               return
-            },
+               
+            } catch(error) { console.log('detalle '+error);
+            
+       }
         
-        
+    }
 
-    
+
             
 
 
