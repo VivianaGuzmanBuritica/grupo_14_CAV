@@ -12,10 +12,10 @@ window.addEventListener(('load'), function () {
 
         let campoNombre = document.querySelector('#name');
         if (campoNombre.value == '') {
-            errores.push('el campo de nombre debe estar completo');
+            errores.push('El campo de nombre debe estar completo');
         }
         else if (campoNombre.value.length < 2) {
-            errores.push('el campo nombre debe contener al menos 2 caracteres');
+            errores.push('El campo nombre debe contener al menos 2 caracteres');
         }
 
        
@@ -23,8 +23,11 @@ window.addEventListener(('load'), function () {
 
         let campoDescripcion = document.querySelector('#description');
         if (campoDescripcion.value == '') {
-            errores.push('el campo de Descripción debe estar completo');
+            errores.push('El campo de Descripción debe estar completo');
         }
+        // else if (campoDescripcion.value.length < 2) {
+        //     errores.push('El campo descripción debe contener al menos 2 caracteres');
+        // }
         
         //validación Imagen
 
@@ -48,7 +51,7 @@ window.addEventListener(('load'), function () {
 
         let campoPrecio = document.querySelector('#price');
         if (campoPrecio.value == '') {
-            errores.push('el campo de precio debe estar completo');
+            errores.push('El campo de precio debe estar completo');
         }
         
         //Array errores y mostrar en navegador
