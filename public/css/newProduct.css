@@ -61,11 +61,12 @@ h2{
      text-align: left;
  }
 
-.errores ul{
+.erroresNombre ul, .erroresDescripcion ul, .erroresImagen ul, .erroresPrecio ul{
     width: 100vw;
-    margin: 15px auto;  
+    padding-bottom: 5%;  
     list-style-type: none;
     color: salmon;
+   
 }
 
 fieldset input, select {
