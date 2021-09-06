@@ -64,8 +64,12 @@ window.addEventListener(('load'), function () {
 
         if (errores.nombre.length > 0) {
             e.preventDefault();
+           
 
             let ulErrores = document.querySelector('div.erroresNombre ul');
+           
+            ulErrores.innerHTML = '';
+
             for (let i = 0; i < errores.nombre.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores.nombre + '</li>'
             }
@@ -76,8 +80,12 @@ window.addEventListener(('load'), function () {
 
         if (errores.descripcion.length > 0) {
             e.preventDefault();
+            
 
             let ulErrores = document.querySelector('div.erroresDescripcion ul');
+
+            ulErrores.innerHTML = '';
+
             for (let i = 0; i < errores.descripcion.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores.descripcion + '</li>'
             }
@@ -89,6 +97,9 @@ window.addEventListener(('load'), function () {
             e.preventDefault();
 
             let ulErrores = document.querySelector('div.erroresImagen ul');
+
+            ulErrores.innerHTML = '';
+
             for (let i = 0; i < errores.imagen.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores.imagen + '</li>'
             }
@@ -100,6 +111,9 @@ window.addEventListener(('load'), function () {
             e.preventDefault();
 
             let ulErrores = document.querySelector('div.erroresPrecio ul');
+
+            ulErrores.innerHTML = '';
+
             for (let i = 0; i < errores.precio.length; i++) {
                 ulErrores.innerHTML += '<li>' + errores.precio + '</li>'
             }
