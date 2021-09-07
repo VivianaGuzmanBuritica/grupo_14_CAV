@@ -44,6 +44,7 @@ const productController = {
 
 
     createProduct: (req, res) => {
+        console.log(req.file)
         let result = product.new(req.body, req.file)
         return result == result ? res.redirect("/") : res.send("Error al cargar la información")
     },

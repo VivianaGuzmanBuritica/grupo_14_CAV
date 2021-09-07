@@ -57,13 +57,19 @@
                     </article>
                 </section>
                 <section class="cantidadCarrito">
-                    <form>
+
+                    <form action='productCart/add' method='post'>
+                        <input type='hidden' name='product' id='product' value=<%= product.id_product %> >
+                        <input type='number' name='cantidad' id='cantidad' value='1' min='1' >
+                        <button type='submit'>AGREGAR</button>
+                </form>
+                <!--    <form>
                         <input type="number" min="0" placeholder="0">
 
                         <button type="submit"><a href='/productCart'>IR AL CARRITO</a></button>
                         <button type="submit"><a href="/editProduct/<%= product.id_product %>">EDITAR
                                 PRODUCTO</a></button>
-                    </form>
+                    </form> -->
                 </section>
             </section>
 

@@ -54,24 +54,24 @@ module.exports = function(sequelize,dataTypes){
         deletedAt: false
     }
     const User = sequelize.define(alias, cols, config); 
-    /*
+    
         User.associate = function(models){
-        User.belongsToMany(models.tipo_comercio, {
+     /*   User.belongsToMany(models.tipo_comercio, {
             as: "tipo_comercio",
             foreignKey: "tipo",
             otherkey: "id_tipo_comercio",
             
-        }),
+        }),*/
         User.belongsTo(models.rubroUser, {
             as: 'rubro',
-            foreignKey: 'id_rubro',   
+            foreignKey: 'rubro_interes',   
         }),
         User.hasMany(models.Pedido, {
             as: 'pedidos',
-            foreignKey: 'id_pedido',
+            foreignKey: 'id_usuario',
         })
 
     }
-    */
+    
     return User;
 }

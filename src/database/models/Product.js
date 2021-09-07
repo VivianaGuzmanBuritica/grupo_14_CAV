@@ -51,14 +51,14 @@ module.exports = function (Sequelize, dataTypes) {
         });
         
         Product.belongsTo(models.Categoria, {
-                as: 'categorias',
-                foreignKey: 'id_category',
-                targetKey: 'id_category'
+            as: 'categorias',
+            foreignKey: 'id_category',
+            targetKey: 'id_category'
             });
 
-        Product.hasMany(models.ProductoCarrito, {
-               as: 'productocarrito',
-             foreignKey: 'id_producto',
+        Product.hasMany(models.Pedido, {
+            as: 'pedido',
+            foreignKey: 'id',
             })
 
         }
