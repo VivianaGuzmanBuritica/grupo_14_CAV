@@ -29,10 +29,13 @@
                         <label><b>Nombre de producto</b></label>
                         <input type="text" name="name" id="name" value="<%= product.name %>">
                     </fieldset>
-
+                    <!-- validacion -->
+                    <div class="erroresNombre">
+                        <ul></ul>
+                    </div>
                     <fieldset>
-                        <label id="description"><b>Descripción</b></label>
-                        <textarea name="description" id="description" value="<%= product.description %>" required></textarea>
+                        <label><b>Descripción</b></label>
+                        <textarea name="description" id="description" value="<%= product.description %>"></textarea>
                     </fieldset>
 
                     <!-- validacion -->
@@ -41,13 +44,17 @@
                     </div>
 
                     <fieldset>
-                        <figure><img src="/uploads/products/<%=product.image%>" value="<%= product.image.filename%>" required alt="">
+                        <figure><img src="/uploads/products/<%=product.image%>" value="<%= product.image.filename%>"
+                                alt="">
                         </figure>
 
                         <label><b>Ajuntar imagen</b></label>
                         <input type="file" name="image" id="image">
                     </fieldset>
-
+                    <!-- validacion -->
+                    <div class="erroresImagen">
+                        <ul></ul>
+                    </div>
 
                     <fieldset>
                         <label><b>Marca</b></label>
@@ -80,11 +87,20 @@
                                     <% } %>
                             </select>
 
-
-                            <label><b>Precio</b></label>
-                            <input type="number" min="0" name="price" id="price" id="name" value="<%= product.price %>">
                         </fieldset>
+                        <fieldset class='precio'>
+                            <label><b>Precio</b></label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="number" name="price" id="price" id="name" value="<%= product.price %>">
+
+                        </fieldset>
+                        <div class="erroresPrecio">
+                            <ul></ul>
+                        </div>
+                    </fieldset>
                 </div>
+
                 <fieldset>
                     <button type="submit">Editar producto</button>
                     <button type="submit"><a href="/deleteProduct/<%= product.id_product %>">Eliminar
@@ -94,6 +110,7 @@
             </form>
         </main>
         <%- include("../partials/footer") %>
+            <script src='/js/validateProduct.js' tyoe='text/javascript'></script>
 </body>
 
 </html>
