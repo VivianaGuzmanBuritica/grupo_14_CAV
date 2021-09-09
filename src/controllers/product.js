@@ -1,6 +1,7 @@
 const product = require('../models/product');
 const path = require('path');
 const fs = require('fs');
+const { validationResult } = require("express-validator");
 const sequelize = require('sequelize');
 const { all } = require('../models/product');
 const db = require('../database/models');
@@ -28,7 +29,7 @@ const productController = {
                     })
             })
 
-    },
+    }, 
 
     newProduct: (req, res) => {
         db.Marca.findAll()
@@ -43,11 +44,40 @@ const productController = {
     },
 
 
-    createProduct: (req, res) => {
-        console.log(req.file)
-        let result = product.new(req.body, req.file)
-        return result == result ? res.redirect("/") : res.send("Error al cargar la información")
+    createProduct: async (req, res) => {
+        let marcas = await db.Marca.findAll();
+        let categorias = await db.Categoria.findAll();
+        let errors = validationResult(req)
+        if(errors.isEmpty()) {
+            console.log(req.file)
+            let result = product.new(req.body, req.file)
+            return result == result ? res.redirect("/") : res.send("Error al cargar la información")
+        } else {
+            
+            console.log("--------------")
+            
+            //console.log(errors.mapped())
+            /*
+            for (let error of erroresVar) {
+                console.log(error.param);
+                console.log(error.msg);  
+
+            }
+            */
+
+            res.render('products/newProduct', {errors: errors.mapped(), old:req.body, marcas, categorias})
+        }
     },
+
+   /* productValidation: (req,res) => {
+        const resultValidation = validationResult(req);
+        console.log(resultValidation)
+        if(resultValidation.errors.length > 0) {
+            return res.render('products/newProduct',{
+                errors: resultValidation.mapped()
+            })
+        }
+    },*/
 
     edit: (req, res) => {
         db.Product.findByPk(req.params.id)

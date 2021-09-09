@@ -4,7 +4,7 @@
 <head>
     <%- include("../partials/head") %>
         <title>CAV</title>
-        
+
         <link rel="stylesheet" href="/css/newProduct.css">
         </link>
 </head>
@@ -12,80 +12,105 @@
 <body>
     <%- include("../partials/header") %>
         <main>
-            <form action="/editProduct/<%= product.id_product %>?_method=PUT" method="post"  enctype="multipart/form-data">
+            <form action="/editProduct/<%= product.id_product %>?_method=PUT" method="post"
+                enctype="multipart/form-data">
                 <div class="titulo">
                     <h2 for="name">Editar producto</h2>
                     <h3>Es fácil y rápido</h3>
                 </div>
                 <div class="text_input">
-                <fieldset id='id'>
-                    <label><b>ID de producto</b></label>
-                    <input type="text" name="id" id="id" value="<%= product.id_product %>">
-                </fieldset>
+                    <fieldset id='id'>
+                        <label><b>ID de producto</b></label>
+                        <input type="text" name="id" id="id" value="<%= product.id_product %>">
+                    </fieldset>
 
 
-                <fieldset>
-                    <label><b>Nombre de producto</b></label>
-                    <input type="text" name="name" id="name" value="<%= product.name %>">
-                </fieldset>
-                          
-                <fieldset>
-                    <label id="description"><b>Descripción</b></label>
-                    <textarea name="description" id="description" value="<%= product.description %>"></textarea>
-                </fieldset>
+                    <fieldset>
+                        <label><b>Nombre de producto</b></label>
+                        <input type="text" name="name" id="name" value="<%= product.name %>">
+                    </fieldset>
+                    <!-- validacion -->
+                    <div class="erroresNombre">
+                        <ul></ul>
+                    </div>
+                    <fieldset>
+                        <label><b>Descripción</b></label>
+                        <textarea name="description" id="description" value="<%= product.description %>"></textarea>
+                    </fieldset>
 
-                <fieldset>
-                    <figure><img src="/uploads/products/<%=product.image%>" value="<%= product.image%>" alt=""></figure>
-               
-                    <label><b>Ajuntar imagen</b></label>
-                    <input type="file" name="image" id="image">
-                </fieldset>
+                    <!-- validacion -->
+                    <div class="erroresDescripcion">
+                        <ul></ul>
+                    </div>
 
-                
-                 <fieldset>
-                    <label><b>Marca</b></label>
-                    <!-- <input list="brand" name="id_brand" value=""> -->
-                </fieldset>
+                    <fieldset>
+                        <figure><img src="/uploads/products/<%=product.image%>" value="<%= product.image.filename%>"
+                                alt="">
+                        </figure>
 
-                <fieldset>
-                    <select id="brand" name="id_brand" placeholder="<%= marcas.id_brand%>">
-                        <% for (let i=0; i< marcas.length; i++){ %>
+                        <label><b>Ajuntar imagen</b></label>
+                        <input type="file" name="image" id="image">
+                    </fieldset>
+                    <!-- validacion -->
+                    <div class="erroresImagen">
+                        <ul></ul>
+                    </div>
 
-                            <option value='<%= marcas[i].id_brand %>' selected>
-                                <%=marcas[i].name_brand %>
-                            </option>
-                            <% } %>
+                    <fieldset>
+                        <label><b>Marca</b></label>
+                        <!-- <input list="brand" name="id_brand" value=""> -->
+                    </fieldset>
 
-                    </select>
+                    <fieldset>
+                        <select id="brand" name="id_brand" placeholder="<%= marcas.id_brand%>">
+                            <% for (let i=0; i< marcas.length; i++){ %>
 
-                <fieldset>
-                    <label><b>Categoría</b></label>
-                 
-                </fieldset>
+                                <option value='<%= marcas[i].id_brand %>' selected>
+                                    <%=marcas[i].name_brand %>
+                                </option>
+                                <% } %>
 
-                <fieldset>
-                    <select id="category" name="id_category">
-                        <%for (let i=0; i< categorias.length; i++){ %>
-
-                            <option value='<%= categorias[i].id_category %>' selected>
-                                <%=categorias[i].name_category %>
-                            </option>
-                            <% } %>
                         </select>
 
+                        <fieldset>
+                            <label><b>Categoría</b></label>
 
-                    <label><b>Precio</b></label>
-                    <input type="number" min="0" name="price" id="price" id="name" value="<%= product.price %>">
-                </fieldset>
-             </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <select id="category" name="id_category">
+                                <%for (let i=0; i< categorias.length; i++){ %>
+
+                                    <option value='<%= categorias[i].id_category %>' selected>
+                                        <%=categorias[i].name_category %>
+                                    </option>
+                                    <% } %>
+                            </select>
+
+                        </fieldset>
+                        <fieldset class='precio'>
+                            <label><b>Precio</b></label>
+                        </fieldset>
+                        <fieldset>
+                            <input type="number" name="price" id="price" id="name" value="<%= product.price %>">
+
+                        </fieldset>
+                        <div class="erroresPrecio">
+                            <ul></ul>
+                        </div>
+                    </fieldset>
+                </div>
+
                 <fieldset>
                     <button type="submit">Editar producto</button>
-                    <button type="submit"><a href="/deleteProduct/<%= product.id_product %>">Eliminar producto</a></button>
+                    <button type="submit"><a href="/deleteProduct/<%= product.id_product %>">Eliminar
+                            producto</a></button>
                 </fieldset>
 
             </form>
         </main>
         <%- include("../partials/footer") %>
+            <script src='/js/validateProduct.js' tyoe='text/javascript'></script>
 </body>
 
 </html>

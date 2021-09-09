@@ -11,25 +11,31 @@
 <body>
     <%- include("../partials/header") %>
         <main>
+          
             <form action="/newProduct" method="POST" enctype="multipart/form-data">
                 <div class="titulo">
                     <h2 for="name">Nuevo producto</h2>
                     <h3>Es fácil y rápido</h3>
                 </div>
-                <div class= 'errores'>
-                    <ul>
-                        
-                    </ul>
-                </div>
+
+              
+
                 <div class="text_input">
-                    <fieldset>
+                    <fieldset id='nombre'>
                         <label><b>Nombre de producto</b></label>
                         <input type="text" name="name" id="name" placeholder="Nombre de producto">
+                        
                     </fieldset>
+                    <!-- validacion -->
+                    <div class="erroresNombre">
+                        <ul><% if (locals.errors && errors.name) { %>
+                            <div class="feedback"><%= errors.name.msg %> </div>
+                           <% } %></ul>
+                    </div>
 
                     <fieldset>
                         <label><b>Marca</b></label>
-                        <!-- <input list="brand" > -->
+
                     </fieldset>
                     <fieldset>
                         <select id="brand" placeholder="Marca" name="id_brand">
@@ -43,18 +49,30 @@
                         </select>
                     </fieldset>
 
-                    <label id="description"><b>Descripción</b></label>
+                    <label><b>Descripción</b></label>
                     <fieldset>
-
-                        <textarea name="description" id="description" placeholder='Escribe aquí'></textarea>
+                        <textarea name="description" id="description"></textarea>
+                        
                     </fieldset>
+                    <!-- validacion -->
+                    <div class="erroresDescripcion">
+                        <ul><% if (locals.errors && errors.description) { %>
+                            <div class="feedback"><%= errors.description.msg %> </div>
+                           <% } %></ul>
+                    </div>
 
                     <fieldset>
                         <label><b>Adjuntar imagen</b></label>
                         <input type="file" name="image" id="image">
+                        
                     </fieldset>
+                    <div class="erroresImagen">
+                        <ul><% if (locals.errors && errors.image) { %>
+                            <div class="feedback"><%= errors.image.msg %> </div>
+                            <% } %></ul>
+                    </div>
 
-                
+
                     <fieldset>
                         <label><b>Categoría</b></label>
                         <select id="category" name="id_category">
@@ -64,11 +82,17 @@
                                     <%=categorias[i].name_category %>
                                 </option>
                                 <% } %>
-                            </select>
+                        </select>
 
                         <label><b>Precio</b></label>
                         <input type="number" min="0" name="price" id="price" placeholder="$300">
                     </fieldset>
+                     <!-- validacion -->
+                    <div class="erroresImagen">
+                        <ul><% if (locals.errors && errors.price) { %>
+                            <div class="feedback"><%= errors.price.msg %> </div>
+                            <% } %></ul>
+                    </div>
                 </div>
                 <fieldset>
                     <button type="submit">Crear producto!</button>
@@ -77,7 +101,7 @@
             </form>
         </main>
         <%- include("../partials/footer") %>
-        <!-- <script src='/js/validateProduct.js' tyoe='text/javascript'></script> -->
+            <script src='/js/validateProduct.js' tyoe='text/javascript'></script>
 </body>
 
 </html>

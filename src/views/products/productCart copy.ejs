@@ -52,6 +52,39 @@
             <input type="submit" value="PAGAR ">  
         </form>   
         
+    <!--   
+
+        <ul>
+            <%# products.forEach(product => { %>
+                <li>
+                    <span><%/ product.name  %> </span>
+                    <span><%= product.price  %> </span>
+                <form action='productCart/add' method='post'>
+                        <input type='hidden' name='product' id='product' value=<%= product.id_product %> >
+                        <input type='hidden' name='user' id='user' value=<%= user.id %> >
+                        <input type='number' name='cantidad' id='cantidad' value='1' min='1' >
+                        <button type='submit'>AGREGAR</button>
+                </form>
+                </li>
+            <% }) %>
+        </ul>
+
+        <% if (pedido.length > 0) { %>
+            <ul>
+                <% pedido.forEach(item => { %>
+                    <li>
+                        <span><%= item.product.name  %> </span>
+                        <span><%= item.product.price  %> </span>
+                    <form action='/productCart' method='post'>
+                            <input type='hidden' name='product' id='product' value=<%= product.id_product %> >  
+                            <input type='number' name='cantidad' id='cantidad' value='1' min='1' >
+                            <button type='submit'>AGREGAR</button>
+                    </form>
+                    </li>
+                <% }) %>
+            </ul>        
+        <% } %>
+     --> 
        
     </main>
     <%- include("../partials/footer") %>

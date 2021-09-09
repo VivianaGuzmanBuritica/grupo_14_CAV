@@ -3,6 +3,7 @@ const fs = require('fs');
 //const categoryModel = require('./category.js');
 const brandModel = require('./brand.js');
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 
 const model = {
     all: function (req, res) {
@@ -30,6 +31,7 @@ const model = {
             //     return resultado;
         },
     new: function (data, file, res) {
+
         
         db.Product.create({
          
