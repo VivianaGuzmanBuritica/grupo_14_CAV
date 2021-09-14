@@ -5,30 +5,30 @@ module.exports = {
       await queryInterface.createTable('pedido', 
       {
         id: {
-          type: DataTypes.INTEGER.UNSIGNED,
+          type: INTEGER.UNSIGNED,
           primaryKey: true,
           allowNull:false,
           autoIncrement: true
       },
       id_producto: {
-          type: DataTypes.INTEGER,
+          type: INTEGER,
           allowNull:false,
       },
       id_usuario: {
-          type: dataTypes.BIGINT(10).UNSIGNED,
+          type: BIGINT(10).UNSIGNED,
           allowNull:false,
 
       },
       precio_actual: {
-          type: DataTypes.INTEGER.UNSIGNED,
+          type: INTEGER.UNSIGNED,
           allowNull:false,
       },
       cantidad: {
-          type: DataTypes.INTEGER.UNSIGNED,
+          type: INTEGER.UNSIGNED,
           allowNull:false,
       },
       fecha: {
-          type: DataTypes.DATE,
+          type: DATE,
           allowNull:false,
       }
     });
