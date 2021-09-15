@@ -7,10 +7,7 @@ const cookieParser = require('cookie-parser');
 const db = require("./database/models/index");
 
 
-//base de datos
-db.sequelize.sync().then(()=> {
-    console.log("modelos sincronizados")
-})
+
 
 // server start
 app.set("port", process.env.PORT || 3003)
