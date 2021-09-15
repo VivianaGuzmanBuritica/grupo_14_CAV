@@ -6,12 +6,18 @@ const session = require("express-session");
 const cookieParser = require('cookie-parser');
 const db = require("./database/models/index");
 
+<<<<<<< HEAD
 /*
 //base de datos
 db.sequelize.sync().then(()=> {
     console.log("modelos sincronizados")
 })
 */
+=======
+
+
+
+>>>>>>> f442c2f743e426f21492bace5233f27b123110d4
 // server start
 app.set("port", process.env.PORT || 3003)
 app.listen(app.get("port"),() => console.log("Servidor corriendo puerto:"+ app.get("port")))
