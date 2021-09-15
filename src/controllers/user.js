@@ -1,7 +1,7 @@
 const user = require('../models/user');
 const path = require('path');
 const fs = require('fs');
-const { validationResult } = require("express-validator");
+const { validationResult, header } = require("express-validator");
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 
@@ -135,33 +135,44 @@ const userController = {
     //borrar usuario
 
     userLogin: async (req, res)=> {
-        
-
-            let usuario =  await db.User.findAll({where:{ 
-                email: req.body.email,
+            try {
                 
-            }})
-            console.log(usuario)
-           
-            
-        
-            //console.log(usuario[0].password)
-            if (usuario == undefined) {  res.render('users/login',{ errors: [
-                {msg: 'No se encuentra este email en nuestra base de datos'}]
-            })} else { if(
-                bcrypt.compareSync(req.body.password, usuario[0].password))
-                {
+                let usuario =  await db.User.findOne({where:{ 
+                    email: req.body.email,
+                    
+                }})
+                if (!usuario ) { 
+                    res.render('users/login',{ errors: [
+                   {msg: 'No se encuentra este email en nuestra base de datos'}]
+               })
+           } else {
+                if(
+                   bcrypt.compareSync(req.body.password, usuario.password))
+                   {
+   
+                   delete usuario.password;    
+                   res.cookie("recordame", usuario, {maxAge: 600000}),
+                   req.session.loggedin = true;                
+                   req.session.userLogged = usuario;
+                   //res.send('OK puedes igresar '+usuario[1].name);
+                   console.log(req.session);
+                   return res.render('users/userProfile', {user:req.session.userLogged, Tipo, Rubro});
 
-                res.cookie("recordame", usuario, {maxAge: 60000}),
-                req.session.loggedin = true,                
-                req.session.name = usuario[0].id,
-                res.send('OK puedes igresar '+usuario[0].name);
-            }   else {
-                res.render('users/login',{ errors: [
-                    {msg: 'contraseña incorrecta'}]
-                })
-             }
-        }
+               }   else {
+                   res.render('users/login',{ errors: [
+                       {msg: 'Usuario y/o contraseña incorrectas'}]
+                   })
+                }
+           }
+            } catch (error) {
+                
+                res.send(error)
+                
+            }
+            //console.log(usuario);
+           
+           
+      
     }
 } 
         
