@@ -3,7 +3,10 @@ const router = express.Router();
 const user = require('../controllers/user');
 const multer = require('multer');
 const path = require('path');
-const validaciones = require('../middlewares/validateRegister')
+const validaciones = require('../middlewares/validateRegister');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
 
 
     let destino = multer.diskStorage({
@@ -23,19 +26,20 @@ const validaciones = require('../middlewares/validateRegister')
 
  //RUTAS
 
-router.get('/ingresar',user.login);
+router.get('/ingresar',guestMiddleware, user.login);
 router.post('/ingresar', [upload.any()],user.userLogin);
 
-router.get('/registro',user.register);
+router.get('/registro',guestMiddleware, user.register);
 router.post('/registro',[upload.single('fotoPerfil'),validaciones],user.newUser); 
 
 
 router.get('/lista', user.userList);
-//router.get('/perfil', user.profile);
 
-router.get("/:id",user.userDetail); //mostrar vista profile REVISAR "/profile/:id"
+
+router.get("/detail/:id", authMiddleware,user.userDetail); //mostrar vista profile REVISAR "/profile/:id"
 router.get("/edit/:id",user.update); //mostra vista editar profile
 router.put("/update/:id",[upload.single("fotoPerfil")],user.update); ///guarda la version editada
 router.get("/delete/:id",user.delete);
+router.get("/logout", user.logOut);  // logout
 
 module.exports= router;

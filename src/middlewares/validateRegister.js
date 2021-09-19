@@ -17,12 +17,13 @@ const validaciones = [
     .isLength({min:4}).withMessage("La contraseña debe tener 4 caracteres como mínimo"),
     body("confirmPassword").notEmpty().withMessage("Confirmar la contraseña es campo obligatorio").bail()
     .isLength({min:4}).withMessage("La contraseña debe tener 4 caracteres como mínimo"),
-
+/*
     body('confirmPassword').custom((value, { req }) => {
       if (value !== req.body.password) {
         throw new Error('Las contraseñas no coinciden');
           }
         }),
+        */
     body("fotoPerfil").custom((value, {req})=>{
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif']

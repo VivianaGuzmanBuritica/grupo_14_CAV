@@ -11,17 +11,35 @@
             <ul id="menu">
                 <li class="item"><a href="/productList">PRODUCTOS</a></li>
                 <li class="item"><a href="/newProduct">PROVEEDORES</a></li>
-                <% if (locals.user != undefined) { %>
-                    <li class="item"><a href="/usuario/salir">SALIR</a></li>
+                <% if (!locals.userLogged) { %>
+                    <li class="item"><a href="/usuario/ingresar">INGRESAR</a></li>
+                    <li class="item"><a href="/usuario/registro">REGISTRARSE</a></li>
+                    
+                   
                 <% } else { %>
-                    <li class="item"><a href="/usuario/ingresar">MI CUENTA</a></li>
+                    <li  class="item"><a>Usuario: <%= locals.userLogged.name %></a></li>
+                    <figure_Icono><img src="/uploads/avatars/<%= locals.userLogged.fotoPerfil%>" alt=""></figure_Icono>
+                    <li class="item"><a href="/usuario/logout">CERRAR</a></li>
+                    
                     <% } %>
-                <li class="item"><a href="/">INICIO</a></li>
+                
             </ul>
         </nav>
     </div>
+
+   
+
             <span id="ayuda">Ayuda
                 <i class="far fa-question-circle"></i></span>
+
+                <% if (!locals.userLogged) { %>
+                           
+                    <p id="ayuda"><a href="/usuario/lista">USUARIOS</a></p>
+                   
+                <% } else { %>
+                    
+                    <% } %>
+                
                 <a href="productCart"><span id="carrito">Mi carrito
                 <i class="fas fa-shopping-cart"></i></span></a>
 
