@@ -37,9 +37,15 @@ router.get('/lista', user.userList);
 
 
 router.get("/detail/:id", authMiddleware,user.userDetail); //mostrar vista profile REVISAR "/profile/:id"
+
 router.get("/edit/:id",user.update); //mostra vista editar profile
 router.put("/update/:id",[upload.single("fotoPerfil")],user.update); ///guarda la version editada
-router.get("/delete/:id",user.delete);
+
+router.get("/editPassword/:id",user.userDetailPassword); //mostra vista editar password
+router.post("/updatePassword/:id",[upload.single("fotoPerfil")], user.updatePassword); ///guarda la nueva password
+
+
+router.get("/delete/:id",user.delete); // borra
 router.get("/logout", user.logOut);  // logout
 
 module.exports= router;

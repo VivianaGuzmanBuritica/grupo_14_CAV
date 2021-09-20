@@ -41,7 +41,20 @@ const userController = {
       });
     });
   },
-  
+
+  userDetailPassword: (req, res) => {
+    db.User.findByPk(req.params.id).then(function (user) {
+      Rubro.findAll().then(function (rubro) {
+        Tipo.findAll().then(function (tipo) {
+          res.render("users/editPassword", {
+            rubro: rubro,
+            user: user,
+            tipo: tipo,
+          });
+        });
+      });
+    });
+  },
 
   newUser: async (data, res, file) => {
     let tipo = await db.Tipo.findAll();
@@ -110,7 +123,7 @@ const userController = {
           rubro_interes: data.body.id_rubro,
           fotoPerfil: data.file.filename,
           fechaNacimiento: data.body.fechaNacimiento,
-          password: bcrypt.hashSync(data.body.password, 8),
+          //password: bcrypt.hashSync(data.body.password, 8),
           administrador: false,
         },
         { where: { id: data.params.id } }
@@ -119,15 +132,30 @@ const userController = {
           return res.render("users/login");
         })
         .catch((error) => res.send(error));
-      
     } else {
-      return res.redirect("/usuario/edit/" + data.params.id); 
+      return res.redirect("/usuario/edit/" + data.params.id);
     }
   },
   //guarda el profile editado//
 
+  updatePassword: async function (req, res) {
+    
+    let id = req.params.id;
+    console.log("newpass  "+req.body.newPassword);
+    
+    await db.User.update(
+      {
+        password: bcrypt.hashSync(req.body.newPassword, 8),
+      },
+      { where: { id: id } }
+    )
+      .then(() => {
+        return res.render("users/login");
+      })
+      .catch((error) => res.send(error));
+  },
+
   delete: async (req, res) => {
-    console.log("cmn " + req.params.id);
     db.User.destroy({
       where: { id: req.params.id },
     }).catch((error) => console.log("detalle " + error));
@@ -161,11 +189,9 @@ const userController = {
             res.cookie("userMail", req.body.email, { maxAge: 1000 * 60 * 1 });
           }
 
-          
           console.log("Cookies.cmn");
           console.log(req.cookies.userMail);
           return res.redirect("/");
-         
         } else {
           res.render("users/login", {
             errors: [{ msg: "Usuario y/o contraseña incorrectas" }],
@@ -175,7 +201,6 @@ const userController = {
     } catch (error) {
       res.send(error);
     }
-    
   },
 
   logOut: (req, res) => {
@@ -186,5 +211,3 @@ const userController = {
 };
 
 module.exports = userController;
-
-

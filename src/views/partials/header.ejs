@@ -9,19 +9,36 @@
         <i class="fas fa-times"></i>
         <nav class="navbar">
             <ul id="menu">
-                <li class="item"><a href="/productList">PRODUCTOS</a></li>
-                <li class="item"><a href="/newProduct">PROVEEDORES</a></li>
+                <li class="item"><a href="/productList">Productos</a></li>
+                
                 <% if (!locals.userLogged) { %>
-                    <li class="item"><a href="/usuario/ingresar">INGRESAR</a></li>
-                    <li class="item"><a href="/usuario/registro">REGISTRARSE</a></li>
+                    <li class="item"><a href="/usuario/ingresar">Ingresar</a></li>
+                    <li class="item"><a href="/usuario/registro">Registrarse</a></li>
                     
                    
                 <% } else { %>
-                    <li  class="item"><a>Usuario: <%= locals.userLogged.name %></a></li>
-                    <figure_Icono><img src="/uploads/avatars/<%= locals.userLogged.fotoPerfil%>" alt=""></figure_Icono>
-                    <li class="item"><a href="/usuario/logout">CERRAR</a></li>
-                    
+                    <li class="item"><a>Usuario: <%= locals.userLogged.name %></a></li>
+                    <li class="item"><a href="/usuario/detail/<%= locals.userLogged.id %>">Editar mis datos</li>
+                    <figure_Icono><img src="/uploads/avatars/<%= locals.userLogged.fotoPerfil%>" alt=""></figure_Icono>    
+                    <li class="item"><a href="/usuario/logout">Cerrar</a></li>
                     <% } %>
+
+                <% if (locals.userLogged) { %>
+                        <% if (locals.userLogged.administrador ==1) { %>   
+                            
+                            <p id="ayuda"><a href="/newProduct">Agregar productos</a></p>
+                            <p id="ayuda"><a href="/usuario/lista">Listar usuarios</a></p>
+                            <% } else { %>
+                               
+    
+                            <% } %>  
+                        
+    
+                       
+                    <% } else { %>
+                       
+                        <% } %>
+
                 
             </ul>
         </nav>
@@ -32,13 +49,7 @@
             <span id="ayuda">Ayuda
                 <i class="far fa-question-circle"></i></span>
 
-                <% if (!locals.userLogged) { %>
-                           
-                    <p id="ayuda"><a href="/usuario/lista">USUARIOS</a></p>
-                   
-                <% } else { %>
-                    
-                    <% } %>
+               
                 
                 <a href="productCart"><span id="carrito">Mi carrito
                 <i class="fas fa-shopping-cart"></i></span></a>
