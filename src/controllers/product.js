@@ -48,28 +48,28 @@ const productController = {
         let marcas = await db.Marca.findAll();
         let categorias = await db.Categoria.findAll();
         let errors = validationResult(req)
-        if(errors.isEmpty()) {
-            console.log(req.file)
+        //res.send(errors)
+         if(errors.isEmpty()) {
             let result = product.new(req.body, req.file)
             return result == result ? res.redirect("/") : res.send("Error al cargar la información")
         } else {
+            console.log(errors.mapped())
+        /*    console.log("--------------")
             
-            console.log("--------------")
+            console.log(errors.mapped())
             
-            //console.log(errors.mapped())
-            /*
             for (let error of erroresVar) {
                 console.log(error.param);
                 console.log(error.msg);  
 
-            }
-            */
+            }*/
+            
 
             res.render('products/newProduct', {errors: errors.mapped(), old:req.body, marcas, categorias})
         }
     },
 
-   /* productValidation: (req,res) => {
+    /*productValidation: (req,res) => {
         const resultValidation = validationResult(req);
         console.log(resultValidation)
         if(resultValidation.errors.length > 0) {

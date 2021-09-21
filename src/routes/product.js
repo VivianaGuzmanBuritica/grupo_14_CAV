@@ -28,7 +28,7 @@ router.get('/editProduct', product.edit);
 router.get('/editProduct/:id', product.edit);
 router.get('/productList', product.list);
 
-router.post('/newProduct', upload.single("image"),validaciones,product.createProduct);
+router.post('/newProduct', [upload.single("image"),validaciones],product.createProduct);
 router.put('/editProduct/:id',upload.single("image"),product.editProduct);
 router.get('/deleteProduct/:id',product.deleteProduct);
 

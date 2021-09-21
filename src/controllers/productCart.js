@@ -2,29 +2,30 @@ const sequelize = require('sequelize');
 const db = require("../database/models");
 
 const productCartController = {
-    carrito: (req, res) => {
+    /*carrito: (req, res) => {
         res.render('products/productCart')
-    }
-    /*async (req,res) => {
+    }*/
+    carrito: async (req,res) => {
         try {
             const products = await db.Product.findAll();
             console.log("consulto producto ok")
             const user = await db.User.findByPk(1) 
             console.log("consulto user ok")
-            const pedido = await db.Pedido.findAll({include:['product', 'user'], where:{id_usuario:1}});
+            const pedido = await db.Pedido.findAll({include:['producto', 'usuario'], where:{id_usuario:1}});
             console.log("consulto pedido ok")
-            /*return res.send({
+            return res.send({
                 user:user,
                 products: products,
                 pedido: pedido
             })
-            res.render('productCart',{
+            /*res.render('productCart',{
                 title: 'Carrito',
                 user: user,
                 products: products,
                 pedido: pedido
-            });
+            });*/
          } catch (error) {
+             console.log(error)
              res.send(error)
          }
 
@@ -50,7 +51,7 @@ const productCartController = {
     },
     update: async (req,res) => {
         res.send({data:req.body,id:req.params.id})
-    }*/
+    }
 
 
 }

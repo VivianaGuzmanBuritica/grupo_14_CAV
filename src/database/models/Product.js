@@ -58,7 +58,7 @@ module.exports = function (Sequelize, dataTypes) {
 
         Product.hasMany(models.Pedido, {
             as: 'pedido',
-            foreignKey: 'id',
+            foreignKey: 'id_producto',
             })
 
         }

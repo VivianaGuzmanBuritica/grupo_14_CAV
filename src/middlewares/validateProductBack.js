@@ -2,7 +2,7 @@ const {body} = require("express-validator");
 const path = require('path');
 
 const validaciones = [
-    body("name").notEmpty().withMessage("El nombre es campo obligatorio").isLength({min:5}),
+    body("name").notEmpty().isLength({min:5}).withMessage("El nombre debe tener un mínimo de 5 caracteres"),
     body("description").notEmpty().withMessage("La descripción es campo obligatorio").isLength({min:20}),
     body("image").custom((value, { req }) => {
         let file= req.file;
@@ -18,10 +18,8 @@ const validaciones = [
         }
         return true;
     }),
-    body("price").notEmpty().withMessage("Debe insertar un valor"),
-
-    
+    body("price").notEmpty().withMessage("Debe insertar un valor")  
     
   ];
 
-  module.exports = validaciones
+  module.exports = validaciones 
