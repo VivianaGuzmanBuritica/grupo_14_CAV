@@ -145,7 +145,7 @@ const userController = {
     
     await db.User.update(
       {
-        password: bcrypt.hashSync(req.body.newPassword, 8),
+        password: bcrypt.hashSync(req.body.newPassword, 8), 
       },
       { where: { id: id } }
     )
