@@ -20,7 +20,7 @@ const model = {
             .then(function (rubro) {
                 db.Tipo.findAll()
                 .then(function(tipo){
-               res.redirect('//////', {rubro:rubro, tipo:tipo })
+               res.redirect('/', {rubro:rubro, tipo:tipo })
             })
         })
     })

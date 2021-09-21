@@ -83,22 +83,13 @@
                 <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<%= user.fechaNacimiento %>">>
                 </fieldset>
 
-            <fieldset>
-            <legend><b>Contraseña</b></legend>
-            <label for="password"></label>
-            <input type="password" name="password" id="password" required>
-            </fieldset>
-
-            <fieldset>
-                <legend><b>Confirmar contraseña</b></legend>
-                <label for="password"></label>
-                <input type="password" name="confirmPassword" id="password" required>
-                </fieldset>
-                
+                           
              
-                <input type="submit" value="Modificar">  
+                <input type="submit" value="Guardar">  
 
-                <a href="/usuario/delete/<%= user.id %>">Eliminar Usuario</a>
+                <a id="editPassword" href="/usuario/editPassword/<%= user.id %>">Modificar Contraseña</a>
+
+                <a id="eliminar" href="/usuario/delete/<%= user.id %>">Eliminar Usuario</a>
               
             
         </form>

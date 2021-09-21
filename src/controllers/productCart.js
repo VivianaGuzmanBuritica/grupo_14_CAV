@@ -2,10 +2,10 @@ const sequelize = require('sequelize');
 const db = require("../database/models");
 
 const productCartController = {
-    /*carrito: (req, res) => {
+    carrito: (req, res) => {
         res.render('products/productCart')
-    }*/
-    carrito: async (req,res) => {
+    },
+    /*carrito: async (req,res) => {
         try {
             const products = await db.Product.findAll();
             console.log("consulto producto ok")
@@ -23,13 +23,13 @@ const productCartController = {
                 user: user,
                 products: products,
                 pedido: pedido
-            });*/
+            });
          } catch (error) {
              console.log(error)
              res.send(error)
          }
 
-    },
+    },*/
     create: async (req,res) => {
         console.log("----------")
         try {
