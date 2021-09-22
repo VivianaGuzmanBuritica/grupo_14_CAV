@@ -32,6 +32,6 @@ router.post('/newProduct', [upload.single("image"),validaciones],product.createP
 router.put('/editProduct/:id',upload.single("image"),product.editProduct);
 router.get('/deleteProduct/:id',product.deleteProduct);
 
-router.get('/api/product', product.apiProduct);
-
+router.get('/api/products', product.apiProduct);
+router.get('/api/productDetail/:id_product', product.apiDetail);
 module.exports = router;

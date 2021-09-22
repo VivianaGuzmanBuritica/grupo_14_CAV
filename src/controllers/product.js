@@ -116,13 +116,31 @@ const productController = {
 
   apiProduct: (req, res) => {
     db.Product.findAll()
-      .then(product => {
+      .then(products => {
        return res.json(
             {
               meta:{
                   status: 200, 
-                  total: product.length,
-                  url: 'api/product'
+                  total: products.length,//total de productos
+                  url: 'api/products'
+              },
+              data: products 
+            }
+            );
+      })
+      .catch(function (e) {
+        console.log(e);
+      });
+  },
+
+  apiDetail: (req, res) => {
+    db.Product.findByPk(req.params.id_product)
+      .then(product => {
+       return res.json(
+            {
+              meta:{
+                  status: 200,            
+                  url: 'api/productDetail/:id'
               },
               data: product  
             }
