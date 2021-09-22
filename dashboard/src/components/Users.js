@@ -1,11 +1,13 @@
 import React from "react";
+import {Route, Link} from 'react-router-dom';
 
  function Users(){
     return (<div className="caja">
-        <h2>Usuarios</h2>
+        <Link to={'/users'}><h2 className='link'> Usuario</h2></Link>
+        <Route exact={true} path='/users' component={Users} />
         <p>Total: </p>
         <p>Primer agregado: </p>
-    <p>Ultimo agregado: </p>
+    <p>Último agregado: </p>
     </div>);
 }
 
