@@ -34,4 +34,5 @@ router.get('/deleteProduct/:id',product.deleteProduct);
 
 router.get('/api/products', product.apiProduct);
 router.get('/api/productDetail/:id_product', product.apiDetail);
+router.get('/api/productCategory', product.apiCategory);
 module.exports = router;

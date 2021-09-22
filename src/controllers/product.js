@@ -116,17 +116,15 @@ const productController = {
 
   apiProduct: (req, res) => {
     db.Product.findAll()
-      .then(products => {
-       return res.json(
-            {
-              meta:{
-                  status: 200, 
-                  total: products.length,//total de productos
-                  url: 'api/products'
-              },
-              data: products 
-            }
-            );
+      .then((products) => {
+        return res.json({
+          meta: {
+            status: 200,
+            total: products.length, //total de productos
+            url: "api/products",
+          },
+          data: products,
+        });
       })
       .catch(function (e) {
         console.log(e);
@@ -135,20 +133,38 @@ const productController = {
 
   apiDetail: (req, res) => {
     db.Product.findByPk(req.params.id_product)
-      .then(product => {
-       return res.json(
-            {
-              meta:{
-                  status: 200,            
-                  url: 'api/productDetail/:id'
-              },
-              data: product  
-            }
-            );
+      .then((product) => {
+        return res.json({
+          meta: {
+            status: 200,
+            url: "api/productDetail/:id",
+          },
+          data: product,
+        });
       })
       .catch(function (e) {
         console.log(e);
       });
+  },
+
+  apiCategory: (req, res) => {
+    db.Product.findAll({
+        where: {
+            id_category: {[Op.like]: '%'+req.query.keyword+'%'}
+        }
+    }).then(function (product) {
+    //  db.Categoria.findAll().then(function (categorias) {
+        return res.json({
+          meta: {
+            status: 200,
+            url: "api/productCategory",
+          },
+          data: {
+            product
+          },
+        });
+    //   });
+    });
   },
 };
 
