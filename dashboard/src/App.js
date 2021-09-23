@@ -15,10 +15,7 @@ function App() {
                   
                            
          <Route exact={true} path='/' />
-         <Route exact={true} path='/productList'  component={Products} />
-         <Route exact={true} path='/users' component={Users} />
-
-          
+                  
          <Products/>
           <Users/>    
         </main>

@@ -4,12 +4,12 @@ import {Route, Link} from 'react-router-dom';
 
 
 
-function ProductsList() {
+function UsersList() {
   return (
     <div className="caja">
-  <p>Lista de Productos</p>
+  <p>Lista de Usuarios</p>
  
     </div>
   );
 }
-export default ProductsList;
+export default UsersList;
