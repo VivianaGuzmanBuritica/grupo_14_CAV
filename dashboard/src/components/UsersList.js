@@ -1,15 +1,31 @@
-
 import React from "react";
-import {Route, Link} from 'react-router-dom';
-
-
+import { useState, useEffect } from "react";
+import { Route, Link } from "react-router-dom";
 
 function UsersList() {
+  let [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3003/usuarios/api/usuarios")
+      .then((response) => response.json())
+      .then((data) => setUsers(data.data));
+  },[]);
+
+  useEffect(() => {
+    console.log("Me modifique");
+  },[users]);
+
   return (
-    <div className="caja">
-  <h2>Lista de Usuarios</h2>
- 
-    </div>
+    <React.Fragment>
+      <div className="caja">
+        <main>
+        <h2>Lista de Usuarios</h2>
+        
+        {users.length === 0 && <li>Cargando información...</li>}
+        {users.map(user =><li>{user.name}</li>)}
+        </main>
+      </div>
+    </React.Fragment>
   );
 }
 export default UsersList;
