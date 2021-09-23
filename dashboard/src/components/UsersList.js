@@ -21,7 +21,7 @@ function UsersList() {
         <main>
         <h2>Lista de Usuarios</h2>
         
-        {users.length === 0 && <li>Cargando información...</li>}
+        {users.length === 0 && <p className='cargando'>Cargando información...</p>}
         {users.map(user =><li>{user.name}</li>)}
         </main>
       </div>

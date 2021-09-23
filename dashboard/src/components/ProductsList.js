@@ -25,7 +25,7 @@ useEffect(()=>{
     <div className="caja">
       <main>
         <h2>Lista de Productos</h2>
-    {products.length ===0 && <li>Cargando información...</li>}
+    {products.length ===0 && <p className='cargando'>Cargando información...</p>}
         {products.map( product => <li>{product.name}</li>)}
         </main>
     </div>
