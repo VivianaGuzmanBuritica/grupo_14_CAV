@@ -13,7 +13,7 @@ function Products() {
       <p>Primer agregado: </p>
       <p>Último agregado: </p>
      
-      <Route exact={true} path="/productList" component={ProductsList} />
+      
     </div>
   );
 }

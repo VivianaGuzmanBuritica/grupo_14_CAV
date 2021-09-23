@@ -7,7 +7,7 @@ import {Route, Link} from 'react-router-dom';
 function UsersList() {
   return (
     <div className="caja">
-  <p>Lista de Usuarios</p>
+  <h2>Lista de Usuarios</h2>
  
     </div>
   );
