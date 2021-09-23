@@ -121,6 +121,8 @@ const productController = {
           meta: {
             status: 200,
             total: products.length, //total de productos
+            ultimo: products.length, // modficar para que muestre el ultimo nombre de producto
+            primero: products.length, // modificar para que muestre el primer nombre de producto registrado
             url: "api/products",
           },
           data: products,
